@@ -65,7 +65,7 @@ export default function Home() {
         </p>
 
         <p className="text-center font-Jura mr-auto ml-auto" data-aos="zoom-in">
-          <span className="font-bold">Languages:</span> C/C++, Python, TeX, Javascript, HTML5, CSS3, Assembly [x86], Java, C#
+          <span className="font-bold">Languages:</span> C/C++, Python, TeX, Javascript, HTML5, CSS3, Assembly [x86], Java, Matlab
         </p>
 
         <p className="text-center font-Jura mr-auto ml-auto w-full md:w-4/5" data-aos="zoom-in">
