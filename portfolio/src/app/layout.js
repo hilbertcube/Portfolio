@@ -14,7 +14,7 @@ const geistMono = localFont({
 });
 
 export const metadata = {
-  title: "Donle",
+  title: "Don Le",
   description: "My portfolio website made with next",
 };
 
