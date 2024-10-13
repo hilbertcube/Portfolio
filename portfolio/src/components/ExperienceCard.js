@@ -11,7 +11,7 @@ export default function EventCard({ info }) {
       {/* Right Column: Job Information */}
       <div className="md:w-3/4">
         <h3 className="text-xl font-bold text-slate-300">{info.organization}</h3>
-        <h4 className="text-lg text-gray-500 group-hover:text-green-500">{info.job_title}</h4>
+        <h4 className="mt-1 text-lg text-gray-500 group-hover:text-green-500">{info.job_title}</h4>
         <p className="mt-2 text-gray-300 pt-3 pb-5 text-justify">{info.description}</p>
         
         {/* Languages and Tools */}

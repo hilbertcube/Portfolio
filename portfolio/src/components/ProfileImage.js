@@ -2,9 +2,9 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 
+
 export default function ProfileImage() {
   const [rotation, setRotation] = useState(0);
-
   // Event listener for mouse movement
   useEffect(() => {
     const handleMouseMove = (e) => {
@@ -12,9 +12,10 @@ export default function ProfileImage() {
       const rect = document.querySelector(".ring-wrapper").getBoundingClientRect();
       const x = e.clientX - (rect.left + rect.width / 2);
       const y = e.clientY - (rect.top + rect.height / 2);
-      const angle = Math.atan2(y, x) * (180 / Math.PI);
+      const angle = Math.atan2(y, x) * (180 / Math.PI); // degree
       // top is negative, bottom is positive
-      // console.log(angle);
+      console.log(x, y, angle);
+      // console.log(Math.atan2(59, 206.0) * (180 / Math.PI));
       setRotation(angle);
     };
 
@@ -43,7 +44,7 @@ export default function ProfileImage() {
       <div
         className="absolute top-0 left-0 w-full h-full rounded-full"
         style={{
-          border: "5px solid #dc2626", // Light blue semi-transparent ring
+          border: "5px solid #dc2626",
           clipPath: "polygon(60% 0%, 100% 0%, 100% 100%, 60% 100%)",
           transform: `rotate(${rotation}deg)`,
           transition: "transform 0.3s ease-out",
