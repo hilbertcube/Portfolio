@@ -14,7 +14,7 @@ export default function ProfileImage() {
       const y = e.clientY - (rect.top + rect.height / 2);
       const angle = Math.atan2(y, x) * (180 / Math.PI); // degree
       // top is negative, bottom is positive
-      console.log(x, y, angle);
+      // console.log(x, y, angle);
       // console.log(Math.atan2(59, 206.0) * (180 / Math.PI));
       setRotation(angle);
     };
