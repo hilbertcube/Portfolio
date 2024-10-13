@@ -28,6 +28,12 @@ export default function RootLayout({ children }) {
           rel="stylesheet"
         />
         <link rel='icon' href='/icons/favicon.png' type="image/png"/>
+        {/* <script
+          type="text/javascript"
+          id="MathJax-script"
+          async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+        /> */}
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
@@ -35,6 +41,7 @@ export default function RootLayout({ children }) {
       >
         <AOSInitializer />
         {children}
+        
       </body>
     </html>
   );

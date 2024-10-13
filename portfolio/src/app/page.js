@@ -1,7 +1,11 @@
+// "use client"; 
+// import { useEffect } from "react";
 import Image from "next/image";
 import ProfileImage from '../components/ProfileImage';
 import EventCard from '../components/ExperienceCard';
 import '@fortawesome/fontawesome-free/css/all.min.css';
+
+
 
 const exp = [
   {
@@ -9,43 +13,52 @@ const exp = [
     job_title: 'Computer Vision Research Intern',
     description: 'Utilized MPI for multi‑core and OpenMP for multi‑thread processing, along with NVIDIA CUDA, to accelerate feature detection, seam finding, image processing, and stitching algorithms to handle real‑time image processing on drones. Achieved a 300% increase in the speed of the image stitching process and decreased the parallel-processing cost by 61%.',
     time_frame: 'Jun. 2024 - Sep. 2024',
-    languages_and_tools: ['C++', 'Python','OpenCV', 'MPI', 'OpenMP', 'CUDA', 'CMake']
+    languages_and_tools: ['C++', 'Python','OpenCV', 'MPI', 'OpenMP', 'CUDA', 'CMake'],
   },
   {
     organization: 'California Polytechnic State University, Pomona' ,
     job_title: 'Collision Avoidance and Detection Research Intern',
     description: 'Collaborated with a team of electrical, computer, aerospace, and mechanical engineers to implement collision avoidance and detection software on drones. Utilized Gazebo, Ubuntu, and ORB SLAM3 to compute drone\'s stereo camera trajectory and a sparse 3D reconstruction.',
     time_frame: 'Sep. 2024 - Present',
-    languages_and_tools: ['C++', 'Python', 'ORB_SLAM_3', 'Ubuntu', 'Gazebo', 'PX4', 'CMake']
+    languages_and_tools: ['C++', 'Python', 'ORB_SLAM_3', 'Ubuntu', 'Gazebo', 'PX4', 'CMake'],
   },
   {
     organization: 'SMACS - Webs-for-Clubs' ,
     job_title: 'Web developer',
     description: 'Collaborated with a team of fellow developers to create static and dynamic, functional, and easy‑to‑maintain websites for various clubs at local college. Utilized Node.js, Next.js, and Tailwind CSS to build fully functional and informative websites, aiming at providing information and updating announcements.',
     time_frame: 'Sep. 2024 - Present',
-    languages_and_tools: ['Javascript', 'HTML', 'Nodejs' , 'Nextjs' , 'Tailwind CSS', 'AOS']
+    languages_and_tools: ['Javascript', 'HTML', 'Nodejs' , 'Nextjs' , 'Tailwind CSS', 'AOS'],
   },
   {
     organization: 'www.neumannium.com' ,
     job_title: 'Web developer',
     description: 'I am developing an article‑based website dedicated to education, numeric algorithm discussion, and computer physics simulation. This is a website to display my writings about various projects, ranging from physics, mathematics to computer science. Stay tuned, as it will be released soon.',
     time_frame: 'Jul. 2024 - Present',
-    languages_and_tools: ['Javascript', 'HTML', 'CSS', 'AOS', 'MathJax']
+    languages_and_tools: ['Javascript', 'HTML', 'CSS', 'AOS', 'MathJax'],
   },
   {
     organization: 'Mt. SAC' ,
     job_title: 'Math, Physics, and C.S. Tutor',
     description: 'I tutor various subjects, ranging from math and physics to computer science at Mt. San Antonio College. I work at two positions: embedded tutor, where I conducted after-class tutoring sessions and assisted professors in organizing classwork, and drop-in tutor, where I provided one-on-one tutoring sessions when the students came to me. I also created and distributed comprehensive study notes to support students in understanding math concepts.',
     time_frame: 'Feb. 2024 - Present',
-    languages_and_tools: ['Differential Equations', 'Linear Algebra', 'C++', 'Java', 'Calculus', 'Classical Mechanics']
+    languages_and_tools: ['Differential Equations', 'Linear Algebra', 'C++', 'Java', 'Calculus', 'Classical Mechanics'],
+  },
+  {
+    organization: 'Chladni Patterns Generator' ,
+    job_title: 'Personal Project',
+    description: 'I developed a Python application to generate Chladni patterns on square and circular domains. The patterns are obtained by solving for eigenvalues problems of the two-dimensional wave equation using separation of variables.',
+    time_frame: 'Feb. 2024 - May. 2024',
+    languages_and_tools: ['Python', 'PDE', 'C++', 'Numpy'],
+    link: 'https://github.com/Continuum3416/Chladni-Patterns-Generator'
   },
 ];
 
-//
 
+//
 export default function Home() {
   return (
     <div className="grid grid-rows-[1fr_auto] min-h-screen">
+      
       <div className="grid grid-rows-[0px_1fr_5px] items-center justify-items-center min-h-screen p-4 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
       <main className="flex flex-col gap-4 row-start-2 items-center sm:items-start" id="main">
         <div className="mr-auto ml-auto" data-aos="zoom-in">
