@@ -159,7 +159,7 @@ export default function Home() {
       </footer>
 
     </div>
-    <div className="bg-black text-white items-center justify-items-center p-4 pb-20 sm:p-20 font-[family-name:var(--font-geist-sans)]">
+    <div className="bg-black text-white items-center justify-items-center p-4 pt-20 pb-20 sm:p-20 font-[family-name:var(--font-geist-sans)]">
       <div id="projects" className="text-center font-Jura mr-auto ml-auto text-5xl mt-5 mb-14">Projects and Experience</div>
 
     <div className="">
@@ -171,7 +171,7 @@ export default function Home() {
     </div>
 
       
-      </div>
+    </div>
       <footer className="bg-black text-center text-white font-Jura pb-6">Made with Next, Tailwind, and AOS  •  <a target="_blank" className="hover:text-blue-300" href="https://github.com/Continuum3416/Portfolio">Github</a></footer>
     </div>
 
