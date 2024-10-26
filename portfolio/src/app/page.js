@@ -30,11 +30,12 @@ const exp = [
     languages_and_tools: ['Javascript', 'HTML', 'Nodejs' , 'Nextjs' , 'Tailwind CSS', 'AOS'],
   },
   {
-    organization: 'www.neumannium.com' ,
+    organization: 'neumanncondition' ,
     job_title: 'Web developer',
     description: 'I am developing an article‑based website dedicated to education, numeric algorithm discussion, and computer physics simulation. This is a website to display my writings about various projects, ranging from physics, mathematics to computer science. Stay tuned, as it will be released soon.',
     time_frame: 'Jul. 2024 - Present',
     languages_and_tools: ['Javascript', 'HTML', 'CSS', 'AOS', 'MathJax'],
+    link: 'https://github.com/Continuum3416/neumanncondition'
   },
   {
     organization: 'Mt. SAC' ,
