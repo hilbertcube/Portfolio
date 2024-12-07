@@ -67,7 +67,7 @@ export default function Home() {
         </div>
 
         <div className="text-center font-Jura mr-auto ml-auto text-4xl" data-aos="zoom-in">
-          Don <span className="font-bold">Le</span>
+          Don D. <span className="font-bold">Le</span>
         </div>
 
         <div className="text-center font-Jura mr-auto ml-auto text-xl text-blue-700" data-aos="zoom-in">

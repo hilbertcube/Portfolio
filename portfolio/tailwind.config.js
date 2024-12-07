@@ -12,7 +12,7 @@ module.exports = {
         foreground: "var(--foreground)",
       },
       fontFamily: {
-        'Jura': ['Jura', 'sans-serif'], // Add your custom font
+        'Jura': ['Jura', 'sans-serif'],
       },
       screens: {
         'ms': '900px',
@@ -22,9 +22,11 @@ module.exports = {
         '3': '3px', // Adds a 3px border width
         '5': '5px', // Adds a 5px border width
         '10': '10px', // Adds a 10px border width
-        // You can add more custom widths here
       },
     },
+  },
+  colors: {
+     'majority-red': '#dc2626'
   },
   plugins: [],
 };
