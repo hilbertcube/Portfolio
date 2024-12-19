@@ -13,7 +13,7 @@ const exp = [
     job_title: 'Computer Vision Research Intern',
     description: 'Utilized MPI for multi‑core and OpenMP for multi‑thread processing, along with NVIDIA CUDA, to accelerate feature detection, seam finding, image processing, and stitching algorithms to handle real‑time image processing on drones. Achieved a 300% increase in the speed of the image stitching process and decreased the parallel-processing cost by 61%.',
     time_frame: 'Jun. 2024 - Sep. 2024',
-    languages_and_tools: ['C++', 'Python','OpenCV', 'MPI', 'OpenMP', 'CUDA', 'CMake'],
+    languages_and_tools: ['C++', 'Python','OpenCV', 'MPI', 'OpenMP', 'CUDA', 'CMake', 'Ubuntu'],
   },
   {
     organization: 'California Polytechnic State University, Pomona' ,
