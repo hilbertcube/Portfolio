@@ -35,7 +35,7 @@ export default function Home() {
                   <span className="text-gray-600 font-mono mr-2">[{index + 1}]</span>
                   <div>
                     <p>
-                      {publication.author}. "{publication.title}". <em>{publication.booktitle}</em>, {publication.year}, {publication.address}, {publication.date}.
+                      {publication.author}. &ldquo;{publication.title}&rdquo;. <em>{publication.booktitle}</em>, {publication.year}, {publication.address}, {publication.date}.
                     </p>
                   </div>
                 </li>
