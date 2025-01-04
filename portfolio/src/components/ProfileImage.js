@@ -76,7 +76,7 @@ export default function ProfileImage() {
       {/* Profile Image */}
       <Image
         className="rounded-full border-5 border-slate-300"
-        src="/images/profile_1.jpg"
+        src="/images/profile_2.jpg"
         alt="Profile Image"
         width={180}
         height={180}

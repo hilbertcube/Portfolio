@@ -4,8 +4,8 @@ import Image from "next/image";
 import ProfileImage from '../components/ProfileImage';
 import EventCard from '../components/ExperienceCard';
 import '@fortawesome/fontawesome-free/css/all.min.css';
-
-
+import { TfiAlignCenter } from "react-icons/tfi";
+import Footer from "../components/NavFooter";
 
 const exp = [
   {
@@ -13,14 +13,14 @@ const exp = [
     job_title: 'Computer Vision Research Intern',
     description: 'Utilized MPI for multi‑core and OpenMP for multi‑thread processing, along with NVIDIA CUDA, to accelerate feature detection, seam finding, image processing, and stitching algorithms to handle real‑time image processing on drones. Achieved a 300% increase in the speed of the image stitching process and decreased the parallel-processing cost by 61%.',
     time_frame: 'Jun. 2024 - Sep. 2024',
-    languages_and_tools: ['C++', 'Python','OpenCV', 'MPI', 'OpenMP', 'CUDA', 'CMake', 'Ubuntu'],
+    languages_and_tools: ['C++', 'Python','OpenCV', 'MPI', 'OpenMP', 'CUDA', 'CMake'],
   },
   {
     organization: 'California Polytechnic State University, Pomona' ,
     job_title: 'Collision Avoidance and Detection Research Intern',
     description: 'Collaborated with a team of electrical, computer, aerospace, and mechanical engineers to implement collision avoidance and detection software on drones. Utilized Gazebo, Ubuntu, and ORB SLAM3 to compute drone\'s stereo camera trajectory and a sparse 3D reconstruction.',
     time_frame: 'Sep. 2024 - Present',
-    languages_and_tools: ['C++', 'Python', 'ORB_SLAM_3', 'Ubuntu', 'Gazebo', 'PX4', 'CMake'],
+    languages_and_tools: ['C++', 'Python', 'ORB_SLAM_3', 'Ubuntu', 'Gazebo', 'PX4', 'CMake', 'YOLOv4'],
   },
   {
     organization: 'SMACS - Webs-for-Clubs' ,
@@ -30,9 +30,9 @@ const exp = [
     languages_and_tools: ['Javascript', 'HTML', 'Nodejs' , 'Nextjs' , 'Tailwind CSS', 'AOS'],
   },
   {
-    organization: 'neumanncondition' ,
+    organization: 'neumanncondition.com' ,
     job_title: 'Web developer',
-    description: 'I am developing an article‑based website dedicated to education, numeric algorithm discussion, and computer physics simulation. This is a website to display my writings about various projects, ranging from physics, mathematics to computer science. Stay tuned, as it will be released soon.',
+    description: 'This is my blog website. I coded it from scratch using HTML, CSS, and Javascript. This is a website to display my writings about engineering, physics, mathematics, and computer science.',
     time_frame: 'Jul. 2024 - Present',
     languages_and_tools: ['Javascript', 'HTML', 'CSS', 'AOS', 'MathJax'],
     link: 'https://github.com/Continuum3416/neumanncondition'
@@ -53,6 +53,7 @@ const exp = [
     link: 'https://github.com/Continuum3416/Chladni-Patterns-Generator'
   },
 ];
+
 
 
 //
@@ -112,52 +113,7 @@ export default function Home() {
       </div>
 
       </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center border-t-2 border-blue-700 pt-2">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://drive.google.com/drive/folders/1yW-UBJ5ur0TDWlJ5QnCJdM8DC0jsSjTw?usp=sharing"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          View my CV
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4 overscroll-none"
-          href="#projects"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          View my Projects
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://neumanncondition.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          View my Blogs
-        </a>
-      </footer>
+      <Footer/>
 
     </div>
     <div className="bg-black text-white items-center justify-items-center p-4 pt-20 pb-20 sm:p-20 font-[family-name:var(--font-geist-sans)]">
