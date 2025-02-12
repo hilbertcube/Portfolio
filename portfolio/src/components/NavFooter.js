@@ -33,7 +33,7 @@ const Footer = () => {
             width={16}
             height={16}
           />
-          View my CV
+          View my Resume
         </a>
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4 overscroll-none"
