@@ -1,5 +1,5 @@
 import localFont from "next/font/local";
-import AOSInitializer from "./AOSInitializer";
+import AOSInitializer from "./dependencies/AOSInitializer";
 import "./globals.css";
 
 

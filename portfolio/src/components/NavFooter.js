@@ -1,6 +1,5 @@
 'use client';
 import { usePathname } from 'next/navigation'; // Updated import
-import Image from 'next/image';
 
 // Icons
 import { FiFileText } from "react-icons/fi";
@@ -11,48 +10,64 @@ import { FiEye } from "react-icons/fi";
 
 
 const Footer = () => {
-    const pathname = usePathname(); // Get the current pathname
-    const isHomePage = pathname === '/'; // Check if it's the homepage
-    const isPublicationsPage = pathname === '/publications'; // Check if it's the publications page
+  const pathname = usePathname(); // Get the current pathname
+  // const isHomePage = pathname === '/';
+  // const isPublicationsPage = pathname === '/publications';
+
+  return (
+    <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center border-t-2 border-blue-700 pt-2">
+      <a
+        className={`nav-link ${pathname === '/' ? 'text-blue-700 font-bold' : 'text-black'}`}
+        href="/"
+        rel="noopener noreferrer"
+      >
+        <FiHome />
+        <span className="nav-text">Home</span>
+      </a>
+      <a
+        className={`nav-link ${pathname === '/publications' ? 'text-blue-700 font-bold' : 'text-black'}`}
+        href="/publications"
+        rel="noopener noreferrer"
+      >
+        <FiEye />
+        <span className="nav-text">Publications</span>
+      </a>
+      {/* <a
+        className="nav-link"
+        href={isHomePage ? "/publications" : "/"}
+        rel="noopener noreferrer"
+      >
+        {isHomePage ? <FiEye /> : <FiHome />}
+        <span className="nav-text">{isHomePage ? 'Publications' : 'Home'}</span>
+      </a> */}
+      <a
+        className="nav-link"
+        href="https://drive.google.com/drive/folders/1yW-UBJ5ur0TDWlJ5QnCJdM8DC0jsSjTw?usp=sharing"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <FiFileText />
+        <span className="nav-text">Résumé</span>
+      </a>
+      <a
+        className="nav-link"
+        href="/#projects"
+        rel="noopener noreferrer"
+      >
+        <FiCpu />
+        <span className="nav-text">Projects</span>
+      </a>
+      <a
+        className="nav-link"
+        href="https://neumanncondition.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <TfiLayoutGrid3 />
+        <span className="nav-text">Blogs</span>
+      </a>
+    </footer>
+  );
+};
   
-    return (
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center border-t-2 border-blue-700 pt-2">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href={isHomePage ? "/publications" : "/"}
-          rel="noopener noreferrer"
-        >
-          {isHomePage ? <FiEye /> : <FiHome />}
-          {isHomePage ? 'Publications' : 'Home'}
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://drive.google.com/drive/folders/1yW-UBJ5ur0TDWlJ5QnCJdM8DC0jsSjTw?usp=sharing"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <FiFileText />
-          View my Résumé
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4 overscroll-none"
-          href="/#projects"
-          rel="noopener noreferrer"
-        >
-          <FiCpu />
-          View my Projects
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://neumanncondition.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <TfiLayoutGrid3 />
-          View my Blogs
-        </a>
-      </footer>
-    );
-  };
-  
-  export default Footer;
+export default Footer;

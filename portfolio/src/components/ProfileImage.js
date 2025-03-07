@@ -59,7 +59,7 @@ export default function ProfileImage() {
       window.removeEventListener("touchstart", handleClick);
     };
   }, []);
-
+  const radius = 180;
   return (
     <div className="relative mr-auto ml-auto ring-wrapper" data-aos="zoom-in">
       {/* Outer Ring */}
@@ -78,8 +78,8 @@ export default function ProfileImage() {
         className="rounded-full border-5 border-slate-300"
         src="/images/profile_2.jpg"
         alt="Profile Image"
-        width={180}
-        height={180}
+        width={radius}
+        height={radius}
         priority
       />
     </div>
