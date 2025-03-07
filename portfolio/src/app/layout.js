@@ -28,7 +28,7 @@ export default function RootLayout({ children }) {
           href="https://unpkg.com/aos@2.3.1/dist/aos.css"
           rel="stylesheet"
         />
-        <link rel='icon' href='/icons/favicon.png' type="image/png"/>
+        <link rel='icon' href='/icons/favicon.jpg' type="image/jpg"/>
         {/* <script
           type="text/javascript"
           id="MathJax-script"
