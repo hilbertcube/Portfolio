@@ -6,8 +6,6 @@ import { useState } from "react";
 import Footer from "../../components/NavFooter";
 
 
-
-//
 export default function Home() {
   const [publications] = useState([
     {
@@ -46,8 +44,6 @@ export default function Home() {
         <Footer/>
       </div>
 
-
-      <footer className="bg-black text-center text-white font-Jura pb-6">Made with Next, Tailwind, and AOS  •  <a target="_blank" className="hover:text-blue-300" href="https://github.com/Continuum3416/Portfolio">Github</a></footer>
     </div>
 
   );

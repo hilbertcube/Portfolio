@@ -80,10 +80,10 @@ export default function Home() {
           </p>
 
           <p className="text-center font-Jura mr-auto ml-auto" data-aos="zoom-in">
-            <span className="font-bold">Languages:</span> C/C++, Python, TeX, Javascript, HTML5, CSS3, Assembly [x86], Java, Matlab
+            <span className="font-bold">Languages:</span> C, C++, Python, Cuda, TeX, Rust, Javascript, Assembly [x86], Java
           </p>
 
-          <p className="text-center font-Jura mr-auto ml-auto w-full md:w-4/5" data-aos="zoom-in">
+          <p className="text-center font-Jura mr-auto ml-auto w-full md:w-3/4" data-aos="zoom-in">
             My work so far consists mostly of image-processing, collision-detection with drones, and physics simulation. As mentioned, I also do web-development, either in vanilla JS with CSS3, or Next.js with Tailwind CSS (I was threatened by my friend to use Tailwind).
           </p>
 

@@ -1,8 +1,13 @@
 'use client';
 import { usePathname } from 'next/navigation'; // Updated import
 import Image from 'next/image';
-import { TfiAlignCenter } from 'react-icons/tfi';
-import { TfiHome } from "react-icons/tfi";
+
+// Icons
+import { FiFileText } from "react-icons/fi";
+import { FiHome } from "react-icons/fi";
+import { TfiLayoutGrid3 } from "react-icons/tfi";
+import { FiCpu } from "react-icons/fi";
+import { FiEye } from "react-icons/fi";
 
 
 const Footer = () => {
@@ -17,7 +22,7 @@ const Footer = () => {
           href={isHomePage ? "/publications" : "/"}
           rel="noopener noreferrer"
         >
-          {isHomePage ? <TfiAlignCenter /> : <TfiHome />}
+          {isHomePage ? <FiEye /> : <FiHome />}
           {isHomePage ? 'Publications' : 'Home'}
         </a>
         <a
@@ -26,27 +31,15 @@ const Footer = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          View my Resume
+          <FiFileText />
+          View my Résumé
         </a>
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4 overscroll-none"
           href="/#projects"
           rel="noopener noreferrer"
         >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
+          <FiCpu />
           View my Projects
         </a>
         <a
@@ -55,13 +48,7 @@ const Footer = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
+          <TfiLayoutGrid3 />
           View my Blogs
         </a>
       </footer>
