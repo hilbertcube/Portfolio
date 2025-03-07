@@ -3,7 +3,7 @@ import { usePathname } from 'next/navigation'; // Updated import
 
 // Icons
 import { FiFileText } from "react-icons/fi";
-import { FiHome } from "react-icons/fi";
+import { ImHome } from "react-icons/im";
 import { TfiLayoutGrid3 } from "react-icons/tfi";
 import { FiCpu } from "react-icons/fi";
 import { FiEye } from "react-icons/fi";
@@ -21,7 +21,7 @@ const Footer = () => {
         href="/"
         rel="noopener noreferrer"
       >
-        <FiHome />
+        <ImHome />
         <span className="nav-text">Home</span>
       </a>
       <a
