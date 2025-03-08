@@ -15,7 +15,7 @@ const Footer = () => {
   // const isPublicationsPage = pathname === '/publications';
 
   return (
-    <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center border-t-2 border-blue-700 pt-2">
+    <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center border-t-2 border-blue-700 pt-2 font-[family-name:var(--font-geist-sans)]">
       <a
         className={`nav-link ${pathname === '/' ? 'text-blue-700 font-bold' : 'text-black'}`}
         href="/"
@@ -44,7 +44,6 @@ const Footer = () => {
       <a
         className="nav-link"
         href="./Resume.pdf"
-        target="_blank"
         rel="noopener noreferrer"
       >
         <FiFileText />

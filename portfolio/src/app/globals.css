@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap');
+@import url("css/main_page.css");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -51,15 +52,3 @@
   }
 }
 
-@layer components {
-  .nav-link {
-    @apply flex flex-col md:flex-row items-center gap-2 
-           hover:underline hover:underline-offset-4 overscroll-none;
-  }
-  .nav-text{
-    @apply text-xs md:text-base;
-  }
-  .social-media {
-    @apply hover:bg-gray-400 p-2 rounded-full transition duration-300 ease-in-out;
-  }
-}

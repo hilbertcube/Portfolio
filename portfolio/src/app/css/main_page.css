@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+/* Main page */
+    .front-page-main {
+        @apply flex flex-col gap-3 sm:row-start-2 items-start;
+    }
+    .nav-link {
+        @apply flex flex-col md:flex-row items-center gap-2 
+                hover:underline hover:underline-offset-4 overscroll-none;
+    }
+    .nav-text{
+        @apply text-xs md:text-base;
+    }
+
+    .social-media {
+        @apply flex items-center justify-center w-9 h-9 sm:w-12 sm:h-12 rounded-full 
+            bg-gray-300 transition-all duration-300 ease-in-out hover:bg-gray-400;
+    }
+
+    .social-media i {
+        @apply text-black transition-colors duration-300 ease-in-out text-xl sm:text-2xl;
+    }
+
+    .profile-container {
+        @apply flex flex-col items-center gap-2;
+    }
+
+    .profile-name {
+        @apply text-4xl font-bold text-center font-[var(--font-primary)] font-Jura;
+    }
+
+    .profile-title {
+        @apply text-xl text-blue-700 text-center font-[var(--font-primary)] font-Jura;
+    }
+
+    .profile-description,
+    .profile-skills {
+        @apply text-[15px] text-center font-[var(--font-primary)] w-full md:w-3/4 font-Jura;
+    }
+
+    .work-summary {
+        @apply text-center font-Jura mr-auto ml-auto w-full md:w-3/4 text-[15px];
+    }
+
+    .social-links {
+        @apply flex justify-center space-x-5 flex-wrap mr-auto ml-auto;
+    }
+
+    .social-icon {
+        @apply hover:bg-gray-400 p-3 rounded-full transition duration-300 ease-in-out bg-gray-300;
+    }
+
+    .footer {
+        @apply w-full text-center mt-6;
+    }
+
+    .copyright {
+        @apply bg-black text-center text-white font-Jura pb-3 text-xs;
+    }
+}
