@@ -40,9 +40,10 @@ const Footer = () => {
         {isHomePage ? <FiEye /> : <FiHome />}
         <span className="nav-text">{isHomePage ? 'Publications' : 'Home'}</span>
       </a> */}
+      {/* https://drive.google.com/drive/folders/1yW-UBJ5ur0TDWlJ5QnCJdM8DC0jsSjTw?usp=sharing */}
       <a
         className="nav-link"
-        href="https://drive.google.com/drive/folders/1yW-UBJ5ur0TDWlJ5QnCJdM8DC0jsSjTw?usp=sharing"
+        href="./Resume.pdf"
         target="_blank"
         rel="noopener noreferrer"
       >
