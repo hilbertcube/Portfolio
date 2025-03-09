@@ -25,8 +25,8 @@ const exp = [
   },
   {
     organization: 'Mt. SAC' ,
-    job_title: 'Math, Physics, and C.S. Tutor',
-    description: 'I tutor various subjects, ranging from math and physics to computer science at Mt. San Antonio College. I work at two positions: embedded tutor, where I conducted after-class tutoring sessions and assisted professors in organizing classwork, and drop-in tutor, where I provided one-on-one tutoring sessions when the students came to me. I also created and distributed comprehensive study notes to support students in understanding math concepts.',
+    job_title: 'Math, Physics, and Computer Science Tutor',
+    description: 'I tutor various subjects, ranging from math and engineering physics to computer science at Mt. San Antonio College. I work at two positions: embedded tutor, where I conducted after-class tutoring sessions and assisted professors in organizing classwork, and drop-in tutor, where I provided one-on-one tutoring sessions when the students came to me. I also created and distributed comprehensive study notes to support students in understanding math concepts.',
     time_frame: 'Feb. 2024 - Present',
     languages_and_tools: ['Differential Equations', 'Linear Algebra', 'C++', 'Java', 'Calculus', 'Classical Mechanics'],
   },
@@ -35,8 +35,8 @@ const exp = [
 
 const projects = [
   {
-    organization: 'SLAM Point Cloud Generator and Command Line Wrapper' ,
-    job_title: 'Object Detection',
+    organization: 'SLAM Point Cloud Generation and YOLO Command Line Wrapper' ,
+    job_title: 'Object Detection and Visual SLAM',
     description: 'Point cloud generation and plotting for ORB-SLAM3. This project is a combination of two repositories, including a command-line wrapper and a point cloud generator. It utilizes two versions of YOLO: version 4 for C++ and version 11 for Python.',
     time_frame: 'Feb. 2025 - Present',
     languages_and_tools: ['C','C++', 'Python', 'ORB SLAM3', 'YOLOv4', 'YOLOv11', 'Linux'],
@@ -59,8 +59,8 @@ const projects = [
     link: 'https://github.com/Continuum3416/Spatial-Grid-Partitioning'
   },
   {
-    organization: 'SMACS - Webs-for-Clubs' ,
-    job_title: 'Web Development',
+    organization: 'Webs-for-Clubs' ,
+    job_title: 'Web Development, College Project',
     description: 'Collaborated with a team of fellow developers to create static and dynamic, functional, and easy‑to‑maintain websites for various clubs at local college. Utilized Node.js, Next.js, and Tailwind CSS to build fully functional and informative websites, aiming at providing information and updating announcements.',
     time_frame: 'Sep. 2024 - Present',
     languages_and_tools: ['Javascript', 'HTML', 'Nodejs' , 'Nextjs' , 'Tailwind CSS', 'AOS'],
@@ -99,10 +99,10 @@ export default function Home() {
               A computer engineering student with experience in embedded systems, scientific programming, computer vision, and web-dev.
             </p>
             <p className="profile-skills" data-aos="zoom-in" data-aos-once="true">
-              <span className="font-bold">Languages:</span> C, C++, Python, CUDA, Rust, TeX, JavaScript, Assembly [x86], Java
+              <span className="font-bold">Languages:</span> C, C++, Python, CUDA, Rust, TeX, JavaScript, Assembly [Intel x86], Java
             </p>
             <p className="profile-skills" data-aos="zoom-in" data-aos-once="true">
-              <span className="font-bold">Tools:</span> CMake, Makefiles, Boost, GDB, MSVC, vcpkg, VMWare, Conda, Docker, Linux, WSL2, CUDA Toolkit, OpenCV
+              <span className="font-bold">Tools:</span> CMake, Makefiles, Boost, msys2, GDB, MSVC, vcpkg, VMWare, Conda, Docker, Linux, WSL2, CUDA Toolkit, OpenCV
             </p>
             <p className="work-summary" data-aos="zoom-in" data-aos-once="true">
               My work mainly involves graphics programming, image processing, drone collision detection, and physics simulation. I also do web development (sometimes), mainly using vanilla JS with CSS3 or Next.js with Tailwind CSS. 
