@@ -130,7 +130,7 @@ export default function Home() {
             </abbr>
             
             <abbr title="Telegram" className="no-underline">
-              <a href="https://t.me/doodle157" target="_blank" className="social-media" data-aos="fade-in" data-aos-delay="800" data-aos-easing="ease-in-out" data-aos-once="true">
+              <a href="https://t.me/doodle_04" target="_blank" className="social-media" data-aos="fade-in" data-aos-delay="800" data-aos-easing="ease-in-out" data-aos-once="true">
                 <i className="fa-brands fa-telegram"></i>
               </a>
             </abbr>
