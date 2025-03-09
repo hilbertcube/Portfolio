@@ -105,30 +105,48 @@ export default function Home() {
               <span className="font-bold">Tools:</span> CMake, Makefiles, Boost, GDB, MSVC, vcpkg, VMWare, Conda, Docker, Linux, WSL2, CUDA Toolkit, OpenCV
             </p>
             <p className="work-summary" data-aos="zoom-in" data-aos-once="true">
-              My work mainly involves graphics programming, image processing, drone collision detection, and physics simulation. I also do web development (sometimes), mainly using vanilla JS with CSS3 or Next.js with Tailwind CSS.
+              My work mainly involves graphics programming, image processing, drone collision detection, and physics simulation. I also do web development (sometimes), mainly using vanilla JS with CSS3 or Next.js with Tailwind CSS. 
             </p>
           </div>
 
           <div className="social-links">
-            <a href="mailto:ledongduu@gmail.com" className="social-media" data-aos="fade-in" data-aos-delay="200" data-aos-easing="ease-in-out" data-aos-once="true">
-              <i className="fas fa-envelope"></i>
-            </a>
+            <abbr title="Email" className="no-underline">
+              <a href="mailto:ledongduu@gmail.com" className="social-media" data-aos="fade-in" data-aos-delay="200" data-aos-easing="ease-in-out" data-aos-once="true">
+                <i className="fas fa-envelope"></i>
+              </a>
+            </abbr>
+            
+            <abbr title="Github" className="no-underline">
+              <a href="https://github.com/Continuum3416" target="_blank" className="social-media" data-aos="fade-in" data-aos-delay="400" data-aos-easing="ease-in-out" data-aos-once="true">
+                <i className="fa-brands fa-github"></i>
+              </a>
+            </abbr>
 
-            <a href="https://github.com/Continuum3416" target="_blank" className="social-media" data-aos="fade-in" data-aos-delay="400" data-aos-easing="ease-in-out" data-aos-once="true">
-              <i className="fa-brands fa-github"></i>
-            </a>
 
-            <a href="https://www.linkedin.com/in/don-d-le/" target="_blank" className="social-media" data-aos="fade-in" data-aos-delay="600" data-aos-easing="ease-in-out" data-aos-once="true">
-              <i className="fa-brands fa-linkedin"></i>
-            </a>
+            <abbr title="Linkedin" className="no-underline">
+              <a href="https://www.linkedin.com/in/don-d-le/" target="_blank" className="social-media" data-aos="fade-in" data-aos-delay="600" data-aos-easing="ease-in-out" data-aos-once="true">
+                <i className="fa-brands fa-linkedin"></i>
+              </a>
+            </abbr>
+            
+            <abbr title="Telegram" className="no-underline">
+              <a href="https://t.me/doodle157" target="_blank" className="social-media" data-aos="fade-in" data-aos-delay="800" data-aos-easing="ease-in-out" data-aos-once="true">
+                <i className="fa-brands fa-telegram"></i>
+              </a>
+            </abbr>
+            
+            {/* <abbr title="Whatsapp" className="no-underline">
+              <a href="https://api.whatsapp.com/send?phone=18402098002&text=Hello%2C%20how%20are%20you%20doing." target="_blank" className="social-media" data-aos="fade-in" data-aos-delay="800" data-aos-easing="ease-in-out" data-aos-once="true">
+                <i className="fa-brands fa-whatsapp"></i>
+              </a>
+            </abbr> */}
 
-            <a href="https://t.me/doodle157" target="_blank" className="social-media" data-aos="fade-in" data-aos-delay="800" data-aos-easing="ease-in-out" data-aos-once="true">
-              <i className="fa-brands fa-telegram"></i>
-            </a>
+            <abbr title="Instagram" className="no-underline">
+              <a href="https://www.instagram.com/don.d.le/" target="_blank" className="social-media" data-aos="fade-in" data-aos-delay="1000" data-aos-easing="ease-in-out" data-aos-once="true">
+                <i className="fa-brands fa-instagram"></i>
+              </a>
+            </abbr>
 
-            <a href="https://www.instagram.com/don.d.le/" target="_blank" className="social-media" data-aos="fade-in" data-aos-delay="1000" data-aos-easing="ease-in-out" data-aos-once="true">
-              <i className="fa-brands fa-instagram"></i>
-            </a>  
           </div>
 
         </main>

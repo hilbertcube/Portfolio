@@ -46,7 +46,7 @@
     }
 
     .social-links {
-        @apply flex justify-center space-x-5 flex-wrap mr-auto ml-auto;
+        @apply flex justify-center space-x-3 sm:space-x-5 flex-wrap mr-auto ml-auto;
     }
 
     .social-icon {

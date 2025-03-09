@@ -3,7 +3,7 @@ import { FaRegFilePdf } from "react-icons/fa";
 export default function PublicationCard({ publication, index }) {
   return (
     <li className="flex flex-col sm:flex-row items-start gap-4 w-full">
-      <img src={publication.image} alt="Publication" className="border border-black w-3/5 sm:w-3/12 object-cover rounded mx-auto" />
+      <img src={publication.image} alt="Publication" className="border border-black w-3/5 sm:w-3/12 object-cover mx-auto" />
       <div className="w-full flex items-start sm:w-9/12">
       <span className="text-gray-600 font-mono mr-2">[{index + 1}]</span>
         <div>
