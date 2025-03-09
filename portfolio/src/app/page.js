@@ -12,9 +12,9 @@ const exp = [
   {
     organization: 'California Polytechnic State University, Pomona' ,
     job_title: 'Collision Avoidance and Detection Research Assistant',
-    description: 'Collaborated with a team of electrical, computer, aerospace, and mechanical engineers to implement collision avoidance and detection software on drones. Utilized Gazebo, Ubuntu, and ORB SLAM3 to compute drone\'s stereo camera trajectory and a sparse 3D reconstruction. Optimized object detection by integrating ORB SLAM3with YOLOv4 in C++, improving runtime performance by 50% over the original Python version and achieving a detection confidence rate of 90%.',
+    description: 'Collaborated with a team of electrical, computer, aerospace, and mechanical engineers to implement collision avoidance and detection software on drones. Utilized Gazebo, Ubuntu, and ORB SLAM3 to compute drone\'s stereo camera trajectory and a sparse 3D reconstruction. Optimized object detection by integrating ORB SLAM3 with YOLOv4 in C++, improving runtime performance by 50% over the original Python version and achieving a detection confidence rate of 90%.',
     time_frame: 'Sep. 2024 - Present',
-    languages_and_tools: ['C++', 'Python', 'ORB_SLAM_3', 'Ubuntu', 'Gazebo', 'PX4', 'CMake', 'YOLOv4'],
+    languages_and_tools: ['C++', 'Python', 'ORB_SLAM_3', 'Ubuntu', 'Gazebo', 'PX4', 'CMake', 'YOLOv4', 'PyTorch'],
   },
   {
     organization: 'California Polytechnic State University, Pomona' ,
@@ -78,7 +78,7 @@ const projects = [
     job_title: 'Scientific Programming',
     description: 'Developed a Python script to generate an unlimited number of Chladni patterns on square and circular domains. The patterns are obtained by solving for eigenvalues of the two-dimensional wave equation through separation of variables  and elimination of the Bessel functions of the 2nd kind.',
     time_frame: 'Feb. 2024 - May. 2024',
-    languages_and_tools: ['Python', 'PDE', 'C++', 'Numpy'],
+    languages_and_tools: ['Python', 'PDE', 'Numpy', 'Scipy', 'Conda', 'Itertools'],
     link: 'https://github.com/Continuum3416/Chladni-Patterns-Generator'
   },
 ];
@@ -146,7 +146,6 @@ export default function Home() {
                 <i className="fa-brands fa-instagram"></i>
               </a>
             </abbr>
-
           </div>
 
         </main>
