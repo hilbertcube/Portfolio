@@ -43,7 +43,7 @@ const Footer = () => {
       {/* https://drive.google.com/drive/folders/1yW-UBJ5ur0TDWlJ5QnCJdM8DC0jsSjTw?usp=sharing */}
       <a
         className="nav-link"
-        href="./Resume.pdf"
+        href="/#experience"
         rel="noopener noreferrer"
       >
         <FiFileText />

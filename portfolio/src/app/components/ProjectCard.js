@@ -1,8 +1,8 @@
 import Image from 'next/image';
 
-export default function EventCard({ info }) {
+export default function ProjectCard({info}) {
   return (
-    <a className="group hover:bg-zinc-900 transition-all duration-200 cursor-pointer font-Jura flex flex-col md:flex-row bg-inherit shadow-md rounded-lg p-4 mb-4" data-aos="fade-up" href={info.link} target="_blank" rel="noopener noreferrer">
+    <a className="group w-full max-w-3xl mx-auto hover:bg-zinc-900 transition-all duration-200 cursor-pointer font-Jura flex flex-col md:flex-row bg-inherit shadow-md rounded-lg p-4 mb-4 text-[15px] md:text-base" data-aos="fade-up" href={info.link} target="_blank" rel="noopener noreferrer">
       {/* Left Column: Time Frame */}
       <div className="md:w-1/4 md:pr-3 flex justify-center">
         <span className="text-gray-400 text-base font-semibold pb-2 mb-2 border-b-2 md:border-b-0">{info.time_frame}</span>
@@ -29,5 +29,6 @@ export default function EventCard({ info }) {
         </div>
       </div>
     </a>
+
   );
 }
