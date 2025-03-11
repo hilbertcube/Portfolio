@@ -15,8 +15,8 @@ const geistMono = localFont({
 });
 
 export const metadata = {
-  title: "Don Le",
-  description: "My portfolio website made with next",
+  title: "Don D. Le",
+  description: "Portfolio website built with Next",
 };
 
 export default function RootLayout({ children }) {
@@ -24,17 +24,8 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         {/* Add AOS CSS */}
-        <link
-          href="https://unpkg.com/aos@2.3.1/dist/aos.css"
-          rel="stylesheet"
-        />
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
         <link rel='icon' href='/icons/favicon.jpg' type="image/jpg"/>
-        {/* <script
-          type="text/javascript"
-          id="MathJax-script"
-          async
-          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
-        /> */}
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}

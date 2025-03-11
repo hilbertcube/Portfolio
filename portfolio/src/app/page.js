@@ -122,7 +122,6 @@ export default function Home() {
               </a>
             </abbr>
 
-
             <abbr title="Linkedin" className="no-underline">
               <a href="https://www.linkedin.com/in/don-d-le/" target="_blank" className="social-media" data-aos="fade-in" data-aos-delay="600" data-aos-easing="ease-in-out" data-aos-once="true">
                 <i className="fa-brands fa-linkedin"></i>
