@@ -20,6 +20,7 @@ const Footer = () => {
       <Link
         href="/"
         className={`nav-link ${pathname === "/" ? "text-blue-700 font-bold" : "text-black"}`}
+        rel="noopener noreferrer"
       >
         <ImHome />
         <span className="nav-text">Home</span>
@@ -27,6 +28,7 @@ const Footer = () => {
       <Link
         href="/publications"
         className={`nav-link ${pathname === "/publications" ? "text-blue-700 font-bold" : "text-black"}`}
+        rel="noopener noreferrer"
       >
         <FiEye />
         <span className="nav-text">Publications</span>
