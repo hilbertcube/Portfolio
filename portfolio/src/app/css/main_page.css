@@ -30,7 +30,7 @@
     }
 
     .footer-nav {
-        @apply row-start-3 flex gap-3 sm:gap-5 flex-wrap items-center justify-center border-t-2 border-blue-700 pt-2 font-[family-name:var(--font-geist-sans)];
+        @apply row-start-3 flex gap-4 sm:gap-5 flex-wrap items-center justify-center border-t-2 border-blue-700 pt-2 font-[family-name:var(--font-geist-sans)];
         /* background-color: red; */
     }
 

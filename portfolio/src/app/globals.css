@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');
 @import url("css/main_page.css");
 @import url("css/publication.css");
+@import url("css/bot.css");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
