@@ -13,26 +13,31 @@ export default function ProfileImage() {
     // Check if we are on the client (browser)
     if (typeof window !== "undefined") {
       setIsMobile(window.innerWidth <= 768); // Set isMobile based on window width
-
-      const rotationMultiplier = isMobile ? 5 : 1;  // Increase the multiplier for faster rotation on mobile
+      
+      // 5 is too fast, can cause errors sometimes, if
+      // work in mobile environment on desktop
+      const rotationMultiplier = isMobile ? 4 : 1;  // Increase the multiplier for faster rotation on mobile
 
       const handleMouseMove = (e) => {
-        const rect = document.querySelector(".ring-wrapper").getBoundingClientRect();
-        const x = e.clientX - (rect.left + rect.width / 2);
-        const y = e.clientY - (rect.top + rect.height / 2);
-        let angle = Math.atan2(y, x) * (180 / Math.PI);
-        if (angle < 0) {
-          angle += 360;
-        }
-        let deltaAngle = angle - previousAngle;
-        if (deltaAngle > 180) {
-          deltaAngle -= 360;
-        } else if (deltaAngle < -180) {
-          deltaAngle += 360;
-        }
+        const ringWrapper = document.querySelector(".ring-wrapper");
+        if (ringWrapper) { // Check if the element exists
+          const rect = ringWrapper.getBoundingClientRect();
+          const x = e.clientX - (rect.left + rect.width / 2);
+          const y = e.clientY - (rect.top + rect.height / 2);
+          let angle = Math.atan2(y, x) * (180 / Math.PI);
+          if (angle < 0) {
+            angle += 360;
+          }
+          let deltaAngle = angle - previousAngle;
+          if (deltaAngle > 180) {
+            deltaAngle -= 360;
+          } else if (deltaAngle < -180) {
+            deltaAngle += 360;
+          }
 
-        previousAngle = angle;
-        setRotation((prevRotation) => prevRotation + deltaAngle * rotationMultiplier);
+          previousAngle = angle;
+          setRotation((prevRotation) => prevRotation + deltaAngle * rotationMultiplier);
+        }
       };
 
       const handleTouchMove = (e) => {

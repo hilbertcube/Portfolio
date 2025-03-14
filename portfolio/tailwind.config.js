@@ -13,6 +13,7 @@ module.exports = {
       },
       fontFamily: {
         'Jura': ['Jura', 'sans-serif'],
+        'Cedarville': ['Cedarville Cursive',' cursive'],
       },
       screens: {
         'ms': '900px',

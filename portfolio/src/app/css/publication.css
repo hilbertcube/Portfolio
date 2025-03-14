@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 @layer components {
-    .paper-button {
-        @apply cursor-pointer inline-flex items-center gap-1 px-3 py-2 rounded border border-black 
-        hover:bg-gray-400 bg-gray-300 text-[15px] hover:text-slate-100;
-        margin-right: 0.5rem;
-    }
+  .paper-button {
+    @apply cursor-pointer inline-flex items-center gap-1 px-3 py-2 rounded border border-black 
+    hover:bg-gray-400 bg-gray-300 text-[15px] hover:text-slate-100;
+    margin-right: 0.5rem;
+  }
 }

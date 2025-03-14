@@ -8,6 +8,7 @@ import { ImHome } from "react-icons/im";
 import { TfiLayoutGrid3 } from "react-icons/tfi";
 import { FiCpu } from "react-icons/fi";
 import { FiEye } from "react-icons/fi";
+import { FiBox } from "react-icons/fi";
 
 
 const Footer = () => {
@@ -67,6 +68,14 @@ const Footer = () => {
         <TfiLayoutGrid3 />
         <span className="nav-text">Blogs</span>
       </a>
+      <Link
+        className="nav-link"
+        href="/poetry-bot"
+        rel="noopener noreferrer"
+      >
+        <FiBox/>
+        <span className="nav-text">????</span>
+      </Link>
     </footer>
   );
 };

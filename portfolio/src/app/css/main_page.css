@@ -30,7 +30,7 @@
     }
 
     .footer-nav {
-        @apply row-start-3 flex gap-6 flex-wrap items-center justify-center border-t-2 border-blue-700 pt-2 font-[family-name:var(--font-geist-sans)];
+        @apply row-start-3 flex gap-3 sm:gap-5 flex-wrap items-center justify-center border-t-2 border-blue-700 pt-2 font-[family-name:var(--font-geist-sans)];
         /* background-color: red; */
     }
 
@@ -69,5 +69,13 @@
 
     .copyright {
         @apply bg-black text-center text-white font-Jura pb-3 text-xs;
+    }
+
+    .grid-change-button {
+      @apply hidden ms:flex items-center justify-center p-2 w-fit h-fit text-white rounded-lg mr-3;
+    }
+
+    .grid-change-button-icon {
+      @apply hover:text-blue-700;
     }
 }

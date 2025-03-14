@@ -1,12 +1,19 @@
-// "use client"; 
+"use client"; 
+import { useState } from 'react';
 // import { useEffect } from "react";
+import AOS from "aos";
+
 import Image from "next/image";
 import ProfileImage from './components/ProfileImage';
 import ExperienceCard from './components/ExperienceCard';
 import ProjectCard from './components/ProjectCard';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import Footer from "./components/NavFooter";
+
+// Icons
 import { FaRegFilePdf } from "react-icons/fa";
+import { FiGrid } from "react-icons/fi";
+import { FiSquare } from "react-icons/fi";
 
 const exp = [
   {
@@ -85,6 +92,21 @@ const projects = [
 
 
 export default function Home() {
+  const [isDoubleColumn, setIsDoubleColumn] = useState(false);
+  
+  const toggleColumns = () => {
+    const newState = !isDoubleColumn;
+    setIsDoubleColumn(newState);
+
+    const projectCards = document.querySelectorAll(".project-card");
+    projectCards.forEach((card) => {
+      card.classList.remove("aos-animate");
+      setTimeout(() => {
+        AOS.refreshHard();
+      }, 10);
+    });
+  };
+  
   return (
     // If get rid of experience, get rid of this CSS
     <div className="grid grid-rows-[1fr_auto] min-h-screen">
@@ -171,9 +193,33 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-1 ms:grid-cols-1 gap-4">
             {projects.map((job, index) => (
-              <ProjectCard key={index} info={job} />
-            ))}
+                <div key={index} className="w-full" data-aos="fade-up">
+                  <ProjectCard info={job} />
+                </div>
+              ))}
           </div>
+
+          {/* <div id="projects" className="flex items-center justify-center gap-4 font-Jura text-5xl mt-32 mb-14 w-full">
+            <h2 className="flex items-center">
+              <button 
+                onClick={toggleColumns} 
+                className="grid-change-button"
+              >
+                {isDoubleColumn ? <FiSquare className = "grid-change-button-icon" size={30} /> : 
+                <FiGrid className = "grid-change-button-icon" size={30} />}
+              </button>
+              Projects
+            </h2>
+          </div>
+
+          <div className={`grid gap-4 auto-rows-auto ${isDoubleColumn ? "ms:grid-cols-2" : "ms:grid-cols-1"} grid-cols-1`}>
+            {projects.map((job, index) => (
+              <div key={index} className="w-full project-card" data-aos="fade-up">
+                <ProjectCard info={job} />
+              </div>
+            ))}
+          </div> */}
+
         </div>
       </div>
       

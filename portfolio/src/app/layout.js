@@ -1,5 +1,6 @@
 import localFont from "next/font/local";
 import AOSInitializer from "./dependencies/AOSInitializer";
+import Link from "next/link";
 import "./globals.css";
 
 
@@ -33,7 +34,6 @@ export default function RootLayout({ children }) {
       >
         <AOSInitializer />
         {children}
-        
       </body>
     </html>
   );

@@ -34,10 +34,9 @@ export default function Home() {
               ))}
             </ul>
           </div>
-
         </div>
       </main>
-      <Footer />
+      <Footer/>
     </div>
   );
 }
