@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import { GoDependabot } from "react-icons/go";
-import Footer from "../components/NavFooter";
+import { ImHome } from "react-icons/im";
 
 const topics = ["Dying Nature", "Humans Society", "Nihilism", "God", "The Bible", "Love", "Existentialism", "Time", "The Universe", "Memory", "Death", "Hope", "Philosophy", "Technology", "Freedom", "Justice", "Chaos", "Humanity", "Art", "Music", "Emotion", "Bad Dreams", "Brutal History", "Wisdom", "Loneliness", "Suffering", "Creation", "Spirituality", "Peace", "Conflict", "War", "The great depression"];
 
@@ -26,6 +26,7 @@ export default function Home() {
     if (isTyping) return; // Prevent multiple clicks while typing
     
     setIsTyping(true);
+    setDisplayedText(opening); 
 
     const newTopic = getRandomContent(topics);
     //console.log(newTopic);
@@ -118,7 +119,7 @@ export default function Home() {
   // grid grid-rows-[auto_1fr] justify-items-center min-h-screen bg-black p-4 sm:p-10
 
   return (
-    <div className="min-h-screen bg-black p-4 sm:p-10 justify-items-center">
+    <div className="min-h-screen bg-[url(/images/bg/bg.svg)] bg-no-repeat bg-cover p-4 sm:p-10 justify-items-center">
       <main className="flex flex-col items-center justify-start">
         <div className="flex items-center mb-4">
           <GoDependabot size={30} className="text-white"/>
@@ -131,7 +132,7 @@ export default function Home() {
         </div>
         
         <div className="mt-4 inline-flex flex-row gap-2">
-          <a href="./" className = "font-Jura rounded hover:bg-blue-600 p-2 bg-blue-700 text-white">Go Back</a>
+          <a href="./" className = "font-Jura rounded hover:bg-blue-600 p-2 bg-blue-700 text-white">Home</a>
           <button className = {`font-Jura rounded hover:bg-blue-600 p-2 ${isTyping ? "text-slate-700 bg-blue-900" : "text-white bg-blue-700"}`} onClick={generateText}>Refresh</button>
         </div>
       </main>

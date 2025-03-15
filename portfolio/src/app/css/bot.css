@@ -19,7 +19,7 @@
 
   .chat-box {
     @apply relative z-10 max-w-xl w-full text-center cursor-pointer rounded-[0.5rem] border-[2px] 
-    border-gray-800 text-white p-5 ms:text-base text-[14px] mt-3;
+    border-gray-800 text-white p-5 ms:text-[15px] text-[14px] mt-3;
   }
 
   .chat-box::after {
