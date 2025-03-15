@@ -68,14 +68,14 @@ const Footer = () => {
         <TfiLayoutGrid3 />
         <span className="nav-text">Blogs</span>
       </a>
-      <Link
+      <a
         className="nav-link"
         href="/poetry-bot"
         rel="noopener noreferrer"
       >
         <FiBox/>
         <span className="nav-text">????</span>
-      </Link>
+      </a>
     </footer>
   );
 };
