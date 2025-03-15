@@ -16,6 +16,7 @@ import { FaRegFilePdf } from "react-icons/fa";
 import { FiGrid } from "react-icons/fi";
 import { FiSquare } from "react-icons/fi";
 
+
 const exp = [
   {
     organization: 'California Polytechnic State University, Pomona' ,
@@ -149,6 +150,7 @@ export default function Home() {
             <p className="work-summary" data-aos="zoom-in" data-aos-once="true">
               My work mainly involves graphics programming, image processing, drone collision detection, and physics simulation. I also do web development (sometimes), mainly using vanilla JS with CSS3 or Next.js with Tailwind CSS. 
             </p>
+            
           </div>
 
           <div className="social-links">

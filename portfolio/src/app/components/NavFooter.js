@@ -9,6 +9,7 @@ import { TfiLayoutGrid3 } from "react-icons/tfi";
 import { FiCpu } from "react-icons/fi";
 import { FiEye } from "react-icons/fi";
 import { FiBox } from "react-icons/fi";
+import { GoDependabot } from "react-icons/go";
 
 
 const Footer = () => {

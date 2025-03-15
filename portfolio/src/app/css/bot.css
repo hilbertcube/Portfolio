@@ -15,21 +15,20 @@
   }
 
   .chat-box {
-    @apply relative z-10 max-w-xl w-full text-center cursor-pointer rounded border border-gray-800 text-white p-5 ms:text-base text-[14px] mt-3;
+    @apply relative z-10 max-w-xl w-full text-center cursor-pointer rounded border-[2px] border-gray-800 text-white p-5 ms:text-base text-[14px] mt-3;
   }
 
-  /* .chat-box::after {
+  .chat-box::after {
     content: '';
     position: absolute;
-    left: 0;
-    top: 20%;
+    top: 0;
+    left: 50%;
     width: 0;
     height: 0;
     border: 20px solid transparent;
-    border-right-color: #314158;
-    border-left: 0;
-    border-bottom: 0;
-    margin-top: -10px;
+    border-bottom-color: #314158;
+    border-top: 0;
     margin-left: -20px;
-  } */
+    margin-top: -20px;
+  }
 }

@@ -1,10 +1,10 @@
 'use client'
 
-import '@fortawesome/fontawesome-free/css/all.min.css';
+
 import { useState, useEffect, useRef } from "react";
+import { GoDependabot } from "react-icons/go";
 
 const topics = ["Dying Nature", "Humans Society", "Nihilism", "God", "The Bible", "Love", "Existentialism", "Time", "The Universe", "Memory", "Death", "Hope", "Philosophy", "Technology", "Freedom", "Justice", "Chaos", "Humanity", "Art", "Music", "Emotion", "Bad Dreams", "Brutal History", "Wisdom", "Loneliness", "Suffering", "Creation", "Spirituality", "Peace", "Conflict", "War", "The great depression"];
-
 
 function getRandomContent(array) {
   const randomIndex = Math.floor(Math.random() * array.length);
@@ -29,7 +29,7 @@ export default function Home() {
 
     const newTopic = getRandomContent(topics);
     //console.log(newTopic);
-    const prompt = `Give me a short poem about ${newTopic}, with at least 15 lines. Only generate the poem and its title (enclosed in double star **), and NOTHING else. Show emotions and creativity. Remember the previous poems and try not to use the same words.`;
+    const prompt = `Give me a short poem about ${newTopic} in French, with at least 15 lines. Only generate the poem and its title (enclosed in double star **), and NOTHING else. Show emotions and creativity. Remember the previous poems and try not to use the same words.`;
 
     // Clear any existing interval
     if (typingIntervalRef.current) {
@@ -99,12 +99,19 @@ export default function Home() {
     generateText();
   }, []);
 
+  const today = new Date();
+  const formattedDate = "\n-- " + today.toLocaleDateString() + " --";
+
   return (
     <div>
       <main className="flex min-h-screen flex-col items-center justify-start p-4 sm:p-10 bg-black">
-        <div className="chat-box">
-          <p className="whitespace-pre-wrap font-Jura">{displayedText}</p>
+        <div className="flex items-center mb-4">
+          <GoDependabot size={30} className="text-white"/>
         </div>
+        <div className="chat-box">
+          <p className="whitespace-pre-wrap font-Jura">{displayedText}{!isTyping && formattedDate}</p>
+        </div>
+        
         <div className="mt-4 inline-flex flex-row gap-2">
           <a href="./" className = "font-Jura rounded hover:bg-blue-600 p-2 bg-blue-700 text-white">Go Back</a>
           <button className = {`font-Jura rounded hover:bg-blue-600 p-2 ${isTyping ? "text-slate-700 bg-blue-900" : "text-white bg-blue-700"}`} onClick={generateText}>Refresh</button>
