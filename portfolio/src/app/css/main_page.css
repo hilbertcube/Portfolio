@@ -8,7 +8,7 @@
         @apply flex flex-col gap-3 sm:row-start-2 items-start;
     }
     .nav-link {
-        @apply inline-flex flex-col md:flex-row items-center gap-2 overscroll-none;
+        @apply inline-flex flex-col md:flex-row items-center gap-2 overscroll-none text-black;
     }
     
     @media (min-width: 1200px) { 

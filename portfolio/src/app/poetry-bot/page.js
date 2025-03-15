@@ -1,8 +1,8 @@
 'use client'
 
-
 import { useState, useEffect, useRef } from "react";
 import { GoDependabot } from "react-icons/go";
+import Footer from "../components/NavFooter";
 
 const topics = ["Dying Nature", "Humans Society", "Nihilism", "God", "The Bible", "Love", "Existentialism", "Time", "The Universe", "Memory", "Death", "Hope", "Philosophy", "Technology", "Freedom", "Justice", "Chaos", "Humanity", "Art", "Music", "Emotion", "Bad Dreams", "Brutal History", "Wisdom", "Loneliness", "Suffering", "Creation", "Spirituality", "Peace", "Conflict", "War", "The great depression"];
 
@@ -16,7 +16,7 @@ const prompt2 = "Give me a poem from a poet that is no more than 25 lines. Follo
 // `Give me a short poem about ${newTopic}, with at least 15 lines. Only generate the poem and its title (enclosed in double star **), and NOTHING else.`
 
 export default function Home() {
-  const opening = 'Writing...';
+  const opening = 'Writing a poem...';
   const [output, setOutput] = useState(opening);
   const [displayedText, setDisplayedText] = useState(opening);
   const [isTyping, setIsTyping] = useState(false);
@@ -94,7 +94,7 @@ export default function Home() {
     };
   }, []);
 
-  // Call on load
+  // Call generate on page load
   useEffect(() => {
     generateText();
   }, []);
@@ -102,14 +102,32 @@ export default function Home() {
   const today = new Date();
   const formattedDate = "\n-- " + today.toLocaleDateString() + " --";
 
+  // delay showing date
+  const [showDate, setShowDate] = useState(false);
+
+  useEffect(() => {
+    if (!isTyping) {
+      const timer = setTimeout(() => {
+        setShowDate(true);
+      }, 100); // Delay of 0.5 seconds
+      return () => clearTimeout(timer); // Clean up the timer on component unmount or re-render
+    }
+    setShowDate(false); // Reset if typing
+  }, [isTyping]);
+
+  // grid grid-rows-[auto_1fr] justify-items-center min-h-screen bg-black p-4 sm:p-10
+
   return (
-    <div>
-      <main className="flex min-h-screen flex-col items-center justify-start p-4 sm:p-10 bg-black">
+    <div className="min-h-screen bg-black p-4 sm:p-10 justify-items-center">
+      <main className="flex flex-col items-center justify-start">
         <div className="flex items-center mb-4">
           <GoDependabot size={30} className="text-white"/>
         </div>
         <div className="chat-box">
-          <p className="whitespace-pre-wrap font-Jura">{displayedText}{!isTyping && formattedDate}</p>
+          <p className="whitespace-pre-wrap font-Jura">
+            {displayedText}
+            {!isTyping && showDate && <span className="fade-in">{formattedDate}</span>}
+          </p>
         </div>
         
         <div className="mt-4 inline-flex flex-row gap-2">

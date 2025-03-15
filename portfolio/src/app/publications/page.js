@@ -23,7 +23,7 @@ export default function Home() {
   ]);
 
   return (
-    <div className="grid grid-rows-[auto_1fr] items-start justify-items-center min-h-screen p-4 gap-16 sm:p-10 font-[family-name:var(--font-geist-sans)]">
+    <div className="grid grid-rows-[auto_1fr] justify-items-center min-h-screen p-4 sm:p-10">
       <main className="flex flex-col gap-4 row-start-2 items-center sm:items-start" id="main">
         <div className="p-2 sm:p-4 font-Jura w-full mr-auto ml-auto ms:w-[850px]">
           <h1 className="text-2xl font-bold mb-6">Publications</h1>

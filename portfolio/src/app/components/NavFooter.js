@@ -74,7 +74,7 @@ const Footer = () => {
         href="/poetry-bot"
         rel="noopener noreferrer"
       >
-        <FiBox/>
+        <GoDependabot size={20}/>
         <span className="nav-text">????</span>
       </a>
     </footer>
