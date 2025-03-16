@@ -11,22 +11,31 @@ function getRandomContent(array) {
   return array[randomIndex];
 }
 
-const prompt2 = "Give me a poem from a poet that is no more than 25 lines. Follow this format: title, enclosed in double star **, the poem, the author's name and year at the end. Only follow these instructions, and nothing else.";
 
-// `Give me a short poem about ${newTopic}, with at least 15 lines. Only generate the poem and its title (enclosed in double star **), and NOTHING else.`
+
+function extractNotes(input) {
+  // Regular expression to match notes (A-G with optional 'b' or '#' and a digit)
+  const notePattern = /[A-Ga-g][#b]?\d/g;
+
+  // Extract and return the notes
+  return input.match(notePattern) || [];
+}
+
 
 export default function Home() {
-  const opening = 'Writing a poem...';
+  const opening = 'Hello, I\'m Jaskier. I write poetry.\n';
   const [output, setOutput] = useState(opening);
   const [displayedText, setDisplayedText] = useState(opening);
-  const [isTyping, setIsTyping] = useState(false);
+  const [generatedNotes, setGeneratedNotes] = useState("");
   const typingIntervalRef = useRef(null);
+
+  
   
   const generateText = async () => {
     if (isTyping) return; // Prevent multiple clicks while typing
     
     setIsTyping(true);
-    setDisplayedText(opening); 
+    setDisplayedText('Writing a poem...'); 
 
     const newTopic = getRandomContent(topics);
     //console.log(newTopic);
@@ -96,9 +105,9 @@ export default function Home() {
   }, []);
 
   // Call generate on page load
-  useEffect(() => {
-    generateText();
-  }, []);
+  // useEffect(() => {
+  //   generateText();
+  // }, []);
 
   const today = new Date();
   const formattedDate = "\n-- " + today.toLocaleDateString() + " --";
@@ -124,16 +133,17 @@ export default function Home() {
         <div className="flex items-center mb-4">
           <GoDependabot size={30} className="text-white"/>
         </div>
+        
         <div className="chat-box">
           <p className="whitespace-pre-wrap font-Jura">
-            {displayedText}
+            <span className="fade-in">{displayedText}</span>
             {!isTyping && showDate && <span className="fade-in">{formattedDate}</span>}
           </p>
         </div>
         
         <div className="mt-4 inline-flex flex-row gap-2">
           <a href="./" className = "font-Jura rounded hover:bg-blue-600 p-2 bg-blue-700 text-white">Home</a>
-          <button className = {`font-Jura rounded hover:bg-blue-600 p-2 ${isTyping ? "text-slate-700 bg-blue-900" : "text-white bg-blue-700"}`} onClick={generateText}>Refresh</button>
+          <button className = {`font-Jura rounded hover:bg-blue-600 p-2 ${isTyping ? "text-slate-700 bg-blue-900" : "text-white bg-blue-700"}`} onClick={generateText}>Write</button>
         </div>
       </main>
     </div>

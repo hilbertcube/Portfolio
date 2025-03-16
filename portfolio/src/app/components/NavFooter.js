@@ -71,11 +71,11 @@ const Footer = () => {
       </a>
       <a
         className="nav-link"
-        href="/poetry-bot"
+        href="/jaskier-bot"
         rel="noopener noreferrer"
       >
-        <GoDependabot size={20}/>
-        <span className="nav-text">????</span>
+        <GoDependabot/>
+        <span className="nav-text">Jaskier</span>
       </a>
     </footer>
   );

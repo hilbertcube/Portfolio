@@ -5,6 +5,8 @@ import { useState, useEffect, useRef } from "react";
 
 const topics = ["Nature", "Integral Calculus", "Humans Society", "Nihilism", "God", "The Bible", "Love", "Existentialism", "Time", "The Universe", "Memory", "Death", "Hope", "Philosophy", "Technology", "Freedom", "Justice", "Chaos", "Humanity", "Art", "Music", "Emotion", "Dreams", "History", "Wisdom", "Loneliness", "Suffering", "Creation", "Spirituality", "Peace", "Conflict"];
 
+const prompt2 = "Give me a poem from a poet that is no more than 25 lines. Follow this format: title, enclosed in double star **, the poem, the author's name and year at the end. Only follow these instructions, and nothing else.";
+
 
 function getRandomTopic() {
 const randomIndex = Math.floor(Math.random() * topics.length);
