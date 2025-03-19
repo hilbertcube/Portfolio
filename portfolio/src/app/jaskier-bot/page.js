@@ -5,6 +5,12 @@ import { GoDependabot } from "react-icons/go";
 import { ImHome } from "react-icons/im";
 import InfoWindow from '../components/InfoWindow';
 
+import { FaPenNib } from "react-icons/fa";
+import { IoMusicalNotesSharp } from "react-icons/io5";
+import { PiMusicNotesBold } from "react-icons/pi";
+
+import { FaPlay } from "react-icons/fa6";
+
 const topics = ["Dying Nature", "Humans Society", "Nihilism", "God", "The Bible", "Love", "Existentialism", "Time", "The Universe", "Memory", "Death", "Hope", "Philosophy", "Technology", "Freedom", "Justice", "Chaos", "Humanity", "Art", "Music", "Emotion", "Bad Dreams", "Brutal History", "Wisdom", "Loneliness", "Suffering", "Creation", "Spirituality", "Peace", "Conflict", "War", "The great depression"];
 
 function getRandomContent(array) {
@@ -44,7 +50,7 @@ export default function Home() {
       const newTopic = topics[Math.floor(Math.random() * topics.length)];
       prompt = `Give me a short poem about ${newTopic} in French, with at least 15 lines. Only generate the poem and its title (enclosed in double star **), and NOTHING else.`;
     } else if (type === "music") {
-      prompt = "Generate a song using 80 piano notes using standard notation (e.g., A0, C1), but don't use #. Separated the notes by spaces or line breaks. At least 12 notes per line. Do NOT include any other text. Show some emotion and harmony in your piece of work. Note: there are also some additional notes in the mp3 folder: Ab1 to Ab7, Bb0 to Bb7, Db1 to Db7, Eb1 to Eb7, and finally Gb1 to Gb7. Use these notes as well.";
+      prompt = "Generate a song using 80 piano notes using standard notation (e.g., A0, C1), but don't use #. Separated the notes by spaces or line breaks. At least 12 notes per line. Do NOT include any other text. Show some emotion and harmony in your piece of work. Note: there are also some additional notes in the mp3 folder: Ab1 to Ab7, Bb0 to Bb7, Db1 to Db7, Eb1 to Eb7, and finally Gb1 to Gb7. Use these notes as well. I also noticed you start with the same note every time. Don't do that. Be unique.";
     }
     
     try {
@@ -178,7 +184,7 @@ export default function Home() {
       <a href="./" className = "rounded-full hover:bg-blue-600 p-2 bg-blue-700 fixed top-3 left-3 text-white"><ImHome /></a>
       <InfoWindow 
        title="About Jaskier" 
-       content="I wanted to see what all the hype is about with these LLMs, so I created this simple bot to write poetry and play terrible piano for me." 
+       content="I wanted to see what's up with all the hype about these LLMs, so I created this simple bot to write poetry and play terrible piano for me." 
       />
       <main className="flex flex-col items-center justify-start">
         <div className="flex items-center mb-4">
@@ -192,10 +198,25 @@ export default function Home() {
           </p>
         </div>
         
-        <div className="mt-4 inline-flex flex-row gap-2 font-Jura text-white">
-          <button className = {`rounded hover:bg-violet-600 p-2 ${isTyping || isPlaying? "text-slate-700 bg-violet-900" : "bg-violet-700"}`} onClick={() => generateContent("poetry")}>Write</button>
-          <button className={`rounded hover:bg-green-600 p-2 ${isTyping || isPlaying? "text-slate-700 bg-green-900" : "bg-green-700"}`} onClick={() => generateContent("music")}>Compose</button>
-          <button className={`rounded hover:bg-rose-600 p-2 ${isTyping || isPlaying? "text-slate-700 bg-rose-900" : "bg-rose-800"}`} onClick={playMusic}>Play</button>
+        <div className="mt-4 inline-flex flex-row gap-4 font-Jura text-white">
+          <button 
+            className = {`hover:text-indigo-500 bot-buttons ${isTyping || isPlaying ? "text-slate-700 border-indigo-900" : "border-indigo-600"}`} 
+            onClick={() => generateContent("poetry")}
+          >
+            <FaPenNib />
+          </button>
+          <button 
+            className={`hover:text-green-400 bot-buttons ${isTyping || isPlaying ? "text-slate-700 border-green-900" : "border-green-500"}`} 
+            onClick={() => generateContent("music")}
+          >
+            <PiMusicNotesBold />
+          </button>
+          <button 
+            className={`hover:text-rose-600 bot-buttons ${isTyping || isPlaying ? "text-slate-700 border-rose-900" : "border-rose-800"}`} 
+            onClick={playMusic}
+          >
+            <FaPlay />
+          </button>
         </div>
       </main>
     </div>

@@ -35,7 +35,7 @@ export default function InfoWindow({ title, content }) {
               </button>
             </div>
             <div className="mb-6">
-              <p>{content}</p>
+              <p className='text-[14px]'>{content}</p>
             </div>
           </div>
         </div>
