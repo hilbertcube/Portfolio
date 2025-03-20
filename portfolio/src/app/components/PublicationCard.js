@@ -1,11 +1,17 @@
+import Image from 'next/image'
 import { FaRegFilePdf } from "react-icons/fa";
 import { TfiLayoutGrid3 } from "react-icons/tfi";
 import { FiStar } from "react-icons/fi";
 
 export default function PublicationCard({ publication, index }) {
   return (
-    <li className="flex flex-col sm:flex-row items-start gap-4 w-full">
-      <img src={publication.image} alt="Publication" className="border border-gray-400 w-3/5 sm:w-3/12 object-cover mx-auto" />
+    <li className="flex flex-col-reverse sm:flex-row items-start gap-4 w-full">
+      <img 
+        src ={publication.image} 
+        alt ="Publication"
+        className="border border-gray-400 w-4/5 sm:w-3/12 object-cover mx-auto" 
+      />
+      
       <div className="w-full flex items-start sm:w-9/12">
       <span className="text-gray-600 font-mono mr-2">[{index + 1}]</span>
         <div>

@@ -2,8 +2,8 @@
 import { useState } from 'react';
 // import { useEffect } from "react";
 import AOS from "aos";
+import Link from "next/link";
 
-import Image from "next/image";
 import ProfileImage from './components/ProfileImage';
 import ExperienceCard from './components/ExperienceCard';
 import ProjectCard from './components/ProjectCard';
@@ -13,8 +13,7 @@ import Footer from "./components/NavFooter";
 
 // Icons
 import { FaRegFilePdf } from "react-icons/fa";
-import { FiGrid } from "react-icons/fi";
-import { FiSquare } from "react-icons/fi";
+import { GoDependabot } from "react-icons/go";
 
 
 const exp = [
@@ -195,7 +194,7 @@ export default function Home() {
         <Footer/>
       </div>
 
-      <div className="bg-black text-white items-center justify-items-center p-4 pt-20 pb-20 sm:p-20 font-[family-name:var(--font-geist-sans)]">
+      <div className="bg-black text-white items-center justify-items-center p-4 pt-20 pb-28 sm:p-20 font-[family-name:var(--font-geist-sans)] relative">
         <div className="max-w-[1400px]">
           <div id="experience" className="text-center font-Jura mr-auto ml-auto text-5xl mt-5 mb-14">
             Experience
@@ -254,6 +253,14 @@ export default function Home() {
           </div>
 
         </div>
+        
+        <div className='absolute right-6 bottom-2 flex flex-col items-end'>
+          <div className="speech-bubble">!???</div>
+          <a href="/jaskier-bot" className='jaskier-button'>
+            <GoDependabot className='sm:text-[20px] text-[16px]'/>
+          </a>
+        </div>
+
       </div>
       
       <footer className="copyright">Copyright © 2023-{new Date().getFullYear()}  •  All rights reserved</footer>

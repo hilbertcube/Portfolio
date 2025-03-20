@@ -78,4 +78,29 @@
     .grid-change-button-icon {
       @apply hover:text-blue-700;
     }
+
+    .speech-bubble {
+      @apply font-Jura relative no-underline p-2 bg-blue-700 rounded text-[15px];
+      margin-bottom: 25px;
+      margin-right: 20px;
+    }
+    
+    .speech-bubble:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 0;
+      height: 0;
+      border: 20px solid transparent;
+      border-top-color: #1d4ed8;
+      border-bottom: 0;
+      border-right: 0;
+      margin-left: -10px;
+      margin-bottom: -20px;
+    }
+
+    .jaskier-button {
+      @apply flex items-center justify-center text-white rounded-full bg-blue-700 w-8 h-8 sm:w-10 sm:h-10;
+    }
 }
