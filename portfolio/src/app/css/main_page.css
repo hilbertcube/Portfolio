@@ -30,7 +30,7 @@
     }
 
     .footer-nav {
-        @apply row-start-3 flex gap-4 sm:gap-5 flex-wrap items-center justify-center border-t-2 border-blue-700 pt-2 font-[family-name:var(--font-geist-sans)];
+        @apply row-start-3 flex gap-5 sm:gap-5 flex-wrap items-center justify-center border-t-2 border-blue-700 pt-2 font-[family-name:var(--font-geist-sans)];
         /* background-color: red; */
     }
 
@@ -80,27 +80,30 @@
     }
 
     .speech-bubble {
-      @apply font-Jura relative no-underline p-2 bg-blue-700 rounded text-[15px];
-      margin-bottom: 25px;
+      @apply font-Jura relative no-underline px-2 py-[5px] bg-blue-700 rounded text-[15px];
+      margin-bottom: 16px;
       margin-right: 20px;
+      z-index: 100;
     }
     
     .speech-bubble:after {
+      --shift: 17px;
       content: '';
       position: absolute;
       bottom: 0;
       left: 50%;
       width: 0;
       height: 0;
-      border: 20px solid transparent;
+      border: var(--shift) solid transparent;
       border-top-color: #1d4ed8;
       border-bottom: 0;
       border-right: 0;
       margin-left: -10px;
-      margin-bottom: -20px;
+      margin-bottom: -16px;
+      z-index: 10;
     }
 
     .jaskier-button {
-      @apply flex items-center justify-center text-white rounded-full bg-blue-700 w-8 h-8 sm:w-10 sm:h-10;
+      @apply flex items-center justify-center rounded-full bg-blue-700 hover:bg-blue-600 w-8 h-8 sm:w-10 sm:h-10 text-white;
     }
 }

@@ -39,4 +39,8 @@
   .bot-buttons {
     @apply rounded-full flex items-center justify-center w-10 h-10 border-[2px] ;
   }
+
+  .side-button {
+    @apply rounded-full hover:border-green-600 p-2 border-blue-700 border-[2px] fixed left-1 sm:left-3 text-blue-200;
+  }
 }

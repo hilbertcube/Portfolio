@@ -5,40 +5,35 @@ import { GoDependabot } from "react-icons/go";
 import { ImHome } from "react-icons/im";
 import InfoWindow from '../components/InfoWindow';
 
+// Icons
 import { FaPenNib } from "react-icons/fa";
-import { IoMusicalNotesSharp } from "react-icons/io5";
 import { PiMusicNotesBold } from "react-icons/pi";
-
 import { FaPlay } from "react-icons/fa6";
+import { IoLanguage } from "react-icons/io5";
 
 const topics = ["Dying Nature", "Humans Society", "Nihilism", "God", "The Bible", "Love", "Existentialism", "Time", "The Universe", "Memory", "Death", "Hope", "Philosophy", "Technology", "Freedom", "Justice", "Chaos", "Humanity", "Art", "Music", "Emotion", "Bad Dreams", "Brutal History", "Wisdom", "Loneliness", "Suffering", "Creation", "Spirituality", "Peace", "Conflict", "War", "The great depression"];
+const languages = ["English", "French", "Vietnamese", "Japanese", "Russian", "Chinese (simplified)", "German", "Ukrainian"];
+const supported_language = languages.slice(0, -1).join(", ") + ", and " + languages[languages.length - 1] + ".";
 
-function getRandomContent(array) {
+function randomize(array) {
   const randomIndex = Math.floor(Math.random() * array.length);
   return array[randomIndex];
 }
 
-
 function extractNotes(input) {
   // Regular expression to match notes (A-G with optional 'b' or '#' and a digit)
   const notePattern = /[A-Ga-g][#b]?\d/g;
-
-  // Extract and return the notes
   return input.match(notePattern) || [];
 }
-
 
 export default function Home() {
   const opening = 'Hello, I\'m Jaskier.\nI write poetry and play terrible piano.\n';
   const [output, setOutput] = useState(opening);
   const [displayedText, setDisplayedText] = useState(opening);
   const [isPlaying, setIsPlaying] = useState(false); 
-
   const [isTyping, setIsTyping] = useState(false);
   const typingIntervalRef = useRef(null);
 
-  
-  
   const generateContent = async (type) => {
     if (isPlaying || isTyping) return;
     
@@ -47,8 +42,10 @@ export default function Home() {
     
     let prompt = "";
     if (type === "poetry") {
-      const newTopic = topics[Math.floor(Math.random() * topics.length)];
-      prompt = `Give me a short poem about ${newTopic} in French, with at least 15 lines. Only generate the poem and its title (enclosed in double star **), and NOTHING else.`;
+      const newTopic = randomize(topics);
+      const language = (languageMode != "Random") ? languageMode: randomize(languages);
+      console.log("Language:", language);
+      prompt = `Give me a short poem about ${newTopic} in ${language}, with at least 15 lines. Only generate the poem and its title (enclosed in double star **), and NOTHING else.`;
     } else if (type === "music") {
       prompt = "Generate a song using 80 piano notes using standard notation (e.g., A0, C1), but don't use #. Separated the notes by spaces or line breaks. At least 12 notes per line. Do NOT include any other text. Show some emotion and harmony in your piece of work. Note: there are also some additional notes in the mp3 folder: Ab1 to Ab7, Bb0 to Bb7, Db1 to Db7, Eb1 to Eb7, and finally Gb1 to Gb7. Use these notes as well. I also noticed you start with the same note every time. Don't do that. Be unique.";
     }
@@ -156,13 +153,9 @@ export default function Home() {
     };
   }, []);
 
-  // Call generate on page load
-  // useEffect(() => {
-  //   generateText();
-  // }, []);
-
   const today = new Date();
-  const formattedDate = "\n-- " + today.toLocaleDateString() + " --";
+  const formattedDate = `\n-- ${today.toLocaleDateString("en-US", { day: "numeric", month: "long", year: "numeric" })} --`;
+  // const formattedDate = "\n-- " + today.toLocaleDateString() + " --";
 
   // delay showing date
   const [showDate, setShowDate] = useState(false);
@@ -177,14 +170,31 @@ export default function Home() {
     setShowDate(false); // Reset if typing
   }, [isTyping]);
 
-  // grid grid-rows-[auto_1fr] justify-items-center min-h-screen bg-black p-4 sm:p-10
+  const [selectedOption, setSelectedOption] = useState("Random");
+  const [languageMode, setLanguageMode] = useState("Random");
+
+  const handleSelectChange = (option) => {
+    setSelectedOption(option);
+    setLanguageMode(option);
+    //console.log("Selected option:", option);
+  };
 
   return (
     <div className="min-h-screen bg-[url(/images/bg/bg.svg)] bg-no-repeat bg-cover p-10 justify-items-center">
-      <a href="./" className = "rounded-full hover:bg-blue-600 p-2 bg-blue-700 fixed top-3 left-3 text-white"><ImHome /></a>
+      <a href="./" className = "side-button top-[12px] "><ImHome /></a>
       <InfoWindow 
        title="About Jaskier" 
-       content="I wanted to see what's up with all the hype about these LLMs, so I created this simple bot to write poetry and play terrible piano for me." 
+       content="I wanted to see what's up with all the hype about these LLMs, so I created this simple bot to write poetry and play terrible piano for me."
+       position = "top-[54px]"
+      />
+      <InfoWindow 
+       title="Supported Languages" 
+       content={supported_language}
+       position = "top-[96px]"
+       icon = {IoLanguage}
+       showSelect={true}
+       onSelectChange={handleSelectChange}
+       options = {languages}
       />
       <main className="flex flex-col items-center justify-start">
         <div className="flex items-center mb-4">
@@ -206,7 +216,7 @@ export default function Home() {
             <FaPenNib />
           </button>
           <button 
-            className={`hover:text-green-400 bot-buttons ${isTyping || isPlaying ? "text-slate-700 border-green-900" : "border-green-500"}`} 
+            className={`hover:text-green-400 bot-buttons ${isTyping || isPlaying ? "text-slate-700 border-green-900" : "border-green-600"}`} 
             onClick={() => generateContent("music")}
           >
             <PiMusicNotesBold />

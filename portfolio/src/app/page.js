@@ -3,6 +3,7 @@ import { useState } from 'react';
 // import { useEffect } from "react";
 import AOS from "aos";
 import Link from "next/link";
+import Image from 'next/image'
 
 import ProfileImage from './components/ProfileImage';
 import ExperienceCard from './components/ExperienceCard';
@@ -126,6 +127,10 @@ export default function Home() {
       }, 10);
     });
   };
+
+  const totalEmojis = 4;  // Adjust this number based on the number of emoji files you have
+  const randomNumber = Math.floor(Math.random() * totalEmojis) + 1;
+  const randomFile = `${randomNumber}.gif`;
   
   return (
     // If get rid of experience, get rid of this CSS
@@ -255,7 +260,14 @@ export default function Home() {
         </div>
         
         <div className='absolute right-6 bottom-2 flex flex-col items-end'>
-          <div className="speech-bubble">!???</div>
+          <div className="speech-bubble">
+            <Image
+              src={`/emojis/1.gif`}
+              width={30}
+              height={30}
+              alt="Picture of the author"
+            />
+          </div>
           <a href="/jaskier-bot" className='jaskier-button'>
             <GoDependabot className='sm:text-[20px] text-[16px]'/>
           </a>
@@ -269,4 +281,6 @@ export default function Home() {
   );
 }
 
+// emojis/1.gif
+// /emojis/${randomFile}
 
