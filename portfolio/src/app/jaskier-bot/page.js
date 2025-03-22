@@ -216,7 +216,7 @@ export default function Home() {
             {!isTyping && showDate && !hasGenerated && <span className="fade-in">{formattedDate}</span>}
             {hasGenerated && 
               <span className="flex mt-4 items-center justify-center">
-                <Image src="/emojis/6.gif" alt="Random Emoji"         
+                <Image src="/emojis/dragon.gif" alt="Random Emoji"         
                   width={0}
                   height={0}
                   sizes="100vw"
