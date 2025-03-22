@@ -1,18 +1,19 @@
 "use client"; 
 import { useState } from 'react';
-// import { useEffect } from "react";
 import AOS from "aos";
 import Link from "next/link";
 import Image from 'next/image'
 
+// Components
+import Footer from "./components/NavFooter";
 import ProfileImage from './components/ProfileImage';
 import ExperienceCard from './components/ExperienceCard';
 import ProjectCard from './components/ProjectCard';
 import ArticleCard from './components/ArticleCard';
-import '@fortawesome/fontawesome-free/css/all.min.css';
-import Footer from "./components/NavFooter";
+import EmojiDisplay from './components/EmojiDisplay';
 
 // Icons
+import '@fortawesome/fontawesome-free/css/all.min.css';
 import { FaRegFilePdf } from "react-icons/fa";
 import { GoDependabot } from "react-icons/go";
 
@@ -115,20 +116,20 @@ const articles = [
 export default function Home() {
   const [isDoubleColumn, setIsDoubleColumn] = useState(false);
   
-  const toggleColumns = () => {
-    const newState = !isDoubleColumn;
-    setIsDoubleColumn(newState);
+  // const toggleColumns = () => {
+  //   const newState = !isDoubleColumn;
+  //   setIsDoubleColumn(newState);
 
-    const projectCards = document.querySelectorAll(".project-card");
-    projectCards.forEach((card) => {
-      card.classList.remove("aos-animate");
-      setTimeout(() => {
-        AOS.refreshHard();
-      }, 10);
-    });
-  };
+  //   const projectCards = document.querySelectorAll(".project-card");
+  //   projectCards.forEach((card) => {
+  //     card.classList.remove("aos-animate");
+  //     setTimeout(() => {
+  //       AOS.refreshHard();
+  //     }, 10);
+  //   });
+  // };
 
-  const totalEmojis = 4;  // Adjust this number based on the number of emoji files you have
+  const totalEmojis = 8;
   const randomNumber = Math.floor(Math.random() * totalEmojis) + 1;
   const randomFile = `${randomNumber}.gif`;
   
@@ -146,7 +147,7 @@ export default function Home() {
               A computer engineering student with experience in embedded systems, scientific programming, computer vision, and web-dev.
             </p>
             <p className="profile-skills" data-aos="zoom-in" data-aos-once="true">
-              <span className="font-bold">Languages:</span> C, C++, Python, CUDA, Rust, TeX, JavaScript, Assembly [Intel x86], Java
+              <span className="font-bold">Languages:</span> C, C++, Python, CUDA, Rust, <span className="latex">L<sup>a</sup>T<sub>e</sub>X</span>, JavaScript, Assembly [Intel x86], Java
             </p>
             <p className="profile-skills" data-aos="zoom-in" data-aos-once="true">
               <span className="font-bold">Tools:</span> CMake, Makefiles, Boost, msys2, GDB, MSVC, vcpkg, VMWare, Conda, Docker, Linux, WSL2, CUDA Toolkit, OpenCV
@@ -260,17 +261,12 @@ export default function Home() {
         </div>
         
         <div className='absolute right-6 bottom-2 flex flex-col items-end'>
-          <div className="speech-bubble">
-            <Image
-              src={`/emojis/1.gif`}
-              width={30}
-              height={30}
-              alt="Picture of the author"
-            />
-          </div>
-          <a href="/jaskier-bot" className='jaskier-button'>
+          <Link href="/jaskier-bot"  className="speech-bubble">
+            <EmojiDisplay/>
+          </Link>
+          <Link href="/jaskier-bot" className='jaskier-button'>
             <GoDependabot className='sm:text-[20px] text-[16px]'/>
-          </a>
+          </Link>
         </div>
 
       </div>

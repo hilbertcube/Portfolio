@@ -1,18 +1,21 @@
 'use client'
 
 import { useState, useEffect, useRef } from "react";
-import { GoDependabot } from "react-icons/go";
-import { ImHome } from "react-icons/im";
 import InfoWindow from '../components/InfoWindow';
+//import EmojiDisplay from '../components/EmojiDisplay';
+import Link from "next/link";
+import Image from 'next/image'
 
 // Icons
+import { ImHome } from "react-icons/im";
 import { FaPenNib } from "react-icons/fa";
 import { PiMusicNotesBold } from "react-icons/pi";
 import { FaPlay } from "react-icons/fa6";
 import { IoLanguage } from "react-icons/io5";
+import { GoDependabot } from "react-icons/go";
 
 const topics = ["Dying Nature", "Humans Society", "Nihilism", "God", "The Bible", "Love", "Existentialism", "Time", "The Universe", "Memory", "Death", "Hope", "Philosophy", "Technology", "Freedom", "Justice", "Chaos", "Humanity", "Art", "Music", "Emotion", "Bad Dreams", "Brutal History", "Wisdom", "Loneliness", "Suffering", "Creation", "Spirituality", "Peace", "Conflict", "War", "The great depression"];
-const languages = ["English", "French", "Vietnamese", "Japanese", "Russian", "Chinese (simplified)", "German", "Ukrainian"];
+const languages = ["English", "French", "Vietnamese", "Japanese", "Italian", "Russian", "Chinese (simplified)", "German", "Ukrainian", "Bahasa Indonesia"];
 const supported_language = languages.slice(0, -1).join(", ") + ", and " + languages[languages.length - 1] + ".";
 
 function randomize(array) {
@@ -27,15 +30,21 @@ function extractNotes(input) {
 }
 
 export default function Home() {
-  const opening = 'Hello, I\'m Jaskier.\nI write poetry and play terrible piano.\n';
+  const opening = 'Hello there,\nI\'m here to write poetry and play terrible piano.\n';
   const [output, setOutput] = useState(opening);
   const [displayedText, setDisplayedText] = useState(opening);
   const [isPlaying, setIsPlaying] = useState(false); 
   const [isTyping, setIsTyping] = useState(false);
   const typingIntervalRef = useRef(null);
+  const [hasGenerated, setHasGenerated] = useState(true);
 
   const generateContent = async (type) => {
     if (isPlaying || isTyping) return;
+
+    // Once the user generates content for the first time, set it to false
+    if (hasGenerated) {
+      setHasGenerated(false);
+    }
     
     setIsTyping(true);
     setDisplayedText(type === "poetry" ? "Writing a poem..." : "Generating piano notes...");
@@ -181,10 +190,10 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-[url(/images/bg/bg.svg)] bg-no-repeat bg-cover p-10 justify-items-center">
-      <a href="./" className = "side-button top-[12px] "><ImHome /></a>
+      <Link href="./" className = "side-button top-[12px] "><ImHome /></Link>
       <InfoWindow 
        title="About Jaskier" 
-       content="I wanted to see what's up with all the hype about these LLMs, so I created this simple bot to write poetry and play terrible piano for me."
+       content="A simple AI bot made to generate poetry and play terrible piano. A project created on a random Sunday morning."
        position = "top-[54px]"
       />
       <InfoWindow 
@@ -204,7 +213,16 @@ export default function Home() {
         <div className="chat-box">
           <p className="whitespace-pre-wrap font-Jura">
             <span className="fade-in">{displayedText}</span>
-            {!isTyping && showDate && <span className="fade-in">{formattedDate}</span>}
+            {!isTyping && showDate && !hasGenerated && <span className="fade-in">{formattedDate}</span>}
+            {hasGenerated && 
+              <span className="flex mt-4 items-center justify-center">
+                <Image src="/emojis/6.gif" alt="Random Emoji"         
+                  width={0}
+                  height={0}
+                  sizes="100vw"
+                  style={{ width: '30px', height: 'auto' }}
+                />
+              </span>}
           </p>
         </div>
         

@@ -3,6 +3,7 @@
 @import url("css/main_page.css");
 @import url("css/publication.css");
 @import url("css/bot.css");
+@import url("css/components.css");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

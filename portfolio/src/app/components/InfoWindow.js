@@ -44,7 +44,7 @@ export default function InfoWindow({
               <h2 className="text-xl font-bold">{title}</h2>
               <button
                 onClick={toggleModal}
-                className="text-gray-500 hover:text-red-700"
+                className="text-gray-500 hover:text-red-500 font-black"
               >
                 ✕
               </button>
