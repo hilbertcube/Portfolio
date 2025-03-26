@@ -26,7 +26,7 @@ export default function RootLayout({ children }) {
       <head>
         {/* Add AOS CSS */}
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
-        <link rel='icon' href='/icons/favicon.jpg' type="image/jpg"/>
+        <link rel='icon' href='/icons/favicon.png' type="image/png"/>
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}

@@ -34,6 +34,7 @@ const EmojiDisplay = () => {
         height={0}
         sizes="100vw"
         style={{ width: '30px', height: 'auto' }}
+        unoptimized
       />
     </span>
   );

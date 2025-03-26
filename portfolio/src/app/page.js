@@ -16,101 +16,11 @@ import EmojiDisplay from './components/EmojiDisplay';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import { FaRegFilePdf } from "react-icons/fa";
 import { GoDependabot } from "react-icons/go";
+import { exp } from './data/exp';
+import { articles } from './data/articles';
+import { projects } from './data/projects';
 
 
-const exp = [
-  {
-    organization: 'California Polytechnic State University, Pomona' ,
-    job_title: 'Collision Avoidance and Detection Research Assistant',
-    description: 'Collaborated with a team of electrical, computer, aerospace, and mechanical engineers to implement collision avoidance and detection software on drones. Utilized Gazebo, Ubuntu, and ORB SLAM3 to compute drone\'s stereo camera trajectory and a sparse 3D reconstruction. Optimized object detection by integrating ORB SLAM3 with YOLOv4 in C++, improving runtime performance by 50% over the original Python version and achieving a detection confidence rate of 90%.',
-    time_frame: 'Sep. 2024 - Present',
-    languages_and_tools: ['C++', 'Python', 'ORB_SLAM_3', 'Ubuntu', 'Gazebo', 'PX4', 'CMake', 'YOLOv4', 'PyTorch'],
-  },
-  {
-    organization: 'California Polytechnic State University, Pomona' ,
-    job_title: 'Computer Vision Research Intern',
-    description: 'Utilized MPI for multi‑core and OpenMP for multi‑thread processing, along with NVIDIA CUDA, to accelerate feature detection, seam finding, image processing, and stitching algorithms to handle real‑time image processing on drones. Achieved a 300% increase in the speed of the image stitching process and decreased the parallel-processing cost by 61%. Paper published at AIAA Scitech Forum 2025.',
-    time_frame: 'Jun. 2024 - Sep. 2024',
-    languages_and_tools: ['C++', 'Python','OpenCV', 'MPI', 'OpenMP', 'CUDA', 'CMake'],
-  },
-  {
-    organization: 'Mt. SAC' ,
-    job_title: 'Math, Physics, and Computer Science Tutor',
-    description: 'I tutor various subjects, ranging from math and engineering physics to computer science at Mt. San Antonio College. I work at two positions: embedded tutor, where I conducted after-class tutoring sessions and assisted professors in organizing classwork, and drop-in tutor, where I provided one-on-one tutoring sessions when the students came to me. I also created and distributed comprehensive study notes to support students in understanding math concepts.',
-    time_frame: 'Feb. 2024 - Present',
-    languages_and_tools: ['Differential Equations', 'Linear Algebra', 'C++', 'Java', 'Calculus', 'Classical Mechanics'],
-  },
-];
-
-
-const projects = [
-  {
-    organization: 'SLAM Point Cloud Generation and YOLO Command Line Wrapper' ,
-    job_title: 'Object Detection and Visual SLAM',
-    description: 'Point cloud generation and plotting for ORB-SLAM3. This project is a combination of two repositories, including a command-line wrapper and a point cloud generator. It utilizes two versions of YOLO: version 4 for C++ and version 11 for Python.',
-    time_frame: 'Feb. 2025 - Present',
-    languages_and_tools: ['C','C++', 'Python', 'ORB SLAM3', 'YOLOv4', 'YOLOv11', 'Linux'],
-    link: 'https://github.com/Continuum3416/darknet-YOLOv4-cpp'
-  },
-  {
-    organization: 'OpenGL 3D Object Renderer' ,
-    job_title: 'Low-level Graphics Programming',
-    description: '3D Object Renderer for common geometric shapes—including triangle, cube, sphere, and torus (donut) using OpenGL, a cross-platform, low-level API for rendering 2D and 3D vector graphics. Built with CMake, GLFW, GLAD, GLEW, GLM, and FreeGLUT.',
-    time_frame: 'Feb. 2025 - Present',
-    languages_and_tools: ['C++','GLFW', 'GLAD', 'GLEW' , 'GLW' , 'FreeGLUT', 'CMake', 'MSVC', 'vcpkg'],
-    link: 'https://github.com/Continuum3416/OpenGL-Object-Rendering'
-  },
-  {
-    organization: '2D Physics Engine' ,
-    job_title: 'Graphics Programming, Numerical Methods',
-    description: 'A collection of repositories to implement physics from scratch in C++, utilizing SFML for real‑time rendering and visualization. Implemented multiple numerical integration methods, including Euler (explicit/implicit), Verlet, and Runge‑Kutta (RK4), to accurately simulate motion; integrated rigid‑body collision detection for realistic interactions. Added a spatial grid for better optimization.',
-    time_frame: 'Jan. 2025 - Present',
-    languages_and_tools: ['C++','SFML', 'CMake', 'vcpkg', 'Numerical Methods'],
-    link: 'https://github.com/Continuum3416/Spatial-Grid-Partitioning'
-  },
-  {
-    organization: 'Webs-for-Clubs' ,
-    job_title: 'Web Development, College Project',
-    description: 'Collaborated with a team of fellow developers to create static and dynamic, functional, and easy‑to‑maintain websites for various clubs at local college. Utilized Node.js, Next.js, and Tailwind CSS to build fully functional and informative websites, aiming at providing information and updating announcements.',
-    time_frame: 'Sep. 2024 - Present',
-    languages_and_tools: ['Javascript', 'HTML', 'Nodejs' , 'Nextjs' , 'Tailwind CSS', 'AOS'],
-  },
-  {
-    organization: 'neumanncondition.com' ,
-    job_title: 'Web Development, Blogging',
-    description: 'This is my blog website. I coded it from scratch using HTML, CSS, and Javascript. This is a website to display my writings about engineering, physics, mathematics, and computer science.',
-    time_frame: 'Jul. 2024 - Present',
-    languages_and_tools: ['Javascript', 'HTML', 'CSS', 'AOS', 'MathJax'],
-    link: 'https://github.com/Continuum3416/neumanncondition'
-  },
-  {
-    organization: 'Chladni Patterns Generator' ,
-    job_title: 'Scientific Programming',
-    description: 'Developed a Python script to generate an unlimited number of Chladni patterns on square and circular domains. The patterns are obtained by solving for eigenvalues of the two-dimensional wave equation through separation of variables  and elimination of the Bessel functions of the 2nd kind.',
-    time_frame: 'Feb. 2024 - May. 2024',
-    languages_and_tools: ['Python', 'PDE', 'Numpy', 'Scipy', 'Conda', 'Itertools'],
-    link: 'https://github.com/Continuum3416/Chladni-Patterns-Generator'
-  },
-];
-
-const articles = [
-  {
-    title: 'How to find Maxima and Minima of an n-th Dimensional Function' ,
-    topic: 'Vector Calculus, Mathematics',
-    description: 'Utilizing the Hessian Matrix to find the maximum, minimum, and saddle points of an n-dimensional real function. Practice with example problems and exploring alternative methods.',
-    date: 'May. 2024',
-    link: 'https://neumanncondition.com/blogs/maximum-and-minimum/',
-    image: './images/featured-articles/3d_function.png'
-  },
-  {
-    title: 'The Quest to Finding Chladni Patterns. 3 Parts Series' ,
-    topic: 'Waves, PDEs, Scientific Programming',
-    description: 'Solve the two-dimensional square and polar wave equation using separation of variables and solving eigenvalue problems. Design algorithms to plot Chladni\'s pattern using the model.',
-    date: 'June. 2024',
-    link: 'https://neumanncondition.com/blogs/the-quest-to-finding-chladni-patterns-1/',
-    image: './images/featured-articles/dark_chladni.png'
-  },
-]
 
 
 export default function Home() {
