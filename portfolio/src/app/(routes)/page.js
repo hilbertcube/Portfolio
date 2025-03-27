@@ -1,26 +1,26 @@
 "use client"; 
 import { useState } from 'react';
-import AOS from "aos";
 import Link from "next/link";
 import Image from 'next/image'
+import AOS from "aos";
 
 // Components
-import Footer from "./components/NavFooter";
-import ProfileImage from './components/ProfileImage';
-import ExperienceCard from './components/ExperienceCard';
-import ProjectCard from './components/ProjectCard';
-import ArticleCard from './components/ArticleCard';
-import EmojiDisplay from './components/EmojiDisplay';
+import ExperienceCard from '@components/ExperienceCard';
+import ProfileImage from '@components/ProfileImage';
+import EmojiDisplay from '@components/EmojiDisplay';
+import ProjectCard from '@components/ProjectCard';
+import ArticleCard from '@components/ArticleCard';
+import Footer from "@components/NavFooter";
 
 // Icons
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import { FaRegFilePdf } from "react-icons/fa";
 import { GoDependabot } from "react-icons/go";
-import { exp } from './data/exp';
-import { articles } from './data/articles';
-import { projects } from './data/projects';
 
-
+// Data
+import { exp } from '@data/exp';
+import { articles } from '@data/articles';
+import { projects } from '@data/projects';
 
 
 export default function Home() {
@@ -60,7 +60,7 @@ export default function Home() {
               <span className="font-bold">Languages:</span> C, C++, Python, CUDA, Rust, <span className="latex">L<sup>a</sup>T<sub>e</sub>X</span>, JavaScript, Assembly [Intel x86], Java
             </p>
             <p className="profile-skills" data-aos="zoom-in" data-aos-once="true">
-              <span className="font-bold">Tools:</span> CMake, Makefiles, Boost, msys2, GDB, MSVC, vcpkg, VMWare, Conda, Docker, Linux, WSL2, CUDA Toolkit, OpenCV
+              <span className="font-bold">Tools:</span> CMake, Makefiles, Boost, msys2, GDB, MSVC, vcpkg, VMWare, Conda, Docker, Linux, WSL2, CUDA Toolkit
             </p>
             <p className="work-summary" data-aos="zoom-in" data-aos-once="true">
               My work mainly involves graphics programming, image processing, drone collision detection, and physics simulation. I also do web development (sometimes), mainly using vanilla JS with CSS3 or Next.js with Tailwind CSS. 

@@ -1,8 +1,8 @@
 "use client";
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import { useState } from "react";
-import Footer from "../components/NavFooter";
-import PublicationCard from "../components/PublicationCard";
+import Footer from "@components/NavFooter";
+import PublicationCard from "@components/PublicationCard";
 
 export default function Home() {
   const [publications] = useState([

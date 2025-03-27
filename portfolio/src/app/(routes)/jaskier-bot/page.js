@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect, useRef } from "react";
-import InfoWindow from '../components/InfoWindow';
+import InfoWindow from '@components/InfoWindow';
 //import EmojiDisplay from '../components/EmojiDisplay';
 import Link from "next/link";
 import Image from 'next/image'
@@ -15,7 +15,9 @@ import { IoLanguage } from "react-icons/io5";
 import { GoDependabot } from "react-icons/go";
 
 const topics = ["Dying Nature", "Humans Society", "Nihilism", "God", "The Bible", "Love", "Existentialism", "Time", "The Universe", "Memory", "Death", "Hope", "Philosophy", "Technology", "Freedom", "Justice", "Chaos", "Humanity", "Art", "Music", "Emotion", "Bad Dreams", "Brutal History", "Wisdom", "Loneliness", "Suffering", "Creation", "Spirituality", "Peace", "Conflict", "War", "The great depression"];
-const languages = ["English", "French", "Vietnamese", "Japanese", "Italian", "Russian", "Chinese (simplified)", "German", "Ukrainian", "Bahasa Indonesia"];
+
+const languages = ["English", "Vietnamese", "Bahasa Indonesia", "Chinese (simplified)", "French", "German", "Italian", "Japanese", "Russian", "Ukrainian"];
+
 const supported_language = languages.slice(0, -1).join(", ") + ", and " + languages[languages.length - 1] + ".";
 
 function randomize(array) {

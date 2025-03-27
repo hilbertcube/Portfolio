@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');
-@import url("css/main_page.css");
-@import url("css/publication.css");
-@import url("css/bot.css");
-@import url("css/components.css");
+@import url("main_page.css");
+@import url("publication.css");
+@import url("bot.css");
+@import url("components.css");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -53,5 +53,14 @@
     margin-top: 0;
     margin-bottom: 0;
     padding: 0;
+  }
+
+  .text-break {
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
   }
 }
