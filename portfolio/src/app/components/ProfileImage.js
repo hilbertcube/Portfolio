@@ -112,7 +112,7 @@ export default function ProfileImage() {
       {/* Profile Image */}
       <Image
         className="rounded-full border-5 border-slate-300"
-        src="/images/profiles/Goose.jpg"
+        src="/images/profiles/Goose.webp"
         alt="Profile Image"
         width={radius}
         height={radius}

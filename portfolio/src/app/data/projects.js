@@ -1,5 +1,13 @@
 export const projects = [
   {
+    organization: 'Jaskier Bot' ,
+    job_title: 'Messing around with API',
+    description: 'A small AI bot made to write poetry and play terrible piano. I got it to play piano by generating music notes using Gemini, then mapping those notes to a bunch of MP3 files.',
+    time_frame: 'Mar. 2025 - Mar. 2025',
+    languages_and_tools: ['Gemini', 'RestAPI', 'Javascript', 'Node.js'],
+    link: 'https://don-le.vercel.app/jaskier-bot'
+  },
+  {
     organization: 'SLAM Point Cloud Generation and YOLO Command Line Wrapper' ,
     job_title: 'Object Detection and Visual SLAM',
     description: 'Point cloud generation and plotting for ORB-SLAM3. This project is a combination of two repositories, including a command-line wrapper and a point cloud generator. It utilizes two versions of YOLO: version 4 for C++ and version 11 for Python.',
@@ -35,7 +43,7 @@ export const projects = [
     job_title: 'Web Development, Blogging',
     description: 'This is my blog website. I coded it from scratch using HTML, CSS, and Javascript. This is a website to display my writings about engineering, physics, mathematics, and computer science.',
     time_frame: 'Jul. 2024 - Present',
-    languages_and_tools: ['Javascript', 'HTML', 'CSS', 'AOS', 'MathJax'],
+    languages_and_tools: ['Javascript', 'HTML', 'CSS', 'AOS', 'MathJax', 'Github Action'],
     link: 'https://github.com/Continuum3416/neumanncondition'
   },
   {
