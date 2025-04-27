@@ -49,7 +49,7 @@ export const projects = [
   {
     organization: 'Chladni Patterns Generator' ,
     job_title: 'Scientific Programming',
-    description: 'Developed a Python script to generate an unlimited number of Chladni patterns on square and circular domains. The patterns are obtained by solving for eigenvalues of the two-dimensional wave equation through separation of variables  and elimination of the Bessel functions of the 2nd kind.',
+    description: 'A Python scientific computing project to search and generate an unlimited number of Chladni patterns on square and circular domains. The patterns are obtained by solving for eigenvalues of the two-dimensional wave equation through separation of variables  and elimination of the Bessel functions of the 2nd kind.',
     time_frame: 'Feb. 2024 - May. 2024',
     languages_and_tools: ['Python', 'PDE', 'Numpy', 'Scipy', 'Conda', 'Itertools'],
     link: 'https://github.com/Continuum3416/Chladni-Patterns-Generator'

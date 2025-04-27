@@ -7,7 +7,7 @@ export default function ExperienceCard({ experiences}) {
     <div className="relative w-full max-w-4xl mx-auto mt-10">
       
       {/* Timeline vertical line */}
-      <div className="absolute left-0 w-[1px] h-full bg-gray-500"></div>
+      <div className="absolute left-0 w-[1px] h-full bg-gray-700 sm:block hidden"></div>
 
       {/* Experience Cards with Timeline */}
       <div className="relative space-y-8 w-full flex flex-col items-center">
@@ -15,13 +15,13 @@ export default function ExperienceCard({ experiences}) {
           <div key={index} className="relative flex items-center w-full">
             
             {/* Timeline Circle */}
-            <div className="absolute left-0 transform -translate-x-1/2 flex flex-col items-center">
+            <div className="absolute left-0 transform -translate-x-1/2 hidden sm:flex flex-col items-center">
               <div className="w-3 h-3 bg-blue-600 rounded-full border-0"></div>
-              <div className="absolute top-1/2 left-3 transform -translate-y-1/2 w-2 sm:w-10 h-[1px] bg-gray-500"></div>
+              <div className="absolute top-1/2 left-3 transform -translate-y-1/2 w-2 sm:w-10 h-[1px] bg-gray-700"></div>
             </div>
             
             {/* Experience Card */}
-            <div data-aos="fade-up" data-aos-mirror="true" className="group hover:bg-zinc-900 transition-all duration-200 cursor-pointer font-Jura bg-inherit shadow-md rounded-lg p-4 w-[90%] sm:w-3/4 mx-auto text-[15px] md:text-base">
+            <div data-aos="fade-up" data-aos-mirror="true" className="group hover:bg-zinc-900 transition-all duration-200 cursor-pointer font-Jura bg-inherit shadow-md rounded-lg p-4 w-full sm:w-3/4 mx-auto text-[15px] md:text-base">
               <span className="text-gray-400 text-base font-semibold">{job.time_frame}</span>
               <h3 className="text-xl font-bold text-slate-300 my-1">{job.job_title}</h3>
               <h4 className="inline-flex items-start gap-2 sm:gap-2 my-1 text-lg text-gray-500 group-hover:text-green-500">

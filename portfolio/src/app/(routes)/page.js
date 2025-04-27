@@ -11,6 +11,7 @@ import EmojiDisplay from "@components/EmojiDisplay";
 import ProjectCard from "@components/ProjectCard";
 import ArticleCard from "@components/ArticleCard";
 import Footer from "@components/NavFooter";
+import EducationCard from "@components/EducationCard";
 
 // Icons
 import "@fortawesome/fontawesome-free/css/all.min.css";
@@ -21,6 +22,7 @@ import { GoDependabot } from "react-icons/go";
 import { exp } from "@data/exp";
 import { articles } from "@data/articles";
 import { projects } from "@data/projects";
+import { education } from "@data/education";
 
 export default function Home() {
   // const [isDoubleColumn, setIsDoubleColumn] = useState(false);
@@ -51,14 +53,13 @@ export default function Home() {
             <h1 className="profile-name">
               Don D. <span className="font-bold">Le</span>
             </h1>
-            <h2 className="profile-title">SOFTWARE AND WEB DEV</h2>
+            <h2 className="profile-title">COMPUTER ENGINEER, SWE</h2>
             <p
               className="profile-description"
               data-aos="zoom-in"
               data-aos-once="true"
             >
-              A computer engineering student with experience in embedded
-              systems, scientific programming, computer vision, and web-dev.
+              An engineering student with experience in low-latency C/C++, scientific programming, system programming, and computer vision.
             </p>
             <p
               className="profile-skills"
@@ -171,9 +172,18 @@ export default function Home() {
 
       <div className="bg-black text-white items-center justify-items-center p-4 pt-20 pb-28 sm:p-20 font-[family-name:var(--font-geist-sans)] relative">
         <div className="max-w-[1400px]">
+        <div
+            id="education"
+            className="text-center font-Jura mr-auto ml-auto text-5xl mt-5 mb-14"
+          >
+            Education
+          </div>
+          <div>
+            <EducationCard education={education}/>
+          </div>
           <div
             id="experience"
-            className="text-center font-Jura mr-auto ml-auto text-5xl mt-5 mb-14"
+            className="text-center font-Jura mr-auto ml-auto text-5xl mt-32 mb-14"
           >
             Experience
           </div>
@@ -197,7 +207,7 @@ export default function Home() {
           >
             Projects
           </div>
-          <div className="grid grid-cols-1 ms:grid-cols-1 gap-4">
+          <div className="grid grid-cols-1 ms:grid-cols-1 gap-2">
             {projects.map((job, index) => (
               <div key={index} className="w-full" data-aos="fade-up">
                 <ProjectCard info={job} />
