@@ -59,7 +59,7 @@ export default function Home() {
               data-aos="zoom-in"
               data-aos-once="true"
             >
-              An engineering student with experience in low-latency C/C++, scientific programming, system programming, and computer vision.
+              An engineering student <span className="font-[family-name:var(--font-geist-sans)]">@</span>UCLA with experience in low-latency C/C++, scientific computing, system programming, and computer vision.
             </p>
             <p
               className="profile-skills"
@@ -83,10 +83,7 @@ export default function Home() {
               Toolkit
             </p>
             <p className="work-summary" data-aos="zoom-in" data-aos-once="true">
-              My work mainly involves graphics programming, image processing,
-              drone collision detection, and physics simulation. I also do web
-              development (sometimes), mainly using vanilla JS with CSS3 or
-              Next.js with Tailwind CSS.
+            I place a major emphasis on performance and speed, especially in my work with graphics and image processing, embedded systems, and physics simulation. I also do web development (sometimes), mainly using vanilla JS with CSS3 or Next.js with Tailwind CSS.
             </p>
           </div>
 

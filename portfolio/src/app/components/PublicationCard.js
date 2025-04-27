@@ -13,7 +13,7 @@ export default function PublicationCard({ publication, index }) {
       />
       
       <div className="w-full flex items-start sm:w-9/12">
-      <span className="text-gray-600 font-mono mr-2">[{index + 1}]</span>
+      {/* <span className="text-gray-600 font-mono mr-2">[{index + 1}]</span> */}
         <div>
           <p className='text-base/6 text-justify text-[14px] sm:text-base'>
             {publication.author}. &ldquo;{publication.title}&rdquo;. <em>{publication.book_title}</em>, {publication.conference}, {publication.year}, {publication.address}, {publication.date}.

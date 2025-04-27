@@ -2,7 +2,7 @@ import { FaMapMarkerAlt } from "react-icons/fa";
 
 export default function EducationCard({ education }) {
   return (
-    <div className="relative w-full max-w-4xl mt-10">
+    <div className="relative w-full max-w-4xl mt-10 mx-auto">
       {/* Timeline vertical line */}
       <div className="absolute left-0 w-px h-full bg-gray-700 hidden sm:block"></div>
 

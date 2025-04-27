@@ -4,7 +4,7 @@ export const exp = [
     job_title: 'Drone Collision Avoidance and Detection Research Assistant',
     description: 'Utilized Gazebo, Ubuntu, and ORB SLAM3 to compute drone\'s stereo camera trajectory and a sparse 3D reconstruction. Optimized object detection by integrating ORB SLAM3 with YOLOv4 in C++, improving runtime performance by 50% over the original Python version and achieving a detection confidence rate of 90%.',
     time_frame: 'Sep. 2024 - Present',
-    languages_and_tools: ['C++', 'Python', 'ORB_SLAM_3', 'Ubuntu', 'Gazebo', 'PX4', 'CMake', 'YOLOv4', 'PyTorch'],
+    languages_and_tools: ['C++', 'Python', 'VMWare', 'ORB_SLAM_3', 'Ubuntu', 'Gazebo', 'PX4', 'CMake', 'YOLOv4', 'PyTorch'],
   },
   {
     organization: 'California Polytechnic State University, Pomona, CA' ,

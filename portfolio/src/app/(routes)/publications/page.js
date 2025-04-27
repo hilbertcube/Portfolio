@@ -17,7 +17,7 @@ export default function Home() {
       address: 'Orlando, Florida, USA',
       date: '10 January 2025',
       pdfLink: './AIAA_Scitech_Paper_2025_HPC.pdf',
-      image: '/images/publications/with_openmp.png',
+      image: '/images/publications/with_openmp.webp',
       blog: 'https://neumanncondition.com/blogs/accelerating-feature-extraction-and-image-stitching-algorithm/'
     },
   ]);
