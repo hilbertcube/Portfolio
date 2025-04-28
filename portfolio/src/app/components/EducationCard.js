@@ -176,7 +176,7 @@ export default function EducationCard({ education, open_close = false }) {
             <div key={index} className="relative flex items-center w-full">
               {/* Timeline Circle */}
               <div className="absolute left-0 -translate-x-1/2 transform hidden sm:flex flex-col items-center">
-                <div className="w-3 h-3 bg-blue-600 rounded-full"></div>
+                <div className="w-3 h-3 bg-blue-700 rounded-full"></div>
                 <div className="absolute top-1/2 left-3 -translate-y-1/2 transform w-2 sm:w-10 h-px bg-gray-700"></div>
               </div>
 
@@ -197,7 +197,7 @@ export default function EducationCard({ education, open_close = false }) {
                 </h4>
 
                 {edu.gpa !== "" && (
-                  <div className="text-gray-400 text-base font-semibold my-2">
+                  <div className="text-gray-400 text-base font-semibold my-2 mb-4">
                     GPA: {edu.gpa}
                   </div>
                 )}
@@ -205,7 +205,7 @@ export default function EducationCard({ education, open_close = false }) {
                 {/* Coursework */}
                 {edu.relevant_coursework?.length > 0 && (
                   <>
-                    <div className="flex items-start justify-between my-2 mt-4">
+                    <div className="flex items-start justify-between my-2">
                       <h2>Relevant Coursework
                       {courseworkStates[index] && (<span>:</span>)}
                       </h2>
@@ -217,7 +217,7 @@ export default function EducationCard({ education, open_close = false }) {
                       </button>
                     </div>
                     {courseworkStates[index] && (
-                      <div className="mt-2 grid grid-cols-1 sm:grid-cols-2 gap-2">
+                      <div className="mt-2 grid grid-cols-1 sm:grid-cols-2 gap-2 mb-4">
                         {edu.relevant_coursework.map((relevant_coursework, i) => (
                           <div
                             key={i}
@@ -235,7 +235,7 @@ export default function EducationCard({ education, open_close = false }) {
                 {/* Activities and Awards */}
                 {edu.activities_and_awards?.length > 0 && (
                   <>
-                    <div className="flex items-center justify-between my-2 mt-6">
+                    <div className="flex items-center justify-between my-2">
                       <h2>Activities and Awards
                       {activitiesStates[index] && (<span>:</span>)}
                       </h2>

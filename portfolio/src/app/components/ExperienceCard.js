@@ -16,7 +16,7 @@ export default function ExperienceCard({ experiences}) {
             
             {/* Timeline Circle */}
             <div className="absolute left-0 transform -translate-x-1/2 hidden sm:flex flex-col items-center">
-              <div className="w-3 h-3 bg-blue-600 rounded-full border-0"></div>
+              <div className="w-3 h-3 bg-blue-700 rounded-full border-0"></div>
               <div className="absolute top-1/2 left-3 transform -translate-y-1/2 w-2 sm:w-10 h-[1px] bg-gray-700"></div>
             </div>
             
