@@ -190,7 +190,7 @@ export default function Home() {
               <a
                 href="./Resume.pdf"
                 rel="noopener noreferrer"
-                className="cursor-pointer inline-flex items-center gap-2 px-4 py-2 text-white bg-blue-700 rounded hover:bg-blue-600"
+                className="cursor-pointer text-[14px] inline-flex items-center gap-2 px-4 py-2 text-white bg-blue-700 rounded hover:bg-blue-600"
               >
                 <FaRegFilePdf />
                 View PDF Résumé

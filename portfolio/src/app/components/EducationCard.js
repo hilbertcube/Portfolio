@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { FaMapMarkerAlt } from "react-icons/fa";
+import { FaUpRightAndDownLeftFromCenter } from "react-icons/fa6";
 
 export default function EducationCard({ education, open_close = false }) {
   // Start with provided default from open_close prop for server-side rendering
@@ -108,6 +108,25 @@ export default function EducationCard({ education, open_close = false }) {
       setActivitiesStates(Array(education.length).fill(open_close));
     }
   }, [open_close]);
+  
+  // Check if all sections are in the same state to update the global toggle
+  useEffect(() => {
+    if (isClient) {
+      // Check if all coursework sections are shown
+      const allCourseworkShown = courseworkStates.every(state => state === true);
+      // Check if all activities sections are shown
+      const allActivitiesShown = activitiesStates.every(state => state === true);
+      
+      // If all sections are shown, update global state to "Show All"
+      if (allCourseworkShown && allActivitiesShown && !showAllState) {
+        setShowAllState(true);
+      }
+      // If one of the section is hidden, update global state to "Hide All"
+      else if (!allCourseworkShown || !allActivitiesShown && showAllState) {
+        setShowAllState(false);
+      }
+    }
+  }, [courseworkStates, activitiesStates, isClient]);
   
   // Toggle all sections
   const toggleAll = () => {
