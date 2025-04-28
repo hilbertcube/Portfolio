@@ -14,6 +14,7 @@ module.exports = {
       fontFamily: {
         'Jura': ['Jura', 'sans-serif'],
         'Cedarville': ['Cedarville Cursive',' cursive'],
+        'Orbitron': ['Orbitron', 'sans-serif'],
       },
       screens: {
         'ms': '900px',

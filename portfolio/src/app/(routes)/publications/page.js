@@ -8,17 +8,17 @@ export default function Home() {
   const [publications] = useState([
     {
       id: 'author2025',
-      author: 'Rick Ramirez, John Korah, Subodh Bhandari, Yuqi Chen, Du D. Le, and Tu Nguyen',
+      author: 'R. Ramirez, J. Korah, S. Bhandari, D. D. Le, Y. Chen, and T. Nguyen',
       title: 'Accelerated Image Stitching Via Parallel Computing for UAV Applications',
-      book_title: 'Proceedings of the AIAA Conference 2025',
+      book_title: 'in Proc. AIAA Conference 2025',
       conference: 'AIAA SCITECH 2025 Forum*',
       year: 2025,
       month: 'January',
       address: 'Orlando, Florida, USA',
-      date: '10 January 2025',
-      pdfLink: './AIAA_Scitech_Paper_2025_HPC.pdf',
+      date: 'Jan. 2025',
+      pdfLink: './docs/AIAA_Scitech_Paper_2025_HPC.pdf',
       image: '/images/publications/with_openmp.webp',
-      blog: 'https://neumanncondition.com/blogs/accelerating-feature-extraction-and-image-stitching-algorithm/'
+      blog: 'https://neumanncondition.com/articles/accelerating-feature-extraction-and-image-stitching-algorithm/'
     },
   ]);
 

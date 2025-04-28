@@ -49,7 +49,7 @@ export default function Home() {
       <div className="grid grid-rows-[auto_1fr] items-center justify-items-center min-h-screen p-4 gap-6 sm:p-10">
         <main id="main" className="front-page-main">
           <div className="profile-container" data-aos="zoom-in">
-            <ProfileImage />
+            <ProfileImage src="/images/profiles/Goose.webp" />
             <h1 className="profile-name">
               Don D. <span className="font-bold">Le</span>
             </h1>
@@ -83,7 +83,7 @@ export default function Home() {
               Toolkit
             </p>
             <p className="work-summary" data-aos="zoom-in" data-aos-once="true">
-            I place a major emphasis on performance and speed, especially in my work with graphics and image processing, embedded systems, and physics simulation. I also do web development (sometimes), mainly using vanilla JS with CSS3 or Next.js with Tailwind CSS.
+            I place a major emphasis on optimization, performance and speed, especially in my work with graphics and image processing, embedded systems, and physics simulation. I also do web development (sometimes), mainly using vanilla JS with CSS3 or Next.js with Tailwind CSS.
             </p>
           </div>
 
@@ -188,7 +188,7 @@ export default function Home() {
             <ExperienceCard experiences={exp} />
             <div className="flex justify-center mt-8 mb-4">
               <a
-                href="./Resume.pdf"
+                href="./docs/Resume.pdf"
                 rel="noopener noreferrer"
                 className="cursor-pointer text-[14px] inline-flex items-center gap-2 px-4 py-2 text-white bg-blue-700 rounded hover:bg-blue-600"
               >

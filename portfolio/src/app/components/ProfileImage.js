@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 
 
-export default function ProfileImage() {
+export default function ProfileImage( {src} ) {
   const [rotation, setRotation] = useState(0);
   const [isMobile, setIsMobile] = useState(false);  // Add state to track if the device is mobile
   let previousAngle = 0;
@@ -112,7 +112,7 @@ export default function ProfileImage() {
       {/* Profile Image */}
       <Image
         className="rounded-full border-5 border-slate-300"
-        src="/images/profiles/Goose.webp"
+        src={src}
         alt="Profile Image"
         width={radius}
         height={radius}

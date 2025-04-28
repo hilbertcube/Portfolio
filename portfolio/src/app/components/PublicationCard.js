@@ -9,7 +9,7 @@ export default function PublicationCard({ publication, index }) {
       <img 
         src ={publication.image} 
         alt ="Publication"
-        className="border border-gray-400 w-4/5 sm:w-3/12 object-cover mx-auto" 
+        className="border border-gray-400 w-full sm:w-3/12 object-cover mx-auto" 
       />
       
       <div className="w-full flex items-start sm:w-9/12">
@@ -18,13 +18,13 @@ export default function PublicationCard({ publication, index }) {
           <p className='text-base/6 text-justify text-[14px] sm:text-base'>
             {publication.author}. &ldquo;{publication.title}&rdquo;. <em>{publication.book_title}</em>, {publication.conference}, {publication.year}, {publication.address}, {publication.date}.
           </p>
-          <div className="mt-6">
-          <a href={publication.pdfLink} target="_blank" rel="noopener noreferrer" className="paper-button">
+          <div className="mt-6 flex justify-center sm:justify-start">
+          <a href={publication.pdfLink} rel="noopener noreferrer" className="paper-button">
             <FaRegFilePdf />
             View Paper
           </a>
           {publication.blog && (
-            <a href={publication.blog} target="_blank" rel="noopener noreferrer" className="paper-button">
+            <a href={publication.blog} rel="noopener noreferrer" className="paper-button">
             <FiStar />
             View Blog
             </a>

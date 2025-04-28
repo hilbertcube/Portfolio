@@ -206,7 +206,9 @@ export default function EducationCard({ education, open_close = false }) {
                 {edu.relevant_coursework?.length > 0 && (
                   <>
                     <div className="flex items-start justify-between my-2 mt-4">
-                      <h2>Relevant Coursework:</h2>
+                      <h2>Relevant Coursework
+                      {courseworkStates[index] && (<span>:</span>)}
+                      </h2>
                       <button
                         onClick={() => toggleCoursework(index)}
                         className="text-sm text-blue-400 hover:underline"
@@ -234,7 +236,9 @@ export default function EducationCard({ education, open_close = false }) {
                 {edu.activities_and_awards?.length > 0 && (
                   <>
                     <div className="flex items-center justify-between my-2 mt-6">
-                      <h2>Activities and Awards:</h2>
+                      <h2>Activities and Awards
+                      {activitiesStates[index] && (<span>:</span>)}
+                      </h2>
                       <button
                         onClick={() => toggleActivities(index)}
                         className="text-sm text-blue-400 hover:underline"
