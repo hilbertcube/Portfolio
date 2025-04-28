@@ -33,7 +33,7 @@ export default function ExperienceCard({ experiences}) {
               {/* Languages and Tools */}
               <div className="mt-2 flex flex-wrap">
                 {job.languages_and_tools.map((tool, i) => (
-                  <div key={i} className="bg-blue-800 text-slate-100 rounded-full px-3 py-1 mr-2 mb-2 text-[15px]">
+                  <div key={i} className="bg-blue-800 text-slate-100 rounded-full px-3 py-1 mr-2 mb-2 text-[14px]">
                     {tool}
                   </div>
                 ))}
