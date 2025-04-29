@@ -83,7 +83,7 @@ export default function Home() {
               Toolkit
             </p>
             <p className="work-summary" data-aos="zoom-in" data-aos-once="true">
-            I place a major emphasis on optimization, performance and speed, especially in my work with graphics and image processing, embedded systems, and physics simulation. I also do web development (sometimes), mainly using vanilla JS with CSS3 or Next.js with Tailwind CSS.
+            I place a major emphasis on performance and speed, especially in my work with graphics and image processing, embedded systems, and physics simulation. I also do web development (sometimes), mainly using vanilla JS with CSS3 or Next.js with Tailwind CSS.
             </p>
           </div>
 
@@ -259,7 +259,7 @@ export default function Home() {
       </div>
 
       <footer className="copyright">
-        Copyright © 2023-{new Date().getFullYear()} • All rights reserved
+        Copyright © 2023-{new Date().getFullYear()} • All rights reserved <br/> Built without care
       </footer>
     </div>
   );

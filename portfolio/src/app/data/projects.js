@@ -41,9 +41,9 @@ export const projects = [
   {
     organization: 'neumanncondition.com' ,
     job_title: 'Web Development, Blogging',
-    description: 'This is my blog website. I coded it from scratch using HTML, CSS, and Javascript. This is a website to display my writings about engineering, physics, mathematics, and computer science.',
+    description: 'Blog website coded from scratch using HTML, CSS, and Javascript to display writings about engineering, physics, mathematics, and computer science, and other fun stuff.',
     time_frame: 'Jul. 2024 - Present',
-    languages_and_tools: ['Javascript', 'HTML', 'CSS', 'AOS', 'MathJax', 'Github Action'],
+    languages_and_tools: ['Javascript', 'HTML', 'CSS', 'AOS', 'MathJax', 'Prism.js', 'Github Action', 'Github API'],
     link: 'https://github.com/Continuum3416/neumanncondition'
   },
   {
