@@ -43,16 +43,22 @@
     }
 
     .profile-title {
-        @apply text-xl text-blue-700 text-center font-[var(--font-primary)] font-Jura;
+        @apply text-[18px] text-blue-700 text-center font-[var(--font-primary)] font-Jura;
     }
 
     .profile-description,
     .profile-skills {
-        @apply text-[15px] text-center font-[var(--font-primary)] w-full md:w-3/4 font-Jura;
+        @apply text-center font-[var(--font-primary)] w-full md:w-3/4 font-Jura;
     }
 
     .work-summary {
-        @apply text-center font-Jura mr-auto ml-auto w-full md:w-2/3 sm:w-5/6 text-[15px];
+        @apply text-center font-Jura mx-auto w-full md:w-2/3 sm:w-5/6;
+    }
+
+    .profile-description,
+    .profile-skills,
+    .work-summary {
+      @apply text-[14px] sm:text-[15px];
     }
 
     .social-links {

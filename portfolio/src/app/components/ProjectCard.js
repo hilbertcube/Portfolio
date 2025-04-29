@@ -22,7 +22,7 @@ export default function ProjectCard({info}) {
         {/* Languages and Tools */}
         <div className="mt-2 flex flex-wrap">
           {info.languages_and_tools.map((tool, index) => (
-            <div key={index} className="bg-blue-800 text-slate-100 rounded-full px-3 py-1 mr-2 mb-2 text-[14px]">
+            <div key={index} className="bg-blue-800 text-slate-100 rounded-full px-3 py-1 mr-2 mb-2 text-[13px]">
               {tool}
             </div>
           ))}

@@ -4,7 +4,7 @@ export const projects = [
     job_title: 'Messing around with API',
     description: 'A small AI bot made to write poetry and play terrible piano. I got it to play piano by generating music notes using Gemini, then mapping those notes to a bunch of MP3 files.',
     time_frame: 'Mar. 2025 - Mar. 2025',
-    languages_and_tools: ['Gemini', 'RestAPI', 'Javascript', 'Node.js'],
+    languages_and_tools: ['Gemini 2.0 Flash', 'RestAPI', 'Javascript', 'Node.js'],
     link: 'https://don-le.vercel.app/jaskier-bot'
   },
   {
@@ -41,7 +41,7 @@ export const projects = [
   {
     organization: 'neumanncondition.com' ,
     job_title: 'Web Development, Blogging',
-    description: 'Blog website coded from scratch using HTML, CSS, and Javascript to display writings about engineering, physics, mathematics, and computer science, and other fun stuff.',
+    description: 'Blog website. Coded from scratch using HTML, CSS, and Javascript to display writings about engineering, physics, mathematics, computer science, and other fun stuff.',
     time_frame: 'Jul. 2024 - Present',
     languages_and_tools: ['Javascript', 'HTML', 'CSS', 'AOS', 'MathJax', 'Prism.js', 'Github Action', 'Github API'],
     link: 'https://github.com/Continuum3416/neumanncondition'

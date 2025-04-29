@@ -1,5 +1,8 @@
 import { useState, useEffect } from "react";
 import { FaChevronDown, FaChevronRight, FaChevronUp } from "react-icons/fa6";
+import { LuExpand } from "react-icons/lu";
+import { IoContract } from "react-icons/io5";
+
 
 export default function EducationCard({ education, open_close = false }) {
   // Start with provided default from open_close prop for server-side rendering
@@ -239,7 +242,7 @@ export default function EducationCard({ education, open_close = false }) {
       <div className="flex justify-center mb-4 w-full sm:w-3/4 mx-auto text-[14px]">
         <button
           onClick={toggleAll}
-          className="px-4 py-2 bg-blue-700 hover:bg-blue-600 text-white rounded-md transition-colors"
+          className="px-2 py-2 w-40 bg-blue-700 hover:bg-blue-600 text-white rounded-md transition-colors flex items-center justify-center gap-2"
         >
           {showAllState ? "Hide All Sections" : "Show All Sections"}
         </button>

@@ -53,13 +53,13 @@ export default function Home() {
             <h1 className="profile-name">
               Don D. <span className="font-bold">Le</span>
             </h1>
-            <h2 className="profile-title">COMPUTER ENGINEER, SWE</h2>
+            <h2 className="profile-title">COMPUTER ENGINEER & SOFTWARE DEV</h2>
             <p
               className="profile-description"
               data-aos="zoom-in"
               data-aos-once="true"
             >
-              An engineering student <span className="font-[family-name:var(--font-geist-sans)]">@</span>UCLA with experience in low-latency C/C++, scientific computing, system programming, and computer vision.
+              An engineering student <span className="font-[family-name:var(--font-geist-sans)]">@UCLA</span> with experience in low-latency C/C++, scientific computing, system programming, and computer vision.
             </p>
             <p
               className="profile-skills"
@@ -70,20 +70,19 @@ export default function Home() {
               CUDA, Rust,{" "}
               <span className="latex">
                 L<sup>a</sup>T<sub>e</sub>X
-              </span>
-              , JavaScript, Assembly [Intel x86], Java
+              </span>, JavaScript, Assembly [Intel x86], Java
             </p>
             <p
               className="profile-skills"
               data-aos="zoom-in"
               data-aos-once="true"
             >
-              <span className="font-bold">Tools:</span> CMake, Makefiles, Boost,
-              msys2, GDB, MSVC, vcpkg, VMWare, Conda, Docker, Linux, WSL2, CUDA
+              <span className="font-bold">Tools:</span> CMake, Make, Boost,
+              msys2, GDB, MSVC, vcpkg, SIMD, Conda, Docker, Linux, WSL2, CUDA
               Toolkit
             </p>
             <p className="work-summary" data-aos="zoom-in" data-aos-once="true">
-            I place a major emphasis on performance and speed, especially in my work with graphics and image processing, embedded systems, and physics simulation. I also do web development (sometimes), mainly using vanilla JS with CSS3 or Next.js with Tailwind CSS.
+            I place a major emphasis on performance and speed, especially in my work with graphics and image processing, embedded systems, and physics simulation. I also do web dev (sometimes).
             </p>
           </div>
 

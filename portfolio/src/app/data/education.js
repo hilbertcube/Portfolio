@@ -1,14 +1,14 @@
 export const education = [
   // {
-  //   organization: 'Stanford University' ,
-  //   degree_and_major: 'PhD in Computer Science',
+  //   organization: 'MIT - Massachusetts Institute of Technology' ,
+  //   degree_and_major: 'PhD in Quantum Computing',
   //   gpa: "",
   //   time: '2028 - 2032',
   //   relevant_coursework: [],
   //   activities_and_awards: []
   // },
   {
-    organization: 'University of California, Los Angeles (UCLA)' ,
+    organization: 'UCLA - University of California, Los Angeles' ,
     degree_and_major: 'Bachelor of Science in Computer Science and Engineering',
     minor: "",
     gpa: "N/A",
