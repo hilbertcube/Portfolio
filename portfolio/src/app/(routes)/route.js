@@ -1,5 +1,5 @@
-import { redirect } from 'next/navigation';
- 
-export async function GET(request) {
-  redirect('https://www.ddonle.com/');
+import { NextResponse } from 'next/server';
+
+export function GET() {
+  return NextResponse.redirect('https://www.ddonle.com/', 308);
 }
