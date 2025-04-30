@@ -7,6 +7,14 @@ export const education = [
   //   relevant_coursework: [],
   //   activities_and_awards: []
   // },
+  // {
+  //   organization: 'ETH Zürich' ,
+  //   degree_and_major: 'M.S. in Robotics, Systems and Control',
+  //   gpa: "",
+  //   time: '2028 - 2030',
+  //   relevant_coursework: [],
+  //   activities_and_awards: []
+  // },
   {
     organization: 'UCLA - University of California, Los Angeles' ,
     degree_and_major: 'Bachelor of Science in Computer Science and Engineering',

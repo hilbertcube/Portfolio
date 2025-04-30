@@ -95,7 +95,22 @@ export default function ProfileImage( {src} ) {
   }, [isMobile]); 
 
 
-  const radius = 180;
+  const [radius, setRadius] = useState(180);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth <= 768) {
+        setRadius(165); // smaller radius for mobile
+      } else {
+        setRadius(180);
+      }
+    };
+
+    handleResize(); // set on initial render
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <div className="relative mr-auto ml-auto ring-wrapper" data-aos="zoom-in">
       {/* Outer Ring */}

@@ -266,6 +266,7 @@ export default function EducationCard({ education, open_close = false }) {
               <div
                 data-aos="fade-up"
                 data-aos-mirror="true"
+                data-aos-once
                 className="group hover:bg-zinc-900 transition-all duration-200 cursor-pointer font-Jura bg-inherit shadow-md rounded-lg p-4 w-full sm:w-3/4 mx-auto text-[15px] md:text-base border-[1px] border-solid border-slate-800"
               >
                 <h3 className="text-xl font-bold text-slate-300 my-1">

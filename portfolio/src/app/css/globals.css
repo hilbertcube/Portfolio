@@ -64,4 +64,8 @@
     overflow-wrap: break-word;
     word-wrap: break-word;
   }
+
+  .smooth-height {
+    transition: height 0.2s ease-out, min-height 0.2s ease-out;
+  }
 }

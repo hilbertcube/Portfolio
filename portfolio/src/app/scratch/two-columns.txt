@@ -1,0 +1,35 @@
+
+  const [isDoubleColumn, setIsDoubleColumn] = useState(false);
+  const toggleColumns = () => {
+    const newState = !isDoubleColumn;
+    setIsDoubleColumn(newState);
+
+    const projectCards = document.querySelectorAll(".project-card");
+    projectCards.forEach((card) => {
+      card.classList.remove("aos-animate");
+      setTimeout(() => {
+        AOS.refreshHard();
+      }, 10);
+    });
+  };
+  
+  {/* <div id="projects" className="flex items-center justify-center gap-4 font-Jura text-5xl mt-32 mb-14 w-full">
+    <h2 className="flex items-center">
+      <button 
+        onClick={toggleColumns} 
+        className="grid-change-button"
+      >
+        {isDoubleColumn ? <FiSquare className = "grid-change-button-icon" size={30} /> : 
+        <FiGrid className = "grid-change-button-icon" size={30} />}
+      </button>
+      Projects
+    </h2>
+  </div>
+
+  <div className={`grid gap-4 auto-rows-auto ${isDoubleColumn ? "ms:grid-cols-2" : "ms:grid-cols-1"} grid-cols-1`}>
+    {projects.map((job, index) => (
+      <div key={index} className="w-full project-card" data-aos="fade-up">
+        <ProjectCard info={job} />
+      </div>
+    ))}
+  </div> */}

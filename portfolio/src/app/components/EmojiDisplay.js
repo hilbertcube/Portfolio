@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const EmojiDisplay = () => {
   const emojiFolder = '/emojis/';
-  const emojiFiles = ['02.gif', 'question.gif' ,'cat.gif', '2.gif', 'nvidia-linux.gif', 'cpp.gif', 'python.gif', 'rust.png', 'sonic.gif', 'dragon.gif', 'nonono.gif', 'popcorn.gif'];
+  const emojiFiles = ['02.gif', 'question.gif', '2.gif', 'nvidia-linux.gif', 'cpp.gif', 'python.gif', 'rust.png', 'sonic.gif', 'dragon.gif', 'popcorn.gif'];
   
   // Start with a consistent initial emoji to prevent hydration errors
   const initialEmoji = emojiFolder + emojiFiles[0]; // Always use the first emoji initially
