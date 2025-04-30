@@ -45,15 +45,15 @@ export default function Home() {
 
   return (
     // If get rid of experience, get rid of this CSS
-    <div className="grid grid-rows-[1fr_auto] min-h-screen">
-      <div className="grid grid-rows-[auto_1fr] items-center justify-items-center min-h-screen p-4 gap-6 sm:p-10">
+    <div className="grid grid-rows-[1fr_auto]">
+      <div className="grid grid-rows-[auto_1fr] items-center justify-items-center p-4 gap-6 sm:p-10">
         <main id="main" className="front-page-main">
           <div className="profile-container" data-aos="zoom-in">
             <ProfileImage src="/images/profiles/Goose.webp" />
             <h1 className="profile-name">
               Don D. <span className="font-bold">Le</span>
             </h1>
-            <h2 className="profile-title">COMPUTER ENGINEER & SOFTWARE DEV</h2>
+            <h2 className="profile-title">COMPUTER ENGINEER & SOFTWARE DE</h2>
             <p
               className="profile-description"
               data-aos="zoom-in"
