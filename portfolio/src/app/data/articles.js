@@ -15,4 +15,12 @@ export const articles = [
     link: 'https://neumanncondition.com/articles/the-quest-to-finding-chladni-patterns-1/',
     image: './images/featured-articles/dark_chladni.webp'
   },
+  // {
+  //   title: 'The Quest to Finding Chladni Patterns. 3 Parts Series' ,
+  //   topic: 'C++, OpenMP, MPI, CUDA, Computer Vision, Image Processing',
+  //   description: 'Accelerate ORB, feature matching, warping, seam finding, and image composition using C++ OpenCV and CUDA',
+  //   date: 'Aug. 2024',
+  //   link: 'https://neumanncondition.com/articles/the-quest-to-finding-chladni-patterns-1/',
+  //   image: './images/featured-articles/banner.webp'
+  // },
 ]

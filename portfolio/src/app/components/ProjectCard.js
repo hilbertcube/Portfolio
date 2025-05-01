@@ -1,5 +1,7 @@
 import Image from 'next/image';
 
+
+
 export default function ProjectCard({info}) {
   return (
     <a className="group w-full max-w-3xl mx-auto hover:bg-zinc-900 transition-all duration-200 cursor-pointer font-Jura flex flex-col md:flex-row bg-inherit shadow-md rounded-lg p-4 mb-4 text-[15px] md:text-base" href={info.link} target="_blank" rel="noopener noreferrer">

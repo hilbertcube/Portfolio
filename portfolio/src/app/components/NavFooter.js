@@ -20,11 +20,11 @@ const Footer = () => {
         <ImHome />
         <span className="nav-text">Home</span>
       </Link>
-      <Link href="/publications" className={`nav-link ${pathname === "/publications" ? "text-blue-700 font-bold" : "text-black"}`}
+      <a href="/publications" className={`nav-link ${pathname === "/publications" ? "text-blue-700 font-bold" : "text-black"}`}
         rel="noopener noreferrer">
         <FiEye />
         <span className="nav-text">Publications</span>
-      </Link>
+      </a>
       <a className="nav-link" href="/#education" rel="noopener noreferrer">
         <FiFileText />
         <span className="nav-text">Résumé</span>

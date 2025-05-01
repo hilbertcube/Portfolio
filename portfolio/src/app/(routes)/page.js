@@ -1,6 +1,6 @@
 "use client";
-import { useState } from "react";
-import { useEffect } from 'react';
+
+import { useEffect, useRef, useState } from 'react';
 import Link from "next/link";
 import Image from "next/image";
 import AOS from "aos";
@@ -14,6 +14,10 @@ import ArticleCard from "@components/ArticleCard";
 import Footer from "@components/NavFooter";
 import EducationCard from "@components/EducationCard";
 import SocialIcon from "@components/SocialIcon";
+//import PublicationCard from "../components/PublicationCard";
+
+// Hooks
+//import useActiveSection from '../hook/useActiveSection';
 
 // Icons
 import "@fortawesome/fontawesome-free/css/all.min.css";
@@ -26,9 +30,8 @@ import { articles } from "@data/articles";
 import { projects } from "@data/projects";
 import { education } from "@data/education";
 
+
 export default function Home() {
-
-
   const totalEmojis = 8;
   const randomNumber = Math.floor(Math.random() * totalEmojis) + 1;
   const randomFile = `${randomNumber}.gif`;
@@ -44,6 +47,34 @@ export default function Home() {
     window.addEventListener('resize', setViewportHeight);
     return () => window.removeEventListener('resize', setViewportHeight);
   }, []);
+
+  // const sectionRef = useRef(null);
+  // const [isSticky, setIsSticky] = useState(false);
+  
+  // useEffect(() => {
+  //   const section = sectionRef.current;
+    
+  //   const handleScroll = () => {
+  //     if (!section) return;
+      
+  //     const rect = section.getBoundingClientRect();
+  //     const isInView = rect.top <= 0 && rect.bottom >= 0;
+      
+  //     // Set sticky when the section is in view
+  //     setIsSticky(isInView);
+  //   };
+    
+  //   window.addEventListener('scroll', handleScroll);
+  //   // Initial check
+  //   handleScroll();
+    
+  //   return () => {
+  //     window.removeEventListener('scroll', handleScroll);
+  //   };
+  // }, []);
+
+  // const sections = ["education", "experience", "projects", "publications", "articles"];
+  // const activeSection = useActiveSection(sections);
 
   return (
     <div>
@@ -67,8 +98,11 @@ export default function Home() {
               msys2, GDB, MSVC, vcpkg, SIMD, Conda, Docker, Linux, WSL2, CUDA
               Toolkit
             </p>
+            <p className="profile-skills" data-aos="zoom-in" data-aos-once="true">
+              <span className="font-bold">Libraries & Frameworks:</span> Numpy, Scipy, PyTorch, Eigen, OpenCV (C++), GLSL, SFML, ORB SLAM, Next.js
+            </p>
             <p className="work-summary" data-aos="zoom-in" data-aos-once="true">
-            I place a major emphasis on performance and speed, especially in my work with graphics and image processing, embedded systems, and physics simulation. I also do web dev (sometimes).
+            I place a major emphasis on efficiency, performance, and speed; especially in my work with graphics and image processing, embedded systems, and physics simulation. I also do web dev (sometimes), where I value simplicity.
             </p>
           </div>
 
@@ -114,7 +148,24 @@ export default function Home() {
         <Footer />
       </div>
 
-      <div className="bg-black text-white items-center justify-items-center p-4 pt-20 pb-28 sm:p-20 font-[family-name:var(--font-geist-sans)] relative">
+      <div
+        // ref={sectionRef}
+        className="bg-black text-white items-center justify-items-center p-4 pt-20 pb-28 sm:p-20 font-[family-name:var(--font-geist-sans)] relative">
+        {/* <nav
+          className={`${
+            isSticky ? "fixed top-40" : "absolute top-40"
+          } text-white sm:flex flex-col font-Jura gap-2 z-[100] left-4 md:left-40 hidden transition-all duration-400`}
+        >
+          {sections.map((section) => (
+            <a
+              key={section}
+              href={`/#${section}`}
+              className={activeSection === section ? "text-yellow-400" : "text-white"}
+            >
+              {section.charAt(0).toUpperCase() + section.slice(1)}
+            </a>
+          ))}
+        </nav> */}
         <div className="max-w-[1400px]">
           <section id="education">
             <div className="main-section-header">
@@ -156,6 +207,25 @@ export default function Home() {
               ))}
             </div>
           </section>
+
+          {/* <section id="publications">
+            <div className="mt-32 main-section-header">
+              Publication
+            </div>
+            <div className="relative w-full max-w-3xl mx-auto mt-10">
+              <ul className="list-none space-y-5 font-Jura">
+                {publications.map((publication, index) => (
+                  <div key={publication.id || index} data-aos="fade-up">
+                    <PublicationCard 
+                      publication={publication} 
+                      index={index} 
+                    />
+                  </div>
+                ))}
+              </ul>
+            </div>
+          </section> */}
+
           <section id="articles">
             <div className="mt-32 main-section-header">
               Articles
