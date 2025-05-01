@@ -17,16 +17,16 @@ export default function Home() {
           <h1 className="text-2xl font-bold mb-3">Publications</h1>
 
           <div className="max-h-[75vh] overflow-y-auto py-4">
-          <ul className="list-none space-y-5 font-Jura">
-                {publications.map((publication, index) => (
-                  <div key={publication.id || index}>
-                    <PublicationCard 
-                      publication={publication} 
-                      index={index} 
-                    />
-                  </div>
-                ))}
-              </ul>
+            <ul className="list-none space-y-5 font-Jura">
+              {publications.map((publication, index) => (
+                <div key={publication.id || index}>
+                  <PublicationCard 
+                    publication={publication} 
+                    index={index} 
+                  />
+                </div>
+              ))}
+            </ul>
           </div>
         </div>
       </main>

@@ -14,10 +14,10 @@ import ArticleCard from "@components/ArticleCard";
 import Footer from "@components/NavFooter";
 import EducationCard from "@components/EducationCard";
 import SocialIcon from "@components/SocialIcon";
-//import PublicationCard from "../components/PublicationCard";
+import PublicationCard from "@components/PublicationCard";
 
 // Hooks
-//import useActiveSection from '../hook/useActiveSection';
+import useActiveSection from '../hook/useActiveSection';
 
 // Icons
 import "@fortawesome/fontawesome-free/css/all.min.css";
@@ -29,6 +29,7 @@ import { exp } from "@data/exp";
 import { articles } from "@data/articles";
 import { projects } from "@data/projects";
 import { education } from "@data/education";
+import { publications } from "@data/publications";
 
 
 export default function Home() {
@@ -48,8 +49,8 @@ export default function Home() {
     return () => window.removeEventListener('resize', setViewportHeight);
   }, []);
 
-  // const sectionRef = useRef(null);
-  // const [isSticky, setIsSticky] = useState(false);
+  const sectionRef = useRef(null);
+  const [isSticky, setIsSticky] = useState(false);
   
   // useEffect(() => {
   //   const section = sectionRef.current;
@@ -73,12 +74,12 @@ export default function Home() {
   //   };
   // }, []);
 
-  // const sections = ["education", "experience", "projects", "publications", "articles"];
+  // const sections = ["top","education", "experience", "projects", "publications" , "articles"];
   // const activeSection = useActiveSection(sections);
 
   return (
     <div>
-      <div className="grid grid-rows-[auto_1fr] items-center justify-items-center sm:min-h-screen smooth-height p-4 gap-6 sm:p-10">
+      <div id="top" className="grid grid-rows-[auto_1fr] items-center justify-items-center sm:min-h-screen smooth-height p-4 gap-6 sm:p-10">
         <main id="main" className="flex flex-col gap-3 sm:row-start-2 items-start mx-auto">
           <div className="profile-container" data-aos="zoom-in">
             <ProfileImage src="/images/profiles/Goose.webp" />
@@ -98,11 +99,11 @@ export default function Home() {
               msys2, GDB, MSVC, vcpkg, SIMD, Conda, Docker, Linux, WSL2, CUDA
               Toolkit
             </p>
-            <p className="profile-skills" data-aos="zoom-in" data-aos-once="true">
+            {/* <p className="profile-skills" data-aos="zoom-in" data-aos-once="true">
               <span className="font-bold">Libraries & Frameworks:</span> Numpy, Scipy, PyTorch, Eigen, OpenCV (C++), GLSL, SFML, ORB SLAM, Next.js
-            </p>
+            </p> */}
             <p className="work-summary" data-aos="zoom-in" data-aos-once="true">
-            I place a major emphasis on efficiency, performance, and speed; especially in my work with graphics and image processing, embedded systems, and physics simulation. I also do web dev (sometimes), where I value simplicity.
+            I place a major emphasis on efficiency, performance, and speed; especially in my work with graphics and image processing, embedded systems, and physics simulation. I also do web dev (sometimes), where I value simplicity and minimalism.
             </p>
           </div>
 
@@ -149,18 +150,18 @@ export default function Home() {
       </div>
 
       <div
-        // ref={sectionRef}
+        //ref={sectionRef}
         className="bg-black text-white items-center justify-items-center p-4 pt-20 pb-28 sm:p-20 font-[family-name:var(--font-geist-sans)] relative">
         {/* <nav
           className={`${
-            isSticky ? "fixed top-40" : "absolute top-40"
-          } text-white sm:flex flex-col font-Jura gap-2 z-[100] left-4 md:left-40 hidden transition-all duration-400`}
+            isSticky ? "fixed top-60" : "absolute top-60"
+          } text-white sm:flex flex-col font-Jura gap-2 z-[100] left-4 md:left-20 hidden transition-all duration-400`}
         >
           {sections.map((section) => (
             <a
               key={section}
               href={`/#${section}`}
-              className={activeSection === section ? "text-yellow-400" : "text-white"}
+              className={activeSection === section ? "text-blue-300" : "text-white"}
             >
               {section.charAt(0).toUpperCase() + section.slice(1)}
             </a>
@@ -177,7 +178,7 @@ export default function Home() {
           </section>
 
           <section id="experience">
-            <div className="mt-32 main-section-header">
+            <div className="mt-16 sm:mt-32 main-section-header">
               Experience
             </div>
             <div>
@@ -196,7 +197,7 @@ export default function Home() {
           </section>
 
           <section id="projects" >
-            <div className="mt-32 main-section-header">
+            <div className="mt-16 sm:mt-32 main-section-header">
               Projects
             </div>
             <div className="grid grid-cols-1 ms:grid-cols-1 gap-2 my-2 sm:my-4">
@@ -208,26 +209,25 @@ export default function Home() {
             </div>
           </section>
 
-          {/* <section id="publications">
-            <div className="mt-32 main-section-header">
+          <section id="publications">
+            <div className="mt-16 sm:mt-32 main-section-header">
               Publication
             </div>
-            <div className="relative w-full max-w-3xl mx-auto mt-10">
+            <div className="relative w-full max-w-3xl mx-auto my-2 sm:my-4">
               <ul className="list-none space-y-5 font-Jura">
                 {publications.map((publication, index) => (
-                  <div key={publication.id || index} data-aos="fade-up">
-                    <PublicationCard 
-                      publication={publication} 
-                      index={index} 
-                    />
-                  </div>
+                  <PublicationCard 
+                  key={publication.id || index}
+                  publication={publication} 
+                  index={index}
+                />
                 ))}
               </ul>
             </div>
-          </section> */}
+          </section>
 
           <section id="articles">
-            <div className="mt-32 main-section-header">
+            <div className="mt-16 sm:mt-32 main-section-header">
               Articles
             </div>
             <div className="grid grid-cols-1 ms:grid-cols-1 gap-4 my-2 sm:my-4">

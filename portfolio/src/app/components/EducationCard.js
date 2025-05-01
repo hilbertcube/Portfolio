@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { FaChevronDown, FaChevronRight, FaChevronUp } from "react-icons/fa6";
-import { LuExpand } from "react-icons/lu";
-import { IoContract } from "react-icons/io5";
+import { LuGraduationCap } from "react-icons/lu";
 
 
 export default function EducationCard({ education, open_close = false }) {
@@ -270,9 +269,12 @@ export default function EducationCard({ education, open_close = false }) {
                 className="group hover:bg-zinc-900 transition-all duration-200 cursor-pointer font-Jura bg-inherit shadow-md rounded-lg p-4 w-full sm:w-3/4 mx-auto text-[15px] md:text-base border-[1px] border-solid border-slate-800"
               >
                 <h3 className="text-xl font-bold text-slate-300 my-1">
-                  {edu.organization}
+                {edu.organization}
+                
                 </h3>
-                <div className="text-gray-400 text-base font-semibold my-2">
+                
+                <div className="text-gray-400 text-base font-semibold my-2 flex items-center gap-2">
+                <LuGraduationCap />
                   {edu.time}
                 </div>
                 <h4 className="inline-flex items-start gap-2 sm:gap-2 my-1 text-[17px] text-gray-500 group-hover:text-green-500">
