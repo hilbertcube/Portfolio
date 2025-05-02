@@ -22,7 +22,3 @@ export const exp = [
     languages_and_tools: ['Differential Equations', 'Linear Algebra', 'C++', 'Java', 'Calculus', 'Classical Mechanics'],
   },
 ];
-
-
-
-
