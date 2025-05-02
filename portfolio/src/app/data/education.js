@@ -22,7 +22,7 @@ export const education = [
     gpa: "N/A",
     time: '2025 - 2027 (Expected)',
     relevant_coursework: ["Theory of Computing","Operating Systems", "Computer Network Fundamentals", "Probability and Statistics", "Electrical and Electronic Circuits", "Systems and Signals", "Digital Electronic Circuits", "Computer Systems Architecture"],
-    activities_and_awards: ["IEEE UCLA", "UCLA ACM AI"]
+    activities_and_awards: ["IEEE UCLA", "UCLA ACM AI", "AIAA UCLA"]
   },
   {
     organization: 'Mt. San Antonio College' ,

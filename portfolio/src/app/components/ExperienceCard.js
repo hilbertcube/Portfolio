@@ -30,7 +30,9 @@ export default function ExperienceCard({ experiences}) {
                 <div className='pt-2'><SlLocationPin className='text-[15px] sm:text-[16px] align-top'/></div>
                 <span className=''>{job.organization}</span>
               </h4>
-              <p className="text-gray-300 pt-3 pb-5 text-justify">{job.description}</p>
+              <p className="text-gray-300 py-3 text-justify">{job.description}</p>
+              {job.highlight && (<p className="text-gray-300 pt-2 italic pb-5 text-justify">*{job.highlight}</p> 
+              )}
               
               {/* Languages and Tools */}
               <div className="mt-2 flex flex-wrap">

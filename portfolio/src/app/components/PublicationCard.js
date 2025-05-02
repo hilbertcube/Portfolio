@@ -21,7 +21,7 @@ const PublicationCard = ({ publication, index }) => {
   return (
   <div>
     <li 
-      className="flex flex-col-reverse sm:flex-row items-start gap-4 w-full text-gray-300 p-4 hover:bg-zinc-900 rounded-lg"
+      className="flex flex-col-reverse sm:flex-row items-start gap-4 cursor-pointer w-full text-gray-300 p-4 hover:bg-zinc-900 rounded-lg"
       data-aos="fade-up" data-aos-once>
       <img 
         src={publication.thumbnail} 
