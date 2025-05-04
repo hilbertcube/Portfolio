@@ -25,7 +25,7 @@ import { FaRegFilePdf } from "react-icons/fa";
 import { GoDependabot } from "react-icons/go";
 
 // Data
-import { exp } from "@data/exp";
+import { exp } from "@/app/data/experiences";
 import { articles } from "@data/articles";
 import { projects } from "@data/projects";
 import { education } from "@data/education";
@@ -148,7 +148,6 @@ export default function Home() {
         </main>
         <Footer />
       </div>
-
       <div
         //ref={sectionRef}
         className="bg-black text-white items-center justify-items-center p-4 pt-20 pb-28 sm:p-20 font-[family-name:var(--font-geist-sans)] relative">
@@ -167,6 +166,7 @@ export default function Home() {
             </a>
           ))}
         </nav> */}
+        
         <div className="max-w-[1400px]">
           <section id="education">
             <div className="main-section-header">

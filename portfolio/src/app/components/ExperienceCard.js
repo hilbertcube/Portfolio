@@ -1,10 +1,12 @@
 import Image from 'next/image';
 import { FaMapMarkerAlt } from "react-icons/fa";
-import { IoLocationOutline } from "react-icons/io5";
-import { SlLocationPin } from "react-icons/sl";
+// import { IoLocationOutline } from "react-icons/io5";
+// import { SlLocationPin } from "react-icons/sl";
+// import { GrLocation } from "react-icons/gr";
+// import { FaLocationDot } from "react-icons/fa6";
 
 
-export default function ExperienceCard({ experiences}) {
+export default function ExperienceCard({ experiences }) {
   return (
     <div className="relative w-full max-w-4xl mx-auto mt-10">
       
@@ -27,7 +29,7 @@ export default function ExperienceCard({ experiences}) {
               <span className="text-gray-400 text-base font-semibold">{job.time_frame}</span>
               <h3 className="text-xl font-bold text-slate-300 my-1">{job.job_title}</h3>
               <h4 className="inline-flex items-start gap-2 sm:gap-2 my-1 text-lg text-gray-500 group-hover:text-green-500">
-                <div className='pt-2'><SlLocationPin className='text-[15px] sm:text-[16px] align-top'/></div>
+                <div className='pt-2'><FaMapMarkerAlt className='text-[15px] sm:text-[16px] align-top'/></div>
                 <span className=''>{job.organization}</span>
               </h4>
               <p className="text-gray-300 py-3 text-justify">{job.description}</p>

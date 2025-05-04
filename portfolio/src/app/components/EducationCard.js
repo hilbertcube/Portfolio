@@ -247,20 +247,11 @@ export default function EducationCard({ education, open_close = false }) {
         </button>
       </div>
 
-      {/* Timeline vertical line */}
-      {/* <div className="absolute left-0 w-px h-full bg-gray-700 hidden sm:block"></div> */}
-
-      {/* Education Cards with Timeline */}
+      {/* Education Cards*/}
       <div className="relative space-y-4 w-full flex flex-col items-center">
         {education.map((edu, eduIndex) => {
           return (
             <div key={eduIndex} className="relative flex items-center w-full">
-              {/* Timeline Circle */}
-              {/* <div className="absolute left-0 -translate-x-1/2 transform hidden sm:flex flex-col items-center">
-                <div className="w-3 h-3 bg-blue-700 rounded-full"></div>
-                <div className="absolute top-1/2 left-3 -translate-y-1/2 transform w-2 sm:w-10 h-px bg-gray-700"></div>
-              </div> */}
-
               {/* Education Card */}
               <div
                 data-aos="fade-up"
@@ -268,26 +259,36 @@ export default function EducationCard({ education, open_close = false }) {
                 data-aos-once
                 className="group hover:bg-zinc-900 transition-all duration-200 cursor-pointer font-Jura bg-inherit shadow-md rounded-lg p-4 w-full sm:w-3/4 mx-auto text-[15px] md:text-base border-[1px] border-solid border-slate-800"
               >
-                <h3 className="text-xl font-bold text-slate-300 my-1">
-                {edu.organization}
-                
-                </h3>
+                <h3 className="text-xl font-bold text-slate-300 my-1">{edu.organization}</h3>
                 
                 <div className="text-gray-400 text-base font-semibold my-2 flex items-center gap-2">
-                <LuGraduationCap />
+                  <LuGraduationCap />
                   {edu.time}
                 </div>
-                <h4 className="inline-flex items-start gap-2 sm:gap-2 my-1 text-[17px] text-gray-500 group-hover:text-green-500">
+                <h4 className="text-gray-500 text-[17px] my-1 group-hover:text-green-500">
                   {edu.degree_and_major}
                 </h4>
 
-                {edu.minor && (
-                  <div className="text-gray-400 text-base my-1">
-                    {edu.minor}
+                {edu.field_of_study && (
+                  <div className="text-gray-500 text-base my-1 group-hover:text-blue-400">
+                    Field of Study: {edu.field_of_study}
                   </div>
                 )}
 
-                {edu.gpa !== "" && (
+                {edu.thesis && (
+                  <div className="text-gray-500 text-base my-1 group-hover:text-gray-300">
+                    Thesis: <a href={edu.thesis[1]} className="">{edu.thesis[0]}</a>
+                    <i className="fa fa-external-link ml-2 text-[11px]" aria-hidden="true"></i>
+                  </div>
+                )}
+
+                {edu.minor && (
+                  <div className="text-gray-500 text-base my-1 group-hover:text-blue-400">
+                    Minor in {edu.minor}
+                  </div>
+                )}
+
+                {edu.gpa && (
                   <div className="text-gray-400 text-base font-semibold my-2 mb-4">
                     GPA: {edu.gpa}
                   </div>

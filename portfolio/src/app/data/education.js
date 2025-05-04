@@ -1,16 +1,18 @@
 export const education = [
   // {
   //   organization: 'MIT - Massachusetts Institute of Technology' ,
-  //   degree_and_major: 'PhD in Quantum Computing',
-  //   gpa: "",
+  //   degree_and_major: 'PhD in Electrical Engineering and Computer Science',
+  //   field_of_study: "Quantum Computing and Photonics",
+  //   thesis: ["Title", "https://example.com/"],
   //   time: '2028 - 2032',
   //   relevant_coursework: [],
   //   activities_and_awards: []
   // },
   // {
-  //   organization: 'ETH Zürich' ,
-  //   degree_and_major: 'M.S. in Robotics, Systems and Control',
-  //   gpa: "",
+  //   organization: 'ETH Zürich - Eidgenössische Technische Hochschule Zürich' ,
+  //   degree_and_major: 'Master of Science in Robotics, Systems and Control',
+  //   field_of_study: "High Performance Computing",
+  //   thesis: ["Title", "https://example.com/"],
   //   time: '2028 - 2030',
   //   relevant_coursework: [],
   //   activities_and_awards: []
@@ -21,7 +23,7 @@ export const education = [
     minor: "",
     gpa: "N/A",
     time: '2025 - 2027 (Expected)',
-    relevant_coursework: ["Theory of Computing","Operating Systems", "Computer Network Fundamentals", "Probability and Statistics", "Electrical and Electronic Circuits", "Systems and Signals", "Digital Electronic Circuits", "Computer Systems Architecture"],
+    relevant_coursework: ["Theory of Computing","Operating Systems", "Computer Network Fundamentals", "Probability and Statistics", "Electrical and Electronic Circuits", "Systems and Signals", "Digital Electronic Circuits", "Computer Systems Architecture", "Logic Design of Digital Systems"],
     activities_and_awards: ["IEEE UCLA", "UCLA ACM AI", "AIAA UCLA"]
   },
   {
@@ -33,7 +35,3 @@ export const education = [
     activities_and_awards: ["Vice President of Math Club", "Secretary of SMACS", "Putnam Mathematical Competition", "Math, C.S., and Physics Tutor", "Dean's Honor List (All semesters)", "AMATYC Math Competition", "Web-for-Clubs"]
   },
 ];
-
-
-
-

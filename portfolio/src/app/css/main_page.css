@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 @layer components {
+    .custom-gradient {
+      @apply bg-gradient-to-b from-[#ededed] to-black h-32;
+      /* background-image: linear-gradient(to bottom, #ededed 0%, #ededed 75%, #000000 100%); */
+    }
     .fill-height {
       height: calc(100vh - calc(100vh - 100%));
     }
