@@ -23,10 +23,8 @@ export default function ArticleCard({ info }) {
         <h3 className="text-xl font-bold text-slate-300">
           {info.title}
           {info.link && (
-            <i 
-              className="fa fa-external-link ml-2 text-sm group-hover:-translate-y-0.5 transition-transform duration-200" 
-              aria-hidden="true"
-            ></i>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="inline-block h-5 w-5 shrink-0 transition-transform group-hover:-translate-y-1 group-hover:translate-x-1 group-focus-visible:-translate-y-1 group-focus-visible:translate-x-1 motion-reduce:transition-none ml-1 translate-y-px" aria-hidden="true"><path fillRule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clipRule="evenodd"></path>
+            </svg>
           )}
         </h3>
         <span className="text-gray-400 text-base font-semibold pt-2 my-2">{info.date}</span>

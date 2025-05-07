@@ -36,10 +36,11 @@ const PublicationCard = ({ publication, index }) => {
             <span className="font-mono mr-2">[{index + 1}]</span>
             {publication.authors}. &ldquo;{publication.title}&rdquo;. <em>{publication.book_title}</em>, {publication.conference}, {publication.year}, {publication.address}, {publication.date}.
           </p>
-          <div className="mt-6 flex justify-start">
+          <div className="mt-6 flex justify-start gap-2 flex-wrap sm:flex-nowrap overflow-x-auto">
             {images.length > 0 && (
               <button onClick={openPopup} className="paper-button">
                 <FaRegImage />
+                Images
               </button>
             )}
             <a href={publication.pdfLink} rel="noopener noreferrer" className="paper-button">
