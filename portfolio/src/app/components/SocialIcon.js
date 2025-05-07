@@ -12,6 +12,7 @@ const SocialIcon = ({ title, href, delay, iconClass }) => {
         data-aos-delay={delay}
         data-aos-easing="ease-in-out"
         data-aos-once="true"
+        aria-label={title}
       >
         <i className={iconClass}></i>
       </a>

@@ -20,10 +20,10 @@ export default function JaskierBotButton({ position }) {
 
   return (
     <div className={`${position} flex flex-col items-end`}>
-      <button onClick={toggleBot} className="speech-bubble">
+      <button onClick={toggleBot} className="speech-bubble" aria-label = "Jaskier Button">
         <EmojiDisplay />
       </button>
-      <button onClick={toggleBot} className="jaskier-button">
+      <button onClick={toggleBot} className="jaskier-button" aria-label = "Jaskier Button">
         <GoDependabot className="sm:text-[20px] text-[16px]" />
       </button>
       
