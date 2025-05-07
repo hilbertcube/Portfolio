@@ -14,7 +14,7 @@ import PublicationCard from "@components/PublicationCard";
 import JaskierBotButton from '@components/JaskierBot/JaskierBotButton';
 
 // Hooks
-//import useActiveSection from '../hook/useActiveSection';
+import useActiveSection from '../hook/useActiveSection';
 
 // Icons
 import "@fortawesome/fontawesome-free/css/all.min.css";
@@ -45,33 +45,8 @@ export default function Home() {
     return () => window.removeEventListener('resize', setViewportHeight);
   }, []);
 
-  // const sectionRef = useRef(null);
-  // const [isSticky, setIsSticky] = useState(false);
-  
-  // useEffect(() => {
-  //   const section = sectionRef.current;
-    
-  //   const handleScroll = () => {
-  //     if (!section) return;
-      
-  //     const rect = section.getBoundingClientRect();
-  //     const isInView = rect.top <= 0 && rect.bottom >= 0;
-      
-  //     // Set sticky when the section is in view
-  //     setIsSticky(isInView);
-  //   };
-    
-  //   window.addEventListener('scroll', handleScroll);
-  //   // Initial check
-  //   handleScroll();
-    
-  //   return () => {
-  //     window.removeEventListener('scroll', handleScroll);
-  //   };
-  // }, []);
-
-  // const sections = ["top","education", "experience", "projects", "publications" , "articles"];
-  // const activeSection = useActiveSection(sections);
+  const sections = ["top","education", "experience", "projects", "publications" , "articles"];
+  const activeSection = useActiveSection(sections);
 
   return (
     <div>
@@ -100,7 +75,7 @@ export default function Home() {
             {/* <p className="profile-skills" data-aos="zoom-in" data-aos-once="true">
               <span className="font-bold">Libraries & Frameworks:</span> Numpy, Scipy, PyTorch, Eigen, OpenCV (C++), GLSL, SFML, ORB SLAM, Next.js
             </p> */}
-            <p className="text-center font-Jura mx-auto md:w-2/3 w-full">
+            <p className="text-center font-Jura mx-auto md:w-2/3 w-full text-[14px] sm:text-[15px]">
             I place a major emphasis on efficiency, performance, and speed; especially in my work with graphics and image processing, embedded systems, and physics simulation. I also do web dev (sometimes), where I value simplicity and minimalism.
             </p>
           </div>
@@ -141,12 +116,9 @@ export default function Home() {
         <Footer />
       </div>
       <div
-        //ref={sectionRef}
-        className="bg-black text-white items-center justify-items-center p-4 pt-20 pb-28 sm:p-20 font-[family-name:var(--font-geist-sans)] relative">
+        className="bg-black text-white items-center justify-items-center p-4 pt-20 pb-28 sm:p-20 relative">
         {/* <nav
-          className={`${
-            isSticky ? "fixed top-60" : "absolute top-60"
-          } text-white sm:flex flex-col font-Jura gap-2 z-[100] left-4 md:left-20 hidden transition-all duration-400`}
+          className="sticky top-60 text-white sm:flex flex-col font-Jura gap-2 z-[100] left-4 md:left-20 hidden transition-all duration-400"
         >
           {sections.map((section) => (
             <a

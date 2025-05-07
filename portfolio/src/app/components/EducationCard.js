@@ -329,9 +329,9 @@ export default function EducationCard({ education, open_close = false }) {
                                       {expandedCourses[
                                         `${eduIndex}-${course}`
                                       ] ? (
-                                        <FaChevronUp className="inline w-3 h-3" />
+                                        <FaChevronUp className="inline" size={10}/>
                                       ) : (
-                                        <FaChevronDown className="inline w-3 h-3" />
+                                        <FaChevronDown className="inline" size={10}/>
                                       )}
                                     </span>
                                   </button>

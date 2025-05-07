@@ -34,9 +34,10 @@ export const projects = [
   {
     organization: 'Webs-for-Clubs' ,
     job_title: 'Web Development, College Project',
-    description: 'Collaborated with a team of fellow developers to create static and dynamic, functional, and easy‑to‑maintain websites for various clubs at local college. Utilized Node.js, Next.js, and Tailwind CSS to build fully functional and informative websites, aiming at providing information and updating announcements.',
+    description: 'Made websites for clubs at local college using Node, Next.js, and Tailwind CSS. A project under SMACS.',
     time_frame: 'Sep. 2024 - Present',
     languages_and_tools: ['Javascript', 'HTML', 'Nodejs' , 'Nextjs' , 'Tailwind CSS', 'AOS'],
+    link: "https://github.com/SMACS-MtSAC"
   },
   {
     organization: 'neumanncondition.com' ,
