@@ -1,28 +1,24 @@
 "use client";
 
 import { useEffect, useRef, useState } from 'react';
-import Link from "next/link";
-import Image from "next/image";
-import AOS from "aos";
 
 // Components
 import ExperienceCard from "@components/ExperienceCard";
 import ProfileImage from "@components/ProfileImage";
-import EmojiDisplay from "@components/EmojiDisplay";
 import ProjectCard from "@components/ProjectCard";
 import ArticleCard from "@components/ArticleCard";
 import Footer from "@components/NavFooter";
 import EducationCard from "@components/EducationCard";
 import SocialIcon from "@components/SocialIcon";
 import PublicationCard from "@components/PublicationCard";
+import JaskierBotButton from '@components/JaskierBot/JaskierBotButton';
 
 // Hooks
-import useActiveSection from '../hook/useActiveSection';
+//import useActiveSection from '../hook/useActiveSection';
 
 // Icons
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import { FaRegFilePdf } from "react-icons/fa";
-import { GoDependabot } from "react-icons/go";
 
 // Data
 import { exp } from "@/app/data/experiences";
@@ -49,8 +45,8 @@ export default function Home() {
     return () => window.removeEventListener('resize', setViewportHeight);
   }, []);
 
-  const sectionRef = useRef(null);
-  const [isSticky, setIsSticky] = useState(false);
+  // const sectionRef = useRef(null);
+  // const [isSticky, setIsSticky] = useState(false);
   
   // useEffect(() => {
   //   const section = sectionRef.current;
@@ -81,20 +77,22 @@ export default function Home() {
     <div>
       <div id="top" className="grid grid-rows-[auto_1fr] items-center justify-items-center sm:min-h-screen smooth-height p-4 gap-6 sm:p-10">
         <main id="main" className="flex flex-col gap-3 sm:row-start-2 items-start mx-auto">
-          <div className="profile-container" data-aos="zoom-in">
+
+          {/* data-aos="zoom-in" data-aos-once = "true" */}
+          <div className="profile-container">
             <ProfileImage src="/images/profiles/Goose.webp" />
             <h1 className="profile-name">
-              Don D. <span className="font-bold">Le</span>
+              Don D. <span className="font-bold">Le</span>  
             </h1>
             <h2 className="profile-title">COMPUTER ENGINEER & SOFTWARE DEV</h2>
-            <p className="profile-description" data-aos="zoom-in" data-aos-once="true">
+            <p className="profile-description">
               An engineering student <span className="font-[family-name:var(--font-geist-sans)]">@UCLA</span> with experience in low-latency C/C++, scientific computing, system programming, and computer vision.
             </p>
-            <p className="profile-skills" data-aos="zoom-in" data-aos-once="true">
+            <p className="profile-skills">
               <span className="font-bold">Languages:</span> C, C++, Python, CUDA, Rust,{" "}
               <span className="latex">L<sup>a</sup>T<sub>e</sub>X</span>, JavaScript, Assembly [Intel x86], Java
             </p>
-            <p className="profile-skills" data-aos="zoom-in" data-aos-once="true">
+            <p className="profile-skills">
               <span className="font-bold">Tools:</span> CMake, Make, Boost,
               msys2, GDB, MSVC, vcpkg, SIMD, Conda, Docker, Linux, WSL2, CUDA
               Toolkit
@@ -102,7 +100,7 @@ export default function Home() {
             {/* <p className="profile-skills" data-aos="zoom-in" data-aos-once="true">
               <span className="font-bold">Libraries & Frameworks:</span> Numpy, Scipy, PyTorch, Eigen, OpenCV (C++), GLSL, SFML, ORB SLAM, Next.js
             </p> */}
-            <p className="work-summary" data-aos="zoom-in" data-aos-once="true">
+            <p className="text-center font-Jura mx-auto md:w-2/3 w-full">
             I place a major emphasis on efficiency, performance, and speed; especially in my work with graphics and image processing, embedded systems, and physics simulation. I also do web dev (sometimes), where I value simplicity and minimalism.
             </p>
           </div>
@@ -138,12 +136,6 @@ export default function Home() {
               delay="1000"
               iconClass="fa-brands fa-instagram"
             />
-            {/* <SocialIcon
-              title="Whatsapp"
-              href="https://api.whatsapp.com/send?phone=18402098002&text=Hello%2C%20how%20are%20you%20doing."
-              delay="800"
-              iconClass="fa-brands fa-whatsapp"
-            /> */}
           </div>
         </main>
         <Footer />
@@ -240,14 +232,16 @@ export default function Home() {
           </section>
         </div>
 
-        <div className="absolute right-6 bottom-2 flex flex-col items-end">
+        {/* <div className="absolute right-6 bottom-2 flex flex-col items-end">
           <Link href="/jaskier-bot" className="speech-bubble">
             <EmojiDisplay />
           </Link>
           <Link href="/jaskier-bot" className="jaskier-button">
             <GoDependabot className="sm:text-[20px] text-[16px]" />
           </Link>
-        </div>
+        </div> */}
+
+        <JaskierBotButton position="absolute right-6 bottom-2"/>
       </div>
 
       <footer className="copyright">
@@ -257,5 +251,3 @@ export default function Home() {
   );
 }
 
-// emojis/1.gif
-// /emojis/${randomFile}

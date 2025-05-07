@@ -12,14 +12,15 @@
     }
   }
   
-  /* Apply the fade-in effect */
+
   .fade-in {
-    animation: fadeIn 0.5s ease-in forwards; /* Use the fadeIn keyframe animation */
+    animation: fadeIn 0.5s ease-in forwards;
   }
 
   .chat-box {
     @apply relative z-10 max-w-xl w-full text-center cursor-pointer rounded-[0.5rem] border-[2px] 
-    border-gray-800 text-white p-5 ms:text-[15px] text-[14px] mt-3;
+    text-white p-5 ms:text-[15px] text-[14px] mt-3;
+    border-color: #314158;
   }
 
   .chat-box::after {
@@ -34,14 +35,15 @@
     border-top: 0;
     margin-left: -20px;
     margin-top: -20px;
+    
   }
 
   .bot-buttons {
-    @apply rounded-full flex items-center justify-center w-10 h-10 border-[2px] ;
+    @apply rounded-full flex items-center justify-center w-10 h-10 border-[2px] bg-black;
   }
 
   .side-button {
-    @apply rounded-full hover:border-green-600 p-2 border-blue-700 border-[2px] fixed left-1 sm:left-3 text-blue-200;
+    @apply rounded-full hover:border-green-600 p-2 border-blue-700 border-[2px] fixed left-1 sm:left-3 text-blue-200 z-[10000] bg-black;
   }
 }
 

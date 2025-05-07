@@ -26,7 +26,8 @@ const PublicationCard = ({ publication, index }) => {
       <img 
         src={publication.thumbnail} 
         alt="Publication"
-        className="border border-gray-800 w-full sm:w-3/12 object-cover mx-auto rounded-lg" 
+        className="border border-gray-800 w-full sm:w-3/12 object-cover mx-auto rounded-lg"
+        loading="lazy"
       />
 
       <div className="w-full flex items-start sm:w-9/12">

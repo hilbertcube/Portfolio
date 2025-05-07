@@ -13,7 +13,8 @@ export default function ArticleCard({ info }) {
         <img 
           src={info.image} 
           alt="Image" 
-          className="w-full max-w-full h-auto object-contain rounded border-gray-100 mt-2 sm:mt-0" 
+          className="w-full max-w-full h-auto object-contain rounded border-gray-100 mt-2 sm:mt-0"
+          loading="lazy"
         />
       </div>
 

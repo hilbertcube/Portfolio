@@ -10,9 +10,11 @@ export default function InfoWindow({
   icon: Icon = FiAlertCircle, 
   showSelect = false, 
   onSelectChange,
-  options = [] }) {
+  options = [],
+  initialSelectedValue = "Random" }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [selectedValue, setSelectedValue] = useState("Random");
+  // Initialize with the initialSelectedValue prop
+  const [selectedValue, setSelectedValue] = useState(initialSelectedValue);
 
   const toggleModal = () => {
     setIsModalOpen(!isModalOpen);
@@ -65,6 +67,7 @@ export default function InfoWindow({
                       {language}
                     </option>
                   ))}
+                  
                 </select>
                 </div>
               )}

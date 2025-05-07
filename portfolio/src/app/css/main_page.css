@@ -33,10 +33,6 @@
         @apply text-black transition-colors duration-300 ease-in-out text-xl sm:text-2xl;
     }
 
-    .footer-nav {
-        @apply row-start-3 flex gap-6 sm:gap-5 flex-wrap items-center justify-center border-t-2 border-blue-700 pt-2 font-[family-name:var(--font-geist-sans)];
-    }
-
     .profile-container {
         @apply flex flex-col items-center gap-2;
     }
@@ -52,10 +48,6 @@
     .profile-description,
     .profile-skills {
         @apply text-center font-[var(--font-primary)] w-full md:w-3/4 font-Jura;
-    }
-
-    .work-summary {
-        @apply text-center font-Jura mx-auto md:w-2/3 w-full;
     }
 
     .profile-description,
@@ -92,7 +84,7 @@
       @apply font-Jura relative no-underline px-2 py-[5px] bg-blue-700 rounded text-[15px];
       margin-bottom: 16px;
       margin-right: 20px;
-      z-index: 100;
+      z-index: 10;
       height: auto;
     }
     

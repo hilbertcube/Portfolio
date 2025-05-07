@@ -12,7 +12,7 @@ module.exports = {
         foreground: "var(--foreground)",
       },
       fontFamily: {
-        'Jura': ['Jura', 'sans-serif'],
+        'Jura': ['var(--font-jura)'],
         'Cedarville': ['Cedarville Cursive',' cursive'],
         'Orbitron': ['Orbitron', 'sans-serif'],
       },

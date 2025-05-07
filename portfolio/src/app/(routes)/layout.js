@@ -1,17 +1,18 @@
 import localFont from "next/font/local";
 import AOSInitializer from "@dependencies/AOSInitializer";
-import Link from "next/link";
 import "@css/globals.css";
+import { Jura } from "next/font/google";
 
+const jura = Jura({
+  subsets: ["latin", "latin-ext", "vietnamese"], // Only the subsets you need
+  weight: ["300", "400", "700"], // Adjust based on actual use
+  display: "swap", // Recommended for LCP
+  variable: "--font-jura", // Optional, for Tailwind or global use
+});
 
 const geistSans = localFont({
   src: "../fonts/GeistVF.woff",
   variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "../fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
   weight: "100 900",
 });
 
@@ -29,7 +30,7 @@ export default function RootLayout({ children }) {
         <link rel='icon' href='/icons/favicon.png' type="image/png"/>
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${jura.variable} antialiased`}
         suppressHydrationWarning={true}
       >
         <AOSInitializer />

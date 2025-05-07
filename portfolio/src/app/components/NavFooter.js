@@ -10,7 +10,7 @@ import { FiCpu } from "react-icons/fi";
 
 const Footer = () => {
   return (
-    <footer className="footer-nav">
+    <footer className="row-start-3 flex gap-6 sm:gap-5 flex-wrap items-center justify-center border-t-2 border-blue-700 pt-2 font-[family-name:var(--font-geist-sans)];">
       <a className="nav-link" href="/#education" rel="noopener noreferrer">
         <FiFileText />
         <span className="nav-text">Résumé</span>

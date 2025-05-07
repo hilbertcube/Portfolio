@@ -112,7 +112,7 @@ export default function ProfileImage( {src} ) {
   }, []);
 
   return (
-    <div className="relative mr-auto ml-auto ring-wrapper" data-aos="zoom-in">
+    <div className="relative mr-auto ml-auto ring-wrapper">
       {/* Outer Ring */}
       <div
         className="absolute top-0 left-0 w-full h-full rounded-full"

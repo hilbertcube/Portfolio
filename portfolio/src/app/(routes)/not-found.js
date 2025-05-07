@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useRef } from "react";
 import { useRouter } from "next/navigation";
+import styles from "../css/404.css"
 
 export default function Custom404() {
   const router = useRouter();
