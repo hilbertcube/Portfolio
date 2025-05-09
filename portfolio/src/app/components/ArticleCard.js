@@ -28,7 +28,7 @@ export default function ArticleCard({ info }) {
           )}
         </h3>
         <span className="text-gray-400 text-base font-semibold pt-2 my-2">{info.date}</span>
-        <h4 className="mt-1 text-lg text-gray-500 group-hover:text-green-500">{info.topic}</h4>
+        <h4 className="mt-1 text-gray-500 group-hover:text-green-500 text-base sm:text-lg">{info.topic}</h4>
         <p className="mt-2 text-gray-300 pt-3 text-justify">{info.description}</p>
       </div>
     </a>

@@ -38,7 +38,7 @@ const PublicationCard = ({ publication, index }) => {
           </p>
           <div className="mt-6 flex justify-start gap-2 flex-wrap sm:flex-nowrap overflow-x-auto">
             {images.length > 0 && (
-              <button onClick={openPopup} className="paper-button">
+              <button onClick={openPopup} className="paper-button" aria-label = "Images">
                 <FaRegImage />
                 Images
               </button>
