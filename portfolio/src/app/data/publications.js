@@ -12,7 +12,7 @@ export const publications = [
     pdfLink: './docs/AIAA_Scitech_Paper_2025_HPC.pdf',
     thumbnail: '/images/publications/capital.webp',
     images: [
-      '/images/publications/flowchart.webp',
+      '/images/publications/stitching_flowchart.webp',
       '/images/publications/with_openmp.webp', 
       '/images/publications/cost.webp',
       '/images/publications/speedup.webp'],

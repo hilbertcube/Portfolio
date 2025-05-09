@@ -3,7 +3,7 @@ export const exp = [
     organization: 'California Polytechnic State University' ,
     location: "Pomona, CA",
     job_title: 'Research Assistant, UAV Lab',
-    description: 'Developed UAV stereo camera trajectory estimation and 3D reconstruction system using ORB-SLAM3 and MASt3R-SLAM. Integrated ORB-SLAM3 with YOLOv8 in C++ for real-time UAV navigation. Improved runtime performance by 50% and achieving 90% detection accuracy with custom-labeled data.',
+    description: 'Developed UAV stereo camera trajectory estimation and 3D reconstruction system using ORB-SLAM3 and MASt3R-SLAM. Integrated ORB-SLAM3 with YOLOv8 in C++ for real-time UAV navigation. Improved runtime performance by 50% and achieved 90% detection accuracy with custom-labeled data.',
     time_frame: 'Sep. 2024 - Present',
     languages_and_tools: ['C++', 'Python', 'VMWare', 'ORB-SLAM3', 'Ubuntu', 'Gazebo', 'CMake', 'YOLOv4', 'PyTorch'],
   },
