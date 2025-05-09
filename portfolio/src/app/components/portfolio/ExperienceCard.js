@@ -21,7 +21,7 @@ export default function ExperienceCard({ experiences }) {
             </div> */}
             
             {/* Experience Card */}
-            <div data-aos="fade-up" data-aos-mirror="true" className="group hover:bg-zinc-900 transition-all duration-200 cursor-pointer font-Jura bg-inherit shadow-md rounded-lg p-4 w-full sm:w-3/4 mx-auto text-[15px] md:text-base">
+            <div data-aos="fade-up" data-aos-once className="group hover:bg-zinc-900 transition-all duration-200 cursor-pointer font-Jura bg-inherit shadow-md rounded-lg p-4 w-full sm:w-3/4 mx-auto text-[15px] md:text-base">
               <span className="text-gray-400 text-base font-semibold">{job.time_frame}</span>
               <h3 className="text-xl font-bold text-slate-300 my-1">{job.job_title}</h3>
               <h4 className="inline-flex items-start gap-2 sm:gap-2 my-1 pb-0 text-base sm:text-lg text-gray-500 group-hover:text-green-500">

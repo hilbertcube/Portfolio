@@ -166,7 +166,7 @@ export default function Home() {
             </div>
             <div className="grid grid-cols-1 ms:grid-cols-1 gap-2 my-2 sm:my-4">
               {projects.map((job, index) => (
-                <div key={index} className="w-full" data-aos="fade-up">
+                <div key={index} className="w-full" data-aos="fade-up" data-aos-once>
                   <ProjectCard info={job} />
                 </div>
               ))}
@@ -196,7 +196,7 @@ export default function Home() {
             </div>
             <div className="grid grid-cols-1 ms:grid-cols-1 gap-4 my-2 sm:my-4">
               {articles.map((job, index) => (
-                <div key={index} className="w-full" data-aos="fade-up">
+                <div key={index} className="w-full" data-aos="fade-up" data-aos-once>
                   <ArticleCard info={job} />
                 </div>
               ))}
