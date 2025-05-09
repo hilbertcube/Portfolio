@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect, useRef } from "react";
-import InfoWindow from '@components/InfoWindow';
+import InfoWindow from '@/app/components/utils/InfoWindow';
 import { FaPenNib } from "react-icons/fa";
 import { PiMusicNotesBold } from "react-icons/pi";
 import { FaPlay } from "react-icons/fa6";

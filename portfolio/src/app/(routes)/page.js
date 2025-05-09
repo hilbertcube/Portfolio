@@ -3,14 +3,15 @@
 import { useEffect, useRef, useState } from 'react';
 
 // Components
-import ExperienceCard from "@components/ExperienceCard";
+import ExperienceCard from "@/app/components/portfolio/ExperienceCard";
 import ProfileImage from "@components/ProfileImage";
-import ProjectCard from "@components/ProjectCard";
-import ArticleCard from "@components/ArticleCard";
-import Footer from "@components/NavFooter";
-import EducationCard from "@components/EducationCard";
+import ProjectCard from "@/app/components/portfolio/ProjectCard";
+import ArticleCard from "@/app/components/portfolio/ArticleCard";
+import NavFooter from "@components/NavFooter";
+import EducationCard from "@/app/components/portfolio/EducationCard";
+
 import SocialIcon from "@components/SocialIcon";
-import PublicationCard from "@components/PublicationCard";
+import PublicationCard from "@/app/components/portfolio/PublicationCard";
 import JaskierBotButton from '@components/JaskierBot/JaskierBotButton';
 
 // Hooks
@@ -31,7 +32,6 @@ import { publications } from "@data/publications";
 export default function Home() {
   const totalEmojis = 8;
   const randomNumber = Math.floor(Math.random() * totalEmojis) + 1;
-  const randomFile = `${randomNumber}.gif`;
 
   useEffect(() => {
     const setViewportHeight = () => {
@@ -113,7 +113,7 @@ export default function Home() {
             />
           </div>
         </main>
-        <Footer />
+        <NavFooter />
       </div>
       <div
         className="bg-black text-white items-center justify-items-center p-4 pt-20 pb-28 sm:p-20 relative">

@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect, useRef } from "react";
-import InfoWindow from '@components/InfoWindow';
+import InfoWindow from '@/app/components/utils/InfoWindow';
 //import EmojiDisplay from '../components/EmojiDisplay';
 import Link from "next/link";
 import Image from 'next/image'
