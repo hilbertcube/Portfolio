@@ -1,5 +1,6 @@
 "use client";
 
+import React from 'react';
 import { useEffect, useRef, useState } from 'react';
 
 // Components
@@ -13,6 +14,7 @@ import EducationCard from "@/app/components/portfolio/EducationCard";
 import SocialIcon from "@components/SocialIcon";
 import PublicationCard from "@/app/components/portfolio/PublicationCard";
 import JaskierBotButton from '@components/JaskierBot/JaskierBotButton';
+import HeaderSection from '../components/utils/ScrollToTopButton';
 
 // Hooks
 import useActiveSection from '../hook/useActiveSection';
@@ -30,23 +32,23 @@ import { publications } from "@data/publications";
 
 
 export default function Home() {
-  const totalEmojis = 8;
-  const randomNumber = Math.floor(Math.random() * totalEmojis) + 1;
+  // const totalEmojis = 8;
+  // const randomNumber = Math.floor(Math.random() * totalEmojis) + 1;
 
-  useEffect(() => {
-    const setViewportHeight = () => {
-      requestAnimationFrame(() => {
-        const vh = window.innerHeight * 0.01;
-        document.documentElement.style.setProperty('--vh', `${vh}px`);
-      });
-    };
-    setViewportHeight();
-    window.addEventListener('resize', setViewportHeight);
-    return () => window.removeEventListener('resize', setViewportHeight);
-  }, []);
+  // useEffect(() => {
+  //   const setViewportHeight = () => {
+  //     requestAnimationFrame(() => {
+  //       const vh = window.innerHeight * 0.01;
+  //       document.documentElement.style.setProperty('--vh', `${vh}px`);
+  //     });
+  //   };
+  //   setViewportHeight();
+  //   window.addEventListener('resize', setViewportHeight);
+  //   return () => window.removeEventListener('resize', setViewportHeight);
+  // }, []);
 
-  const sections = ["top","education", "experience", "projects", "publications" , "articles"];
-  const activeSection = useActiveSection(sections);
+  // const sections = ["top","education", "experience", "projects", "publications" , "articles"];
+  // const activeSection = useActiveSection(sections);
 
   return (
     <div>
@@ -132,19 +134,16 @@ export default function Home() {
         </nav> */}
         
         <div className="max-w-[1400px]">
+          
           <section id="education">
-            <div className="main-section-header">
-              Education
-            </div>
+            <HeaderSection title="Education" marginClass='mt-0 sm:mt-0' />
             <div>
               <EducationCard education={education}/>
             </div>
           </section>
 
           <section id="experience">
-            <div className="mt-16 sm:mt-32 main-section-header">
-              Experience
-            </div>
+            <HeaderSection title="Experience" />
             <div>
               <ExperienceCard experiences={exp} />
               <div className="flex justify-center my-2 sm:my-4">
@@ -161,9 +160,7 @@ export default function Home() {
           </section>
 
           <section id="projects" >
-            <div className="mt-16 sm:mt-32 main-section-header">
-              Projects
-            </div>
+            <HeaderSection title="Projects" />
             <div className="grid grid-cols-1 ms:grid-cols-1 gap-2 my-2 sm:my-4">
               {projects.map((job, index) => (
                 <div key={index} className="w-full" data-aos="fade-up" data-aos-once>
@@ -174,9 +171,7 @@ export default function Home() {
           </section>
 
           <section id="publications">
-            <div className="mt-16 sm:mt-32 main-section-header">
-              Publication
-            </div>
+            <HeaderSection title="Publication" />
             <div className="relative w-full max-w-3xl mx-auto my-2 sm:my-4">
               <ul className="list-none space-y-5 font-Jura">
                 {publications.map((publication, index) => (
@@ -191,9 +186,7 @@ export default function Home() {
           </section>
 
           <section id="articles">
-            <div className="mt-16 sm:mt-32 main-section-header">
-              Articles
-            </div>
+            <HeaderSection title="Articles" />
             <div className="grid grid-cols-1 ms:grid-cols-1 gap-4 my-2 sm:my-4">
               {articles.map((job, index) => (
                 <div key={index} className="w-full" data-aos="fade-up" data-aos-once>

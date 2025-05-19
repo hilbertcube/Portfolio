@@ -1,6 +1,7 @@
 import localFont from "next/font/local";
 import AOSInitializer from "@dependencies/AOSInitializer";
 import "@css/globals.css";
+import "@css/aos.css"
 import { Jura } from "next/font/google";
 
 const jura = Jura({
@@ -18,15 +19,13 @@ const geistSans = localFont({
 
 export const metadata = {
   title: "Don D. Le",
-  description: "Portfolio website built with Next",
+  description: "Portfolio website built with Next.js",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        {/* Add AOS CSS */}
-        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
         <link rel='icon' href='/icons/favicon.png' type="image/png"/>
       </head>
       <body
