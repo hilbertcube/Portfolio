@@ -91,7 +91,7 @@ export default function Home() {
             />
             <SocialIcon
               title="Github"
-              href="https://github.com/Continuum3416"
+              href="https://github.com/hilbertcube"
               delay="400"
               iconClass="fa-brands fa-github"
             />
