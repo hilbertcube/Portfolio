@@ -19,10 +19,18 @@ export const exp = [
   {
     organization: 'Mt. San Antonio College' ,
     location: "Walnut, CA",
-    job_title: 'Math, Physics, Computer Science Tutor and Math TA',
-    description: 'Provided one-on-one tutoring in computer science, engineering physics, and all levels of lower-division math. Teaching Assistant for a differential equations class of 35 students. Led after-class sessions, created and distributed study notes to support students in mastering math concepts.',
-    time_frame: 'Feb. 2024 - Present',
+    job_title: 'Math, Physics, and CS Tutor',
+    description: 'Provided one-on-one tutoring sessions in computer science (C++, Java, theoretical CS), engineering physics, and all levels of lower-division mathematics at the Academic Support & Achievement Center.',
+    time_frame: 'Aug. 2024 - Present',
     languages_and_tools: ['Differential Equations', 'Linear Algebra', 'C++', 'Java', 'Calculus', 'Classical Mechanics'],
+  },
+  {
+    organization: 'Mt. San Antonio College' ,
+    location: "Walnut, CA",
+    job_title: 'Differential Equations & Linear Algebra TA',
+    description: 'Teaching Assistant for a differential equations class of 35 students. Led after-class sessions, created and distributed study notes to support students in mastering math concepts.',
+    time_frame: 'Feb. 2024 - Jul. 2024',
+    languages_and_tools: ['Differential Equations', 'Linear Algebra', 'Calculus'],
   },
 ];
 
