@@ -1,3 +1,4 @@
+"use client";
 import { useState } from 'react';
 import { FaRegFilePdf } from "react-icons/fa";
 import { FiStar } from "react-icons/fi";

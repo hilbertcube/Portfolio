@@ -1,3 +1,4 @@
+"use client";
 import { useState, useEffect } from "react";
 import { FaChevronDown, FaChevronRight, FaChevronUp } from "react-icons/fa6";
 import { LuGraduationCap } from "react-icons/lu";

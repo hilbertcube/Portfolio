@@ -1,7 +1,4 @@
-"use client";
-
 import React from 'react';
-import { useEffect, useRef, useState } from 'react';
 
 // Components
 import ExperienceCard from "@/app/components/portfolio/ExperienceCard";
@@ -17,7 +14,7 @@ import JaskierBotButton from '@components/JaskierBot/JaskierBotButton';
 import HeaderSection from '../components/utils/ScrollToTopButton';
 
 // Hooks
-import useActiveSection from '../hook/useActiveSection';
+// import useActiveSection from '../hook/useActiveSection';
 
 // Icons
 import "@fortawesome/fontawesome-free/css/all.min.css";
