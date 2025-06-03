@@ -19,8 +19,8 @@ export const education = [
   // },
   {
     organization: 'UCLA - University of California, Los Angeles' ,
-    degree_and_major: 'Bachelor of Science in Computer Science and Engineering',
-    minor: "",
+    degree_and_major: 'Bachelor of Science, Computer Science and Engineering',
+    minor: "Mathematics",
     gpa: "N/A",
     time: '2025 - 2027 (Expected)',
     relevant_coursework: ["Theory of Computing", "Algorithms and Complexity", "Operating Systems", "Computer Network Fundamentals", "Probability and Statistics", "Electrical and Electronic Circuits", "Systems and Signals", "Digital Electronic Circuits", "Computer Systems Architecture", "Logic Design of Digital Systems"],

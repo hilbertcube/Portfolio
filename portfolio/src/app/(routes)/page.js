@@ -11,10 +11,7 @@ import EducationCard from "@/app/components/portfolio/EducationCard";
 import SocialIcon from "@components/SocialIcon";
 import PublicationCard from "@/app/components/portfolio/PublicationCard";
 import JaskierBotButton from '@components/JaskierBot/JaskierBotButton';
-import HeaderSection from '../components/utils/ScrollToTopButton';
-
-// Hooks
-// import useActiveSection from '../hook/useActiveSection';
+import HeaderSection from '@components/utils/ScrollToTopButton';
 
 // Icons
 import "@fortawesome/fontawesome-free/css/all.min.css";
@@ -50,7 +47,7 @@ export default function Home() {
   return (
     <div>
       <div id="top" className="grid grid-rows-[auto_1fr] items-center justify-items-center sm:min-h-screen smooth-height p-4 gap-6 sm:p-10">
-        <main id="main" className="flex flex-col gap-3 sm:row-start-2 items-start mx-auto">
+        <div id="main" className="flex flex-col gap-5 sm:row-start-2 items-start mx-auto">
 
           {/* data-aos="zoom-in" data-aos-once = "true" */}
           <div className="profile-container">
@@ -60,11 +57,11 @@ export default function Home() {
             </h1>
             <h2 className="profile-title">COMPUTER ENGINEER & SOFTWARE DEV</h2>
             <p className="profile-description">
-              An engineering student <span className="font-[family-name:var(--font-geist-sans)]">@UCLA</span> with experience in low-latency C/C++, scientific computing, system programming, and computer vision.
+              I'm an engineering student <span className="font-[family-name:var(--font-geist-sans)]">@ UCLA</span> with experience in low-latency system programming, ODEs/PDEs modelling, and computer vision.
             </p>
             <p className="profile-skills">
               <span className="font-bold">Languages:</span> C, C++, Python, CUDA, Rust,{" "}
-              <span className="latex">L<sup>a</sup>T<sub>e</sub>X</span>, JavaScript, Assembly [Intel x86], Java
+              <span className="latex">L<sup>a</sup>T<sub>e</sub>X</span>, JS, Assembly [Intel x86], Java
             </p>
             <p className="profile-skills">
               <span className="font-bold">Tools:</span> CMake, Make, Boost,
@@ -111,7 +108,7 @@ export default function Home() {
               iconClass="fa-brands fa-instagram"
             />
           </div>
-        </main>
+        </div>
         <NavFooter />
       </div>
       <div
