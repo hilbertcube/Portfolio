@@ -261,6 +261,12 @@ export default function EducationCard({ education, open_close = false }) {
                 className="group hover:bg-zinc-900 transition-all duration-200 cursor-pointer font-Jura bg-inherit shadow-md rounded-lg p-4 w-full sm:w-3/4 mx-auto text-[15px] md:text-base border-[1px] border-solid border-slate-800"
               >
                 <h3 className="text-xl font-bold text-slate-300 my-1">{edu.organization}</h3>
+
+                {/* {edu.college_and_department && (
+                  <div className="text-gray-400 text-base font-semibold my-2 flex items-center gap-2">
+                    {edu.college_and_department}
+                  </div>
+                )} */}
                 
                 <div className="text-gray-400 text-base font-semibold my-2 flex items-center gap-2">
                   <LuGraduationCap />
@@ -276,6 +282,12 @@ export default function EducationCard({ education, open_close = false }) {
                   </div>
                 )}
 
+                {edu.minor && (
+                  <div className="text-gray-500 text-base my-1 group-hover:text-blue-400">
+                    Minor in {edu.minor}
+                  </div>
+                )}
+
                 {edu.thesis && (
                   <div className="text-gray-500 text-base my-1 group-hover:text-gray-300">
                     Thesis: <a href={edu.thesis[1]} className="">{edu.thesis[0]}</a>
@@ -283,11 +295,7 @@ export default function EducationCard({ education, open_close = false }) {
                   </div>
                 )}
 
-                {edu.minor && (
-                  <div className="text-gray-500 text-base my-1 group-hover:text-blue-400">
-                    Minor in {edu.minor}
-                  </div>
-                )}
+
 
                 {edu.gpa && (
                   <div className="text-gray-400 text-base font-semibold my-2 mb-4">

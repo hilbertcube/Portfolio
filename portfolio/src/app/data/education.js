@@ -18,7 +18,8 @@ export const education = [
   //   activities_and_awards: []
   // },
   {
-    organization: 'UCLA - University of California, Los Angeles' ,
+    organization: 'University of California, Los Angeles (UCLA)',
+    college_and_department: "Henry Samueli School of Engineering",
     degree_and_major: 'Bachelor of Science, Computer Science and Engineering',
     minor: "Mathematics",
     gpa: "N/A",
