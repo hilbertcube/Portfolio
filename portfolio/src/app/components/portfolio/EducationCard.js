@@ -220,10 +220,11 @@ export default function EducationCard({ education, open_close = false }) {
 
   // Course details mapping
   const courseDetailsMapping = {
-    "Engineering Physics I, II, III": [
-      "I: Classical Mechanics and Dynamics",
-      "II: Thermodynamics and Electromagnetism",
-      "III: Wave Mechanics, Optics, Relativity, and Fluids Dynamics",
+    "Engineering Physics I, II, III, IV": [
+      "I: General Physics",
+      "II: Classical Mechanics and Dynamics",
+      "III: Thermodynamics and Electromagnetism",
+      "IV: Wave Mechanics, Optics, Relativity, and Fluids Dynamics",
     ],
     "Calculus I, II, III": [
       "I: Limits, Derivatives, and Applications",
