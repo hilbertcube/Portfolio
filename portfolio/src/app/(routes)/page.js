@@ -142,7 +142,7 @@ export default function Home() {
               <ExperienceCard experiences={exp} />
               <div className="flex justify-center my-2 sm:my-4">
                 <a
-                  href="./docs/Resume.pdf"
+                  href="./docs/Master_Resume.pdf"
                   rel="noopener noreferrer"
                   className="cursor-pointer text-[14px] inline-flex items-center gap-2 px-4 py-2 text-white bg-blue-700 rounded hover:bg-blue-600"
                 >
